@@ -33,6 +33,9 @@ function Login(){
                     Tu información no será compartida con nadie.
                 </div>
             </div>
+            <div className="mb-3">
+                
+            </div>
         </form>
     )
 
