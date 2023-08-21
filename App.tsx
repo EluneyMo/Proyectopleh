@@ -12,7 +12,7 @@ const firebaseConfig = {
   messagingSenderId: "215017658521",
   appId: "1:215017658521:web:b456ff32cfd8381a0cc008",
   measurementId: "G-GMVJSBPJG8"
-}
+};
 export default function App() {
   return (
     <React.Fragment>
