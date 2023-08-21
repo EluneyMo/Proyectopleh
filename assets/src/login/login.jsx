@@ -42,6 +42,7 @@ function Login(){
             className="form-control"
             id="contra"
             value={password}
+            onChange={(e) => setPassword(e.target.value)}
             />
             </div>
         </form>
