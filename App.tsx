@@ -9,6 +9,7 @@ const firebaseConfig = {
   authDomain: "pleh-20a48.firebaseapp.com",
   projectId: "pleh-20a48",
   storageBucket: "pleh-20a48.appspot.com",
+  messagingSenderId: "215017658521",
 }
 export default function App() {
   return (
