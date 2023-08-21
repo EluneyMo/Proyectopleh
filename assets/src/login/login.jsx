@@ -1,6 +1,7 @@
 import React from "react";
-import * as firebase from "../../../node_modules/firebase/app"
-import "../../../node_modules/firebase/auth"
+import { initializeApp } from 'firebase/app';
+import { getAuth } from 'firebase/auth';
+
 
 function Login(){
     const [email, setEmail] = useState("");
