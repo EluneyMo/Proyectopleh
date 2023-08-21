@@ -48,7 +48,7 @@ function Login(){
             <div className="mb-3-check">
             <input type="checkbox" className="form-check-input" id="check" />
             <label className="checklabel" htmlFor="check">
-                
+                Recuerdame
             </label>
             </div>
         </form>
