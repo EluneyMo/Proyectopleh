@@ -1,4 +1,5 @@
 import React from "react";
+import * as firebase from "../../../node_modules/firebase/app"
 
 
 function Login(){
