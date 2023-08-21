@@ -5,7 +5,7 @@ import Login from './assets/src/login/login';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
-
+  apiKey: "AIzaSyAmobyJ0-r1o4H0zGMDeL6GtuS4gmxsir4",
 }
 export default function App() {
   return (
