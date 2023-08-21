@@ -18,7 +18,7 @@ function Login(){
     return(
         <form onSubmit={handleLogin}>
             <div className="mb-3">
-
+                <label htmlFor="Email" className="form-label">
             </div>
         </form>
     )
