@@ -13,7 +13,7 @@ export default function App() {
   );
 }
 
-const app = initializeApp(firebaseConfig);
+
 
 const styles = StyleSheet.create({
   container: {
