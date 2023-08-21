@@ -41,6 +41,7 @@ function Login(){
             type="password" 
             className="form-control"
             id="contra"
+            value={password}
             />
             </div>
         </form>
