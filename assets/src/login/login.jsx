@@ -1,61 +1,64 @@
-import React from "react";
+// Importar los componentes y los paquetes necesarios
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { auth } from "../../../firebase/firebase";
 
+function Login() {
+  // Crear los estados para el email y la contraseña
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-function Login(){
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const handleLogin = async (e) => {
-        e.preventDefault();
+  // Crear la función para manejar el inicio de sesión
+  const handleLogin = async (e) => {
+    e.preventDefault();
 
-        try{
-            await firebase.auth().signInWithEmailAndPassword(email, password);
-            console.log("Usuario autenticado");
-        } catch (error){
-            console.error("Error al iniciar sesión:", error.message);
-        }
-    };
-    return(
-        <form onSubmit={handleLogin}>
-            <div className="mb-3">
-                <label htmlFor="Email" className="form-label">
-                    Email
-                </label>
-                <input
-                    type="email"
-                    className="form-control"
-                    id="Email"
-                    aria-describedby="emailHelp"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
-                <div id="emailHelp" className="form-text">
-                    Tu información no será compartida con nadie.
-                </div>
-            </div>
-            <div className="mb-3">
-            <label htmlFor="contra" className="form-label">
-                Contraseña
-            </label>
-            <input 
-            type="password" 
-            className="form-control"
-            id="contra"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            />
-            </div>
-            <div className="mb-3-check">
-            <input type="checkbox" className="form-check-input" id="check" />
-            <label className="checklabel" htmlFor="check">
-                Recuerdame
-            </label>
-            </div>
-            <button type="submit" className="btn">
-                Enviar
-            </button>
-        </form>
-    )
+    try {
+      // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
+      await auth.signInWithEmailAndPassword(email, password);
+      console.log("Usuario autenticado");
+    } catch (error) {
+      console.error("Error al iniciar sesión:", error.message);
+    }
+  };
 
+  // Retornar el componente de la pantalla de login
+  return (
+    <View>
+      <Text>Email</Text>
+      <TextInput
+        style={styles.input}
+        keyboardType="email-address"
+        value={email}
+        onChangeText={(text) => setEmail(text)}
+      />
+      <Text>Tu información no será compartida con nadie.</Text>
+      <Text>Contraseña</Text>
+      <TextInput
+        style={styles.input}
+        secureTextEntry={true}
+        value={password}
+        onChangeText={(text) => setPassword(text)}
+      />
+      <Button style={styles.button} title="Enviar" onPress={handleLogin} />
+    </View>
+  );
 }
+
+// Crear el objeto de estilo con el paquete StyleSheet
+const styles = StyleSheet.create({
+  input: {
+    borderWidth: 1,
+    borderColor: "gray",
+    padding: 10,
+    margin: 10,
+  },
+  button: {
+    backgroundColor: "blue",
+    color: "white",
+    padding: 10,
+    margin: 10,
+  },
+});
+
+// Exportar el componente de login
 export default Login;
