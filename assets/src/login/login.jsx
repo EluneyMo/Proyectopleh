@@ -29,6 +29,8 @@ function Login(){
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                 />
+                <div id="emailHelp" className="form-text">
+                </div>
             </div>
         </form>
     )
