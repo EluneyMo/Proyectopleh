@@ -23,6 +23,7 @@ function Login(){
                 </label>
                 <input
                     type="email"
+                    className="form-control"
                 />
             </div>
         </form>
