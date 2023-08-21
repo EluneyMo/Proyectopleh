@@ -22,7 +22,7 @@ function Login(){
                     Email
                 </label>
                 <input
-
+                    type="email"
                 />
             </div>
         </form>
