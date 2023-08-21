@@ -4,6 +4,14 @@ import React from 'react';
 import Login from './assets/src/login/login';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+
+export default function App() {
+  return (
+    <React.Fragment>
+        <Login />
+    </React.Fragment>
+  );
+}
 const firebaseConfig = {
   apiKey: "AIzaSyAmobyJ0-r1o4H0zGMDeL6GtuS4gmxsir4",
   authDomain: "pleh-20a48.firebaseapp.com",
@@ -13,16 +21,8 @@ const firebaseConfig = {
   appId: "1:215017658521:web:b456ff32cfd8381a0cc008",
   measurementId: "G-GMVJSBPJG8"
 };
-export default function App() {
-  return (
-    <React.Fragment>
-        <Login />
-    </React.Fragment>
-  );
-}
-
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
