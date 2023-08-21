@@ -4,6 +4,9 @@ import React from 'react';
 import Login from './assets/src/login/login';
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+const firebaseConfig = {
+
+}
 export default function App() {
   return (
     <React.Fragment>
