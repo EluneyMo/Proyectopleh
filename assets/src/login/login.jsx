@@ -4,6 +4,7 @@ import "../../../node_modules/firebase/auth"
 
 function Login(){
     const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
     return(
         <form>
             <div class="mb-3">
