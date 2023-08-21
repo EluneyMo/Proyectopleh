@@ -30,6 +30,7 @@ function Login(){
                     onChange={(e) => setEmail(e.target.value)}
                 />
                 <div id="emailHelp" className="form-text">
+                    Tu información no será compartida con nadie.
                 </div>
             </div>
         </form>
