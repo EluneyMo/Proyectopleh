@@ -12,7 +12,7 @@ function Login(){
             await firebase.auth().signInWithEmailAndPassword(email, password);
             console.log("Usuario autenticado");
         } catch (error){
-            
+            console.error("Error al iniciar sesión:", error.message);
         }
     }
     return(
