@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 const firebaseConfig = {
   apiKey: "AIzaSyAmobyJ0-r1o4H0zGMDeL6GtuS4gmxsir4",
-  authDomain: "pleh-20a48.firebaseapp.com"
+  authDomain: "pleh-20a48.firebaseapp.com",
   projectId: "pleh-20a48",
 }
 export default function App() {
