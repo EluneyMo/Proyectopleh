@@ -1,6 +1,6 @@
 import React from "react";
 import { initializeApp } from 'firebase/app';
-import { getAuth } from 'firebase/auth';
+import { auth } from "../../../firebase/firebase";
 
 
 function Login(){
