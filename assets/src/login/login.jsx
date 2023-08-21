@@ -11,6 +11,8 @@ function Login(){
         try{
             await firebase.auth().signInWithEmailAndPassword(email, password);
             console.log("Usuario autenticado");
+        } catch (error){
+            
         }
     }
     return(
