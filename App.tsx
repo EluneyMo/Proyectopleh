@@ -10,6 +10,7 @@ const firebaseConfig = {
   projectId: "pleh-20a48",
   storageBucket: "pleh-20a48.appspot.com",
   messagingSenderId: "215017658521",
+  appId: "1:215017658521:web:b456ff32cfd8381a0cc008",
 }
 export default function App() {
   return (
