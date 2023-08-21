@@ -26,6 +26,7 @@ function Login(){
                     className="form-control"
                     id="Email"
                     aria-describedby="emailHelp"
+                    value={email}
                 />
             </div>
         </form>
