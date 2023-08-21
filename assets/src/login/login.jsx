@@ -27,6 +27,7 @@ function Login(){
                     id="Email"
                     aria-describedby="emailHelp"
                     value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                 />
             </div>
         </form>
