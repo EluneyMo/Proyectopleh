@@ -9,7 +9,7 @@ function Login(){
         e.preventDefault();
 
         try{
-            
+            await firebase.auth().signInWithEmailAndPassword(email, password);
         }
     }
     return(
