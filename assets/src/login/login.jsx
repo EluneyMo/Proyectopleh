@@ -1,6 +1,6 @@
 import React from "react";
-import { initializeApp } from '@react-native-firebase/app';
-import { auth } from "@react-native-firebase/auth";
+import { initializeApp } from '../../../firebase/firebase';
+import { auth } from "../../../firebase/firebase";
 
 
 function Login(){
