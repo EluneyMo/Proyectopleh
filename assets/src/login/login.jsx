@@ -37,7 +37,8 @@ function Login(){
             <label htmlFor="contra" className="form-label">
                 Contraseña
             </label>
-            <input type="text" 
+            <input 
+            type="password" 
             />
             </div>
         </form>
