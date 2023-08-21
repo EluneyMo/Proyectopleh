@@ -5,7 +5,7 @@ import Login from './assets/src/login/login';
 export default function App() {
   return (
     <React.Fragment>
-      
+        <Login />
     </React.Fragment>
   );
 }
