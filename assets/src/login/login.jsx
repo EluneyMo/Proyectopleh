@@ -35,7 +35,7 @@ function Login(){
             </div>
             <div className="mb-3">
             <label htmlFor="contra" className="form-label">
-            
+                Contraseña
             </label>
             </div>
         </form>
