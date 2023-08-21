@@ -1,5 +1,4 @@
 import React from "react";
-import { initializeApp } from '../../../firebase/firebase';
 import { auth } from "../../../firebase/firebase";
 
 
