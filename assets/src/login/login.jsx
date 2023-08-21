@@ -39,6 +39,7 @@ function Login(){
             </label>
             <input 
             type="password" 
+            className="form-control"
             />
             </div>
         </form>
