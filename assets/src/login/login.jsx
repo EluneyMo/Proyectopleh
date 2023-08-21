@@ -52,7 +52,7 @@ function Login(){
             </label>
             </div>
             <button type="submit" className="btn">
-                
+                Enviar
             </button>
         </form>
     )
