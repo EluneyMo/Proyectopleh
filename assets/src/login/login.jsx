@@ -22,6 +22,9 @@ function Login() {
       console.error("Error al iniciar sesión:", error.message);
     }
   };
+  const validateEmail=(email)=>{
+
+  };
 
   // Retornar el componente de la pantalla de login
   return (
