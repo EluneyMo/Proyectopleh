@@ -7,7 +7,7 @@ function Login() {
   // Crear los estados para el email y la contraseña
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [errorMesage, setErrorMessage]= useState("");
   // Crear la función para manejar el inicio de sesión
   const handleLogin = async () => {
     if (!validateEmail(email)){
