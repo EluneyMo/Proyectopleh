@@ -1,7 +1,7 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import Firebase from "../../../firebase/firebase";
+import {app, auth, database} from "../../../firebase/firebase";
 
 function Login() {
   // Crear los estados para el email y la contraseña
@@ -18,6 +18,9 @@ function Login() {
       // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
       await Firebase.auth().signInWithEmailAndPassword(email, password);
       console.log("Usuario autenticado");
+      if (auth.currentUser){
+        
+      }
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
     }
