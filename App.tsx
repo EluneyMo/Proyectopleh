@@ -7,8 +7,9 @@ import Firebase from './firebase/firebase';
 export default function App() {
   const [user, setUser] =useState<Firebase.User | null>(null);
   useEffect(()
-  
-  )
+  {
+
+  });
   return (
     <React.Fragment>
         <Login />
