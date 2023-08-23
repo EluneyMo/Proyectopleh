@@ -24,8 +24,8 @@ function Login() {
   return (
     <View>
       <Text>Email</Text>
-      <TextInput
-        style={styles.input}
+      <input
+        type="email"
         keyboardType="email-address"
         value={email}
         onChangeText={(text) => setEmail(text)}
