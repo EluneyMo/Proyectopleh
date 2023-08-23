@@ -32,7 +32,7 @@ function Login() {
       />
       <Text>Tu información no será compartida con nadie.</Text>
       <Text>Contraseña</Text>
-      <TextInput
+      <input
         style={styles.input}
         secureTextEntry={true}
         value={password}
