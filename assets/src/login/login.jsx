@@ -38,7 +38,7 @@ function Login() {
         value={password}
         onChangeText={(e) => setPassword(e.target.value)}
       />
-      <Button style={styles.button} title="Enviar" onPress={handleLogin} />
+      <button style={styles.button} title="Enviar" onPress={handleLogin} />
     </View>
   );
 }
