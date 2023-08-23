@@ -6,8 +6,7 @@ import Firebase from './firebase/firebase';
 
 export default function App() {
   const [user, setUser] =useState<Firebase.User | null>(null);
-  useEffect(()
-  {
+  useEffect(()=>  {
     const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser)=>{
       setUser(authenticatedUser);
     })
@@ -17,7 +16,7 @@ export default function App() {
         <Login />
     </React.Fragment>
   );
-}
+};
 
 
 
