@@ -25,7 +25,7 @@ export default function App() {
   return (
     <React.Fragment>
       <div className="App">
-
+        <Text>PLEH</Text>
       </div>
         <Login />
     </React.Fragment>
