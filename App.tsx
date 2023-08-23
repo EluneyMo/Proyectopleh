@@ -27,6 +27,9 @@ export default function App() {
       <div className="App">
         <Text>PLEH</Text>
       </div>
+      <div className='iniciar'>
+
+      </div>
         <Login />
     </React.Fragment>
   );
