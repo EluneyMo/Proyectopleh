@@ -3,6 +3,7 @@ import { StyleSheet, Text, View } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Login from './assets/src/login/login';
 import {app, auth, database} from './firebase/firebase';
+import { DataSnapshot } from 'firebase/database';
 interface AuthenticatedUser{
   uid:string;
   email:string|null;
@@ -25,7 +26,7 @@ export default function App() {
     useEffect(()=>{
       if (user){
       const databaseRef=database.ref("https://pleh-20a48-default-rtdb.firebaseio.com/")
-      databaseRef.on('value', snapshot=>{
+      databaseRef.on('value', (snapshot:DataSnapshot)=>{
         const datafromDatabase =snapshot.val();
         console.log('datos desde la base de datos:', datafromDatabase)
     });
