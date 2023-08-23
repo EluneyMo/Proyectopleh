@@ -19,7 +19,7 @@ export default function App() {
     try{
       await Firebase.auth().signOut();
     }catch (error){
-      
+      console.error("Error al cerrar sesion:", error)
     }
   };
   return (
