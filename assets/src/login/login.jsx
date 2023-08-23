@@ -18,6 +18,7 @@ function Login() {
       // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
       const userCredential=await auth.signInWithEmailAndPassword(email, password);
       console.log("Usuario autenticado");
+      const database = app.database();
       if (auth.currentUser){
         const userRef = database.ref(`users/${auth.currentUser.uid}`);
         userRef.set({
