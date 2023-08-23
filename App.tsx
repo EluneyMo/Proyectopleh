@@ -5,6 +5,7 @@ import Login from './assets/src/login/login';
 import Firebase from './firebase/firebase';
 
 export default function App() {
+  const [user, setUser] =useState<firebase.User | null>(null);
   return (
     <React.Fragment>
         <Login />
