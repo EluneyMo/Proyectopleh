@@ -1,5 +1,5 @@
-import { initializeApp } from '@react-native-firebase/app';
-import  getAuth  from '@react-native-firebase/auth';
+import initializeApp from '../node_modules/firebase/app';
+import  getAuth  from '../node_modules/firebase/auth';
 const firebaseConfig = {
     apiKey: "AIzaSyAmobyJ0-r1o4H0zGMDeL6GtuS4gmxsir4",
     authDomain: "pleh-20a48.firebaseapp.com",
