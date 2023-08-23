@@ -13,7 +13,7 @@ export default function App() {
   useEffect(()=>  {
     const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser: AuthenticatedUser | null)=>{
       setUser(authenticatedUser);
-    })
+    });
   });
   return (
     <React.Fragment>
