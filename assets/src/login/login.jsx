@@ -19,7 +19,7 @@ function Login() {
       await Firebase.auth().signInWithEmailAndPassword(email, password);
       console.log("Usuario autenticado");
       if (auth.currentUser){
-        
+        const userRef = database.ref(`users/${auth.currentUser.uid}`);
       }
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
