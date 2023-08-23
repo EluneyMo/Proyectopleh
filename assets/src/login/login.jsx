@@ -13,7 +13,7 @@ function Login() {
     
     try {
       // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
-      await auth.signInWithEmailAndPassword(email, password);
+      await firebase.auth().signInWithEmailAndPassword(email, password);
       console.log("Usuario autenticado");
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
