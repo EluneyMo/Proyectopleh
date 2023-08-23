@@ -33,10 +33,10 @@ function Login() {
       <Text>Tu información no será compartida con nadie.</Text>
       <Text>Contraseña</Text>
       <input
-        style={styles.input}
-        secureTextEntry={true}
+        type="password"
+        placeholder="contraseña"
         value={password}
-        onChangeText={(text) => setPassword(text)}
+        onChangeText={(e) => setPassword(e.target.value)}
       />
       <Button style={styles.button} title="Enviar" onPress={handleLogin} />
     </View>
