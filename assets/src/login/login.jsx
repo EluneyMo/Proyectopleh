@@ -26,9 +26,9 @@ function Login() {
       <Text>Email</Text>
       <input
         type="email"
-        keyboardType="email-address"
+        placeholder="email-address"
         value={email}
-        onChangeText={(text) => setEmail(text)}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <Text>Tu información no será compartida con nadie.</Text>
       <Text>Contraseña</Text>
