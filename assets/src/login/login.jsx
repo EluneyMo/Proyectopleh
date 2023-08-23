@@ -31,6 +31,7 @@ function Login() {
   return (
     <View>
       <Text>Email</Text>
+      <div style={{color: 'red'}}>{errorMesage}</div>
       <input
         type="email"
         placeholder="email-address"
