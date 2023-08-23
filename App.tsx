@@ -22,10 +22,12 @@ export default function App() {
       console.error("Error al cerrar sesion:", error)
     }
   };
-  useEffect(()=>{
-    
+    useEffect(()=>{
+      if (user){
+      
+    });
   }
-  )
+}, [user]);
   return (
     <React.Fragment>
       <div className="App">
