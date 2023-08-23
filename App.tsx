@@ -17,7 +17,7 @@ export default function App() {
   },[]);
   const handleLogout =async()=>{
     try{
-      await Firebase.auth().signOut();
+      await auth.signOut();
     }catch (error){
       console.error("Error al cerrar sesion:", error)
     }
