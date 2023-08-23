@@ -8,8 +8,8 @@ export default function App() {
   const [user, setUser] =useState<Firebase.User | null>(null);
   useEffect(()
   {
-    const unsuscribe =Firebase.auth().onAuthStateChanged((authenticatedUser)=>{
-      
+    const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser)=>{
+      setUser(authenticatedUser);
     })
   });
   return (
