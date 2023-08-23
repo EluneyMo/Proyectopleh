@@ -19,6 +19,7 @@ function Login() {
       const userCredential=await auth.signInWithEmailAndPassword(email, password);
       console.log("Usuario autenticado");
       const database = app.database();
+      const user = userCredential.user;
       if (auth.currentUser){
         const userRef = database.ref(`users/${auth.currentUser.uid}`);
         userRef.set({
