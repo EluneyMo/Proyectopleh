@@ -16,7 +16,9 @@ export default function App() {
     return ()=>unsubscribe();
   },[]);
   const handleLogout =async()=>{
-
+    try{
+      await Firebase.auth().signOut();
+    }
   };
   return (
     <React.Fragment>
