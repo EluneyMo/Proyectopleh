@@ -14,7 +14,7 @@ export default function App() {
       setUser(authenticatedUser);
     });
     return ()=>unsubscribe();
-  });
+  },[]);
   return (
     <React.Fragment>
         <Login />
