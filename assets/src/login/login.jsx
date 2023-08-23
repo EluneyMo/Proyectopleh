@@ -9,9 +9,8 @@ function Login() {
   const [password, setPassword] = useState("");
 
   // Crear la función para manejar el inicio de sesión
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
+  const handleLogin = async () => {
+    
     try {
       // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
       await auth.signInWithEmailAndPassword(email, password);
