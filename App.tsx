@@ -10,7 +10,7 @@ interface AuthenticatedUser{
 export default function App() {
   const [user, setUser] =useState<Firebase.User | null>(null);
   useEffect(()=>  {
-    const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser)=>{
+    const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser: AuthenticatedUser | null)=>{
       setUser(authenticatedUser);
     })
   });
