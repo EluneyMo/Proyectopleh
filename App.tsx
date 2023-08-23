@@ -18,6 +18,8 @@ export default function App() {
   const handleLogout =async()=>{
     try{
       await Firebase.auth().signOut();
+    }catch (error){
+      
     }
   };
   return (
