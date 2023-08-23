@@ -1,8 +1,11 @@
-import initializeApp from '@react-native-firebase/app';
-import  getAuth  from '@react-native-firebase/auth';
+import { firebase } from '@react-native-firebase/auth';
+import initializeApp from '../node_modules/firebase/app';
+import  getAuth  from '../node_modules/firebase/auth';
+import '../node_modules/firebase/database';
 const firebaseConfig = {
     apiKey: "AIzaSyAmobyJ0-r1o4H0zGMDeL6GtuS4gmxsir4",
     authDomain: "pleh-20a48.firebaseapp.com",
+    databaseURL: "https://pleh-20a48-default-rtdb.firebaseio.com/",
     projectId: "pleh-20a48",
     storageBucket: "pleh-20a48.appspot.com",
     messagingSenderId: "215017658521",
@@ -11,4 +14,4 @@ const firebaseConfig = {
   };
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-  export { app, auth };
+  export default Firebase;

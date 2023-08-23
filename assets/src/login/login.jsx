@@ -1,45 +1,52 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import { auth } from "../../../firebase/firebase";
+import Firebase from "../../../firebase/firebase";
 
 function Login() {
   // Crear los estados para el email y la contraseña
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [errorMesage, setErrorMessage]= useState("");
   // Crear la función para manejar el inicio de sesión
-  const handleLogin = async (e) => {
-    e.preventDefault();
-
+  const handleLogin = async () => {
+    if (!validateEmail(email)){
+      setErrorMessage("Correo electronico invalido");
+      return;
+    }
     try {
       // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
-      await auth.signInWithEmailAndPassword(email, password);
+      await Firebase.auth().signInWithEmailAndPassword(email, password);
       console.log("Usuario autenticado");
     } catch (error) {
       console.error("Error al iniciar sesión:", error.message);
     }
+  };
+  const validateEmail=(email)=>{
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(email);
   };
 
   // Retornar el componente de la pantalla de login
   return (
     <View>
       <Text>Email</Text>
-      <TextInput
-        style={styles.input}
-        keyboardType="email-address"
+      <div style={{color: 'red'}}>{errorMesage}</div>
+      <input
+        type="email"
+        placeholder="email-address"
         value={email}
-        onChangeText={(text) => setEmail(text)}
+        onChange={(e) => setEmail(e.target.value)}
       />
       <Text>Tu información no será compartida con nadie.</Text>
       <Text>Contraseña</Text>
-      <TextInput
-        style={styles.input}
-        secureTextEntry={true}
+      <input
+        type="password"
+        placeholder="contraseña"
         value={password}
-        onChangeText={(text) => setPassword(text)}
+        onChangeText={(e) => setPassword(e.target.value)}
       />
-      <Button style={styles.button} title="Enviar" onPress={handleLogin} />
+      <button style={styles.button} title="Enviar" onClick={handleLogin} />
     </View>
   );
 }
