@@ -1,7 +1,7 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import { auth } from "../../../firebase/firebase";
+import Firebase from "../../../firebase/firebase";
 
 function Login() {
   // Crear los estados para el email y la contraseña
