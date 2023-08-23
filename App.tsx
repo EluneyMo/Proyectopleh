@@ -1,11 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import Login from './assets/src/login/login';
 import Firebase from './firebase/firebase';
 
 export default function App() {
-  const [user, setUser] =useState<firebase.User | null>(null);
+  const [user, setUser] =useState<Firebase.User | null>(null);
   return (
     <React.Fragment>
         <Login />
