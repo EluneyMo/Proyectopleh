@@ -25,7 +25,9 @@ export default function App() {
     useEffect(()=>{
       if (user){
       const databaseRef=database.ref("https://pleh-20a48-default-rtdb.firebaseio.com/")
-      databaseRef.on
+      databaseRef.on('value', snapshot=>{
+        const datafromDatabase =snapshot.val();
+        console.log('datos desde la base de datos:', datafromDatabase)
     });
   }
 }, [user]);
