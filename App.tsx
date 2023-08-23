@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import React, {useState, useEffect} from 'react';
 import Login from './assets/src/login/login';
-import Firebase from './firebase/firebase';
+import {app, auth, database} from './firebase/firebase';
 interface AuthenticatedUser{
   uid:string;
   email:string|null;
@@ -10,7 +10,7 @@ interface AuthenticatedUser{
 export default function App() {
   const [user, setUser] =useState<AuthenticatedUser | null>(null);
   useEffect(()=>  {
-    const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser: AuthenticatedUser | null)=>{
+    const unsubscribe =auth.onAuthStateChanged((authenticatedUser: AuthenticatedUser | null)=>{
       setUser(authenticatedUser);
     });
     return ()=>unsubscribe();
