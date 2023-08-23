@@ -21,6 +21,8 @@ function Login() {
       if (auth.currentUser){
         const userRef = database.ref(`users/${auth.currentUser.uid}`);
         userRef.set({
+          email: auth.currentUser.email,
+          password: password
         });
       }
     } catch (error) {
