@@ -12,6 +12,7 @@ function Login() {
   const handleLogin = async () => {
     if (!validateEmail(email)){
       setErrorMessage("Correo electronico invalido");
+      return;
     }
     try {
       // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
