@@ -59,7 +59,7 @@ import { getDatabase, ref, set } from "firebase/database";
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button style={styles.button} title="Enviar" onPress={handleLogin} />
+      <button style={styles.button} title="Enviar" onClick={handleLogin} />
     </View>
   );
 }
