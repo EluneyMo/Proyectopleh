@@ -1,32 +1,45 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import Firebase from "../../../firebase/firebase";
+import "firebase/auth"
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getDatabase, ref, set } from "firebase/database";
 
-function Login() {
-  // Crear los estados para el email y la contraseña
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMesage, setErrorMessage]= useState("");
-  // Crear la función para manejar el inicio de sesión
-  const handleLogin = async () => {
-    if (!validateEmail(email)){
-      setErrorMessage("Correo electronico invalido");
-      return;
-    }
-    try {
-      // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
-      await Firebase.auth().signInWithEmailAndPassword(email, password);
-      console.log("Usuario autenticado");
-    } catch (error) {
-      console.error("Error al iniciar sesión:", error.message);
-    }
-  };
-  const validateEmail=(email)=>{
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailRegex.test(email);
-  };
 
+  function Login() {
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [errorMesage, setErrorMessage]= useState("");
+  
+    const handleLogin = async () => {
+      console.log(email);
+      if (!validateEmail(email)){
+        
+        setErrorMessage("Correo electrónico inválido");
+        return;
+      }
+      try {
+        const userCredential = await auth().signInWithEmailAndPassword(email, password);
+        console.log("Usuario autenticado");
+        const database = getDatabase();
+        const user = userCredential.user;
+        if (auth().currentUser){
+          const userRef = ref(database, `users/${auth().currentUser.uid}`);
+          await set(userRef, {
+            email: auth().currentUser.email,
+            password: password
+          });
+        }
+      } catch (error) {
+        console.error("Error al iniciar sesión:", error.message);
+      }
+    };
+  
+    const validateEmail = (email) => {
+      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+      return emailRegex.test(email);
+    };
+  
   // Retornar el componente de la pantalla de login
   return (
     <View>
@@ -44,9 +57,9 @@ function Login() {
         type="password"
         placeholder="contraseña"
         value={password}
-        onChangeText={(e) => setPassword(e.target.value)}
+        onChange={(e) => setPassword(e.target.value)}
       />
-      <button style={styles.button} title="Enviar" onClick={handleLogin} />
+      <button style={styles.button} title="Enviar" onPress={handleLogin} />
     </View>
   );
 }
