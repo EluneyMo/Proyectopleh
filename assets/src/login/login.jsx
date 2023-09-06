@@ -64,7 +64,8 @@ import Registro from "../registro/register";
 
       <button style={styles.button} title="Enviar" onClick={handleLogin} />
       
-    <p>Crea una cuenta <Link to="Registro">AQUI</Link></p>
+    <Text>Crear una cuenta</Text>
+    
     </View>
     
   );
