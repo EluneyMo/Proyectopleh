@@ -43,6 +43,7 @@ import { Link } from "react-router-dom";
   
   // Retornar el componente de la pantalla de login
   return (
+    <>
     <View>
       <Text>Email</Text>
       <div style={{color: 'red'}}>{errorMesage}</div>
@@ -62,8 +63,9 @@ import { Link } from "react-router-dom";
       />
 
       <button style={styles.button} title="Enviar" onClick={handleLogin} />
-      <p>Crea una cuenta <Link to="">AQUI</Link></p>
+      <p>Crea una cuenta <Link to="../registro/register.jsx">AQUI</Link></p>
     </View>
+    </>
   );
 }
 
