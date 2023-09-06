@@ -1,16 +1,18 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import "firebase/auth"
+import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
-
-
+import FirebaseApp from "../../../firebase/firebase"
+import { Link } from "react-router-dom";
+import Registro from "../registro/register";
+import { useNavigation } from '@react-navigation/native'
   function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMesage, setErrorMessage]= useState("");
-  
+    const navigation = useNavigation();
     const handleLogin = async () => {
       console.log(email);
       if (!validateEmail(email)){
@@ -19,14 +21,15 @@ import { getDatabase, ref, set } from "firebase/database";
         return;
       }
       try {
-        const userCredential = await auth().signInWithEmailAndPassword(email, password);
+        const auth= getAuth(FirebaseApp)
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
         console.log("Usuario autenticado");
         const database = getDatabase();
         const user = userCredential.user;
-        if (auth().currentUser){
-          const userRef = ref(database, `users/${auth().currentUser.uid}`);
+        if (auth.currentUser){
+          const userRef = ref(database, `users/${auth.currentUser.uid}`);
           await set(userRef, {
-            email: auth().currentUser.email,
+            email: auth.currentUser.email,
             password: password
           });
         }
@@ -59,8 +62,16 @@ import { getDatabase, ref, set } from "firebase/database";
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      <button style={styles.button} title="Enviar" onPress={handleLogin} />
+
+      <button style={styles.button} title="Enviar" onClick={handleLogin} />
+      
+    <Text>Crear una cuenta</Text>
+    <Button
+    title="AQUI"
+    onPress={()=>navigation.navigate(Registro)}
+    />
     </View>
+    
   );
 }
 
