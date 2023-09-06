@@ -63,8 +63,9 @@ import { Link } from "react-router-dom";
       />
 
       <button style={styles.button} title="Enviar" onClick={handleLogin} />
-      <p>Crea una cuenta <Link to="../registro/register.jsx">AQUI</Link></p>
+      
     </View>
+    <p>Crea una cuenta <Link to="../registro/register.jsx">AQUI</Link></p>
     </>
   );
 }
