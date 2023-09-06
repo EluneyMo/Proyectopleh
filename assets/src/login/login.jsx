@@ -24,10 +24,10 @@ import FirebaseApp from "../../../firebase/firebase"
         console.log("Usuario autenticado");
         const database = getDatabase();
         const user = userCredential.user;
-        if (auth().currentUser){
-          const userRef = ref(database, `users/${auth().currentUser.uid}`);
+        if (auth.currentUser){
+          const userRef = ref(database, `users/${auth.currentUser.uid}`);
           await set(userRef, {
-            email: auth().currentUser.email,
+            email: auth.currentUser.email,
             password: password
           });
         }
