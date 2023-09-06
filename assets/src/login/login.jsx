@@ -5,7 +5,7 @@ import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import FirebaseApp from "../../../firebase/firebase"
-
+import { Link } from "react-router-dom";
   function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
