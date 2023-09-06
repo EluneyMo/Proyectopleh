@@ -1,6 +1,6 @@
 import React from "react";
 
-function Register(){
+function Registro(){
     return(
         <div className="titulo">
             <form>
@@ -9,3 +9,4 @@ function Register(){
         </div>
     )
 }
+export default Registro;
