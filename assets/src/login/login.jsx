@@ -6,6 +6,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import FirebaseApp from "../../../firebase/firebase"
 import { Link } from "react-router-dom";
+import Registro from "../registro/register";
   function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -43,7 +44,6 @@ import { Link } from "react-router-dom";
   
   // Retornar el componente de la pantalla de login
   return (
-    <>
     <View>
       <Text>Email</Text>
       <div style={{color: 'red'}}>{errorMesage}</div>
@@ -64,9 +64,9 @@ import { Link } from "react-router-dom";
 
       <button style={styles.button} title="Enviar" onClick={handleLogin} />
       
+    <p>Crea una cuenta <Link to="Registro">AQUI</Link></p>
     </View>
-    <p>Crea una cuenta <Link to="../registro/register.jsx">AQUI</Link></p>
-    </>
+    
   );
 }
 
