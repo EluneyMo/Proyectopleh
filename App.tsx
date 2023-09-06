@@ -5,6 +5,7 @@ import { getDatabase,ref, DataSnapshot, onValue } from 'firebase/database';
 import FirebaseApp from './firebase/firebase'; // Importa la configuración de Firebase
 import Login from './assets/src/login/login';
 import Registro from './assets/src/registro/register';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 interface AuthenticatedUser {
   uid: string;
   email: string | null;
