@@ -4,7 +4,7 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
-
+import FirebaseApp from "../../../firebase/firebase"
 
   function Login() {
     const [email, setEmail] = useState("");
