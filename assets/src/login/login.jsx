@@ -60,6 +60,7 @@ import FirebaseApp from "../../../firebase/firebase"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
+
       <button style={styles.button} title="Enviar" onClick={handleLogin} />
     </View>
   );
