@@ -1,7 +1,7 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import "firebase/auth"
+import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 
