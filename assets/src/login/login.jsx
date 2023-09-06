@@ -19,6 +19,7 @@ import FirebaseApp from "../../../firebase/firebase"
         return;
       }
       try {
+        const auth= getAuth(FirebaseApp)
         const userCredential = await auth().signInWithEmailAndPassword(email, password);
         console.log("Usuario autenticado");
         const database = getDatabase();
