@@ -65,7 +65,10 @@ import Registro from "../registro/register";
       <button style={styles.button} title="Enviar" onClick={handleLogin} />
       
     <Text>Crear una cuenta</Text>
-    
+    <Button
+    title="AQUI"
+    onPress={()=>navigation.navigate("Registro")}
+    />
     </View>
     
   );
