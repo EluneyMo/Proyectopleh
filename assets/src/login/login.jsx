@@ -7,6 +7,7 @@ import { getDatabase, ref, set } from "firebase/database";
 import FirebaseApp from "../../../firebase/firebase"
 import { Link } from "react-router-dom";
 import Registro from "../registro/register";
+import { useNavigation } from '@react-navigation/native'
   function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -67,7 +68,7 @@ import Registro from "../registro/register";
     <Text>Crear una cuenta</Text>
     <Button
     title="AQUI"
-    onPress={()=>navigation.navigate("Registro")}
+    onPress={()=>navigation.navigate(Registro)}
     />
     </View>
     
