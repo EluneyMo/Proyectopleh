@@ -17,7 +17,9 @@ const linking ={
 };
 function Navigation(){
     return(
-    
+        <>
         <NavigationContainer linking={linking}>
+        </NavigationContainer>
+        </>
     );
 }
