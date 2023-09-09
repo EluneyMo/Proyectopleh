@@ -27,3 +27,4 @@ function Navigation(){
         </>
     );
 }
+export default Navegador
