@@ -21,6 +21,7 @@ function Navigation(){
         <NavigationContainer linking={linking}>
             <Stack.Navigator>
                 <Stack.Screen name="Login" component={Login}></Stack.Screen>
+                <Stack.Screen name="Registro" component={Registro}></Stack.Screen>
             </Stack.Navigator>
         </NavigationContainer>
         </>
