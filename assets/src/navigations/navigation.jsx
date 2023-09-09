@@ -10,7 +10,8 @@ const linking ={
     prefixes:['PLEH://'],
     config:{
         screens: {
-            
-        }
-    }
-}
+            Login:'login',
+            Registro:'registro',
+        },
+    },
+};
