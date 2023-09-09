@@ -53,6 +53,7 @@ export default function App() {
       <View style={styles.iniciar}>
         {/* Asumiendo que Login es un componente válido */}
         <Login />
+        <Navegador />
       </View>
     </View>
   );
