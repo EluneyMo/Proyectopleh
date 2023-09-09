@@ -5,7 +5,7 @@ import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import FirebaseApp from "../../../firebase/firebase"
-import { Link } from "react-router-dom";
+import { Link } from "@react-navigation/native";
 import Registro from "../registro/register";
 import { useNavigation } from '@react-navigation/native'
   function Login() {
