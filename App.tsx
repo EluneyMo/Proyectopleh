@@ -3,8 +3,8 @@ import { StyleSheet, Text, View } from 'react-native';
 import { getAuth, onAuthStateChanged, User, signOut} from 'firebase/auth'; // Importa auth de Firebase
 import { getDatabase,ref, DataSnapshot, onValue } from 'firebase/database';
 import FirebaseApp from './firebase/firebase'; // Importa la configuración de Firebase
-import Login from './assets/src/login/login';
-import Navegador from './assets/src/navigations/navigation';
+//import Login from './assets/src/login/login';
+import Navigation from './assets/src/navigations/navigation';
 interface AuthenticatedUser {
   uid: string;
   email: string | null;
@@ -52,8 +52,8 @@ export default function App() {
       <Text>PLEH</Text>
       <View style={styles.iniciar}>
         {/* Asumiendo que Login es un componente válido */}
-        <Login />
-        <Navegador />
+      
+        <Navigation />
       </View>
     </View>
   );

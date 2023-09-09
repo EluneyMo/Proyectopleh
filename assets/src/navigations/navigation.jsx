@@ -19,7 +19,7 @@ function Navigation(){
     return(
         <>
         <NavigationContainer linking={linking}>
-            <Stack.Navigator>
+            <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen name="Login" component={Login}></Stack.Screen>
                 <Stack.Screen name="Registro" component={Registro}></Stack.Screen>
             </Stack.Navigator>
@@ -27,4 +27,4 @@ function Navigation(){
         </>
     );
 }
-export default Navegador
+export default Navigation;
