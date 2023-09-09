@@ -4,6 +4,7 @@ import { getAuth, onAuthStateChanged, User, signOut} from 'firebase/auth'; // Im
 import { getDatabase,ref, DataSnapshot, onValue } from 'firebase/database';
 import FirebaseApp from './firebase/firebase'; // Importa la configuración de Firebase
 import Login from './assets/src/login/login';
+import Navegador from './assets/src/navigations/navigation';
 interface AuthenticatedUser {
   uid: string;
   email: string | null;
