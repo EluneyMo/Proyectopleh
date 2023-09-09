@@ -8,4 +8,7 @@ const Stack= createStackNavigator()
 
 const linking ={
     prefixes:['PLEH://'],
+    config:{
+        
+    }
 }
