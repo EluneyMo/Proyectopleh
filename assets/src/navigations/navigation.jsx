@@ -19,6 +19,9 @@ function Navigation(){
     return(
         <>
         <NavigationContainer linking={linking}>
+            <Stack.Navigator>
+                
+            </Stack.Navigator>
         </NavigationContainer>
         </>
     );
