@@ -9,10 +9,10 @@ import { Link } from "@react-navigation/native";
 import Registro from "../registro/register";
 import { useNavigation } from '@react-navigation/native'
   function Login() {
+    const navigation = useNavigation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMesage, setErrorMessage]= useState("");
-    const navigation = useNavigation();
     const handleLogin = async () => {
       console.log(email);
       if (!validateEmail(email)){
@@ -63,12 +63,12 @@ import { useNavigation } from '@react-navigation/native'
         onChange={(e) => setPassword(e.target.value)}
       />
 
-      <button style={styles.button} title="Enviar" onClick={handleLogin} />
+      <Button title="Enviar" onPress={handleLogin} />
       
     <Text>Crear una cuenta</Text>
     <Button
     title="AQUI"
-    onPress={()=>navigation.navigate(Registro)}
+    onPress=<Link to="../registro/register.jsx"/>
     />
     </View>
     

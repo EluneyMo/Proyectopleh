@@ -10,21 +10,21 @@ const linking ={
     prefixes:['PLEH://'],
     config:{
         screens: {
-            Login:'login',
-            Registro:'registro',
+            Login:'Login',
+            Registro:'Registro',
         },
     },
 };
-function Navigation(){
+function Navegacion(){
     return(
-        <>
+        
         <NavigationContainer linking={linking}>
             <Stack.Navigator initialRouteName="Login">
                 <Stack.Screen name="Login" component={Login}></Stack.Screen>
                 <Stack.Screen name="Registro" component={Registro}></Stack.Screen>
             </Stack.Navigator>
         </NavigationContainer>
-        </>
+        
     );
 }
-export default Navigation;
+export default Navegacion;
