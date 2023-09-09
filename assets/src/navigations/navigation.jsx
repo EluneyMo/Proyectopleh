@@ -7,5 +7,5 @@ import Registro from "../registro/register";
 const Stack= createStackNavigator()
 
 const linking ={
-    
+    prefixes:['PLEH://'],
 }
