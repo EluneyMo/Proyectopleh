@@ -5,3 +5,7 @@ import Login from "../login/login";
 import Registro from "../registro/register";
  
 const Stack= createStackNavigator()
+
+const linking ={
+    
+}
