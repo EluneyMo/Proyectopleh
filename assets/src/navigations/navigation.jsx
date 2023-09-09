@@ -20,7 +20,7 @@ function Navigation(){
         <>
         <NavigationContainer linking={linking}>
             <Stack.Navigator>
-                
+                <Stack.Screen name="Login" component={Login}></Stack.Screen>
             </Stack.Navigator>
         </NavigationContainer>
         </>
