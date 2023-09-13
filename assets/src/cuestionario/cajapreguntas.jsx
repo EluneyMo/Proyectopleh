@@ -3,6 +3,7 @@ import React from "react";
 function cardT(){
     return(
         <div className="card text-bg-dark">
+            <img src="..." className="card-img" alt="..." />
 
         </div>
     )
