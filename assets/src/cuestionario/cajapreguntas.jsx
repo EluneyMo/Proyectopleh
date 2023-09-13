@@ -1,7 +1,11 @@
 import React from "react";
 
 function cardT(){
-    
+    return(
+        <div className="card text-bg-dark">
+
+        </div>
+    )
 }
 
 function Card(){
