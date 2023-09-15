@@ -24,6 +24,7 @@ import firebaseConfig  from "../../../firebase/firebase"
       <input
         type="email"
         placeholder="email-address"
+        id="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
       />
@@ -32,6 +33,7 @@ import firebaseConfig  from "../../../firebase/firebase"
       <input
         type="password"
         placeholder="contraseña"
+        id="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
