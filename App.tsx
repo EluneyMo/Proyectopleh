@@ -7,7 +7,7 @@ import appFirebase from './firebase/firebase';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
 const auth=getAuth(appFirebase)
 export default function App() {
-  const [user, setUser] = useState(null);
+  const [usuario, setUsuario] = useState();
   const [dataFromDatabase, setDataFromDatabase] = useState(null);
 
   // Función para iniciar sesión
