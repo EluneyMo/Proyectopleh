@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';// Importa las funciones y la instancia de Firebase
 import Login from './assets/src/login/login';
+import appFirebase from './firebase/firebase';
+import { getAuth, onAuthStateChanged } from 'firebase/auth';
+const auth=getAuth(appFirebase)
 export default function App() {
   const [user, setUser] = useState(null);
   const [dataFromDatabase, setDataFromDatabase] = useState(null);
