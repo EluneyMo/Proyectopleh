@@ -23,7 +23,7 @@ import firebaseConfig  from "../../../firebase/firebase"
     if (registrando){
       try{
         await createUserWithEmailandPassword(auth,correo,contraseña)
-      }
+      } catch (error)
     } 
     else{
       try {
