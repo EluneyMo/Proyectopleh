@@ -23,7 +23,9 @@ import firebaseConfig  from "../../../firebase/firebase"
     if (registrando){
       try{
         await createUserWithEmailandPassword(auth,correo,contraseña)
-      } catch (error)
+      } catch (error){
+        alert("Asegurese de que sea un correo electronico real y de 8 caracteres")
+      }
     } 
     else{
       try {
@@ -43,8 +45,6 @@ import firebaseConfig  from "../../../firebase/firebase"
         type="email"
         placeholder="email-address"
         id="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
       />
       <Text>Tu información no será compartida con nadie.</Text>
       <Text>Contraseña</Text>
@@ -52,12 +52,10 @@ import firebaseConfig  from "../../../firebase/firebase"
         type="password"
         placeholder="contraseña"
         id="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
       />
-</form>
-      <Button title="Enviar" onPress={handleLogin} />
-      
+
+      <Button title="Registrarse" onPress={handleLogin} />
+      </form>
       <Text>Registrate aqui</Text> 
       <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
       <h4>{registrando ?  "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion":"Registrate"}</button></h4>
