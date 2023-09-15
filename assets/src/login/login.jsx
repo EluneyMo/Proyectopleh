@@ -53,10 +53,9 @@ import firebaseConfig  from "../../../firebase/firebase"
         placeholder="contraseña"
         id="password"
       />
-
-      <Button title="Registrarse" onPress={handleLogin} />
+    <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
       </form>
-      <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
+    
       <h4>{registrando ?  "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion":"Registrate"}</button></h4>
     </View>
     
