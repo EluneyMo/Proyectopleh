@@ -40,7 +40,7 @@ import firebaseConfig  from "../../../firebase/firebase"
       </form>
       <Text>Registrate aqui</Text> 
       <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
-      <h4>{registrando ?  "Ya tienes cuenta" : "No tienes cuenta"}</h4>
+      <h4>{registrando ?  "Ya tienes cuenta" : "No tienes cuenta"}<button>{registrando ? "Inicia sesion":"Registrate"</button></h4>
     </View>
     
   );
