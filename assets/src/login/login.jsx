@@ -20,6 +20,7 @@ import firebaseConfig  from "../../../firebase/firebase"
     <View>
       <Text>Email</Text>
       <div style={{color: 'red'}}>{errorMesage}</div>
+      <form>
       <input
         type="email"
         placeholder="email-address"
@@ -36,6 +37,7 @@ import firebaseConfig  from "../../../firebase/firebase"
       />
 
       <Button title="Enviar" onPress={handleLogin} />
+      </form>
       <Text>Registrate aqui</Text> 
       <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
       <h4></h4>
