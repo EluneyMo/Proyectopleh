@@ -6,12 +6,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import firebaseConfig  from "../../../firebase/firebase"
   const auth=getAuth(appFirebase)
-  const functAutenticacion=async(e)=>{
-    e.preventDefault();
-    const correo=e.target.email.value;
-    const contraseña=e.target.password.value;
-    console.log(correo, contraseña)
-  }
+ 
     const validateEmail = (email) => {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return emailRegex.test(email);
@@ -20,6 +15,13 @@ import firebaseConfig  from "../../../firebase/firebase"
   // Retornar el componente de la pantalla de login
   //funcion para guardar y llamar registro
   const [registrando, setRegistrando]=useState(false)
+  const functAutenticacion=async(e)=>{
+    e.preventDefault();
+    const correo=e.target.email.value;
+    const contraseña=e.target.password.value;
+    console.log(correo, contraseña)
+    if (reg)
+  }
   return (
     <View>
       <Text>Email</Text>
