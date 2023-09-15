@@ -36,7 +36,7 @@ import firebaseConfig  from "../../../firebase/firebase"
       />
 
       <Button title="Enviar" onPress={handleLogin} />
-      
+      <Text>Registrate aqui</Text> 
     
     </View>
     
