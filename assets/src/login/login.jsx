@@ -10,6 +10,7 @@ import firebaseConfig  from "../../../firebase/firebase"
     e.preventDefault();
     const correo=e.target.email.value;
     const contraseña=e.target.password.value;
+    console.log(correo, contraseña)
   }
     const validateEmail = (email) => {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
