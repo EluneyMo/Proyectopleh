@@ -1,5 +1,6 @@
 import React from 'react'
-
+import appFirebase from '../../../firebase/firebase'
+import { getAuth, signOut } from 'firebase/auth'
 const Home = ({correoUsuario}) => {
   return (
     <div>
