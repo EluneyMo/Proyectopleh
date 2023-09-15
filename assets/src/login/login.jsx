@@ -5,40 +5,18 @@ import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import firebaseConfig  from "../../../firebase/firebase"
-  function Login() {
+  
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMesage, setErrorMessage]= useState("");
     const handleLogin = async () => {
-      console.log(email);
-      if (!validateEmail(email)){
-        
-        setErrorMessage("Correo electrónico inválido");
-        return;
-      }
-      try {
-        const auth= getAuth(firebaseConfig)
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        console.log("Usuario autenticado");
-        const database = getDatabase();
-        const user = userCredential.user;
-        if (auth.currentUser){
-          const userRef = ref(database, `users/${auth.currentUser.uid}`);
-          await set(userRef, {
-            email: auth.currentUser.email,
-            password: password
-          });
-        }
-      } catch (error) {
-        console.error("Error al iniciar sesión:", error.message);
-      }
-    };
+    }
   
     const validateEmail = (email) => {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
       return emailRegex.test(email);
     };
-  
+  const Login =()=>{
   // Retornar el componente de la pantalla de login
   return (
     <View>
