@@ -24,11 +24,11 @@ import firebaseConfig  from "../../../firebase/firebase"
       await createUserWithEmailandPassword(auth,correo,contraseña)
     } else{
       try {
-
+        await signInWithEmailAndPassword(auth,correo,contraseña)
       }catch(error){
-        
+
       }
-      await signInWithEmailAndPassword(auth,correo,contraseña)
+     
     }
   }
   return (
