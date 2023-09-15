@@ -20,7 +20,9 @@ import firebaseConfig  from "../../../firebase/firebase"
     const correo=e.target.email.value;
     const contraseña=e.target.password.value;
     console.log(correo, contraseña)
-    if (reg)
+    if (registrando){
+      
+    }
   }
   return (
     <View>
