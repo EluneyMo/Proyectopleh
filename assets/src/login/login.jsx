@@ -21,7 +21,7 @@ import firebaseConfig  from "../../../firebase/firebase"
     const contraseña=e.target.password.value;
     console.log(correo, contraseña)
     if (registrando){
-      
+      await createUserWithEmailandPassword(auth,correo,contraseña)
     }
   }
   return (
