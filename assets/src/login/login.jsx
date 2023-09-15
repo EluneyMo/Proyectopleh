@@ -38,6 +38,7 @@ import firebaseConfig  from "../../../firebase/firebase"
       <Button title="Enviar" onPress={handleLogin} />
       <Text>Registrate aqui</Text> 
       <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
+      <h4></h4>
     </View>
     
   );
