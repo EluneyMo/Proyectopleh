@@ -8,7 +8,7 @@ import firebaseConfig  from "../../../firebase/firebase"
   const auth=getAuth(appFirebase)
   const functAutenticacion=async(e)=>{
     e.preventDefault();
-    const email=e.target.email.value;
+    const correo=e.target.email.value;
   }
     const validateEmail = (email) => {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
