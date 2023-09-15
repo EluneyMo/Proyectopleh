@@ -10,7 +10,10 @@ export default function App() {
   const [usuario, setUsuario] = useState();
   onAuthStateChanged(auth,(usuarioFirebase)=>{
     if (usuarioFirebase){
-      
+      setUsuario(usuarioFirebase)
+    }else
+    {
+      setUsuario(null)
     }
   })
   const [dataFromDatabase, setDataFromDatabase] = useState(null);
