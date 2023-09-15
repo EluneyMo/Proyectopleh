@@ -15,7 +15,7 @@ import firebaseConfig  from "../../../firebase/firebase"
   const Login =()=>{
   // Retornar el componente de la pantalla de login
   //funcion para guardar y llamar registro
-  
+  const [registrando, setRegistrando]=useState(false)
   return (
     <View>
       <Text>Email</Text>
