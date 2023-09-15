@@ -38,13 +38,9 @@ export default function App() {
 
 
   return (
-    <View style={styles.container}>
-      <Text>PLEH</Text>
-      <View style={styles.iniciar}>
-        {/* Asumiendo que Login es un componente válido */}
-        <Login/>
-      </View>
-    </View>
+    <>
+    
+    </>
   );
 }
 
