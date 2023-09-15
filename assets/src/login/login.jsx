@@ -5,12 +5,8 @@ import { getAuth, createUserWithEmailandPassword, signInWithEmailAndPassword } f
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import firebaseConfig  from "../../../firebase/firebase"
-  
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [errorMesage, setErrorMessage]= useState("");
-    const handleLogin = async () => {
-    }
+  const auth=getAuth(appFirebase)
+    
   
     const validateEmail = (email) => {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
