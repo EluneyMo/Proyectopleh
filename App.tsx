@@ -9,7 +9,9 @@ const auth=getAuth(appFirebase)
 export default function App() {
   const [usuario, setUsuario] = useState();
   onAuthStateChanged(auth,(usuarioFirebase)=>{
-    
+    if (usuarioFirebase){
+      
+    }
   })
   const [dataFromDatabase, setDataFromDatabase] = useState(null);
 
