@@ -22,11 +22,12 @@ import firebaseConfig  from "../../../firebase/firebase"
     console.log(correo, contraseña)
     if (registrando){
       await createUserWithEmailandPassword(auth,correo,contraseña)
-    } else{
+    } 
+    else{
       try {
         await signInWithEmailAndPassword(auth,correo,contraseña)
       }catch(error){
-
+        alert("El correo o la contraseña son incorrectos")
       }
      
     }
