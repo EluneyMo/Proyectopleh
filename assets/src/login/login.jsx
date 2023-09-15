@@ -6,7 +6,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import firebaseConfig  from "../../../firebase/firebase"
   const auth=getAuth(appFirebase)
-
+  const functAutenticacion=async(e)=>{}
   
     const validateEmail = (email) => {
       const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
@@ -20,7 +20,7 @@ import firebaseConfig  from "../../../firebase/firebase"
     <View>
       <Text>Email</Text>
       <div style={{color: 'red'}}>{errorMesage}</div>
-      <form>
+      <form onSubmit={functAutenticacion}>
       <input
         type="email"
         placeholder="email-address"
@@ -37,9 +37,9 @@ import firebaseConfig  from "../../../firebase/firebase"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-
+</form>
       <Button title="Enviar" onPress={handleLogin} />
-      </form>
+      
       <Text>Registrate aqui</Text> 
       <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
       <h4>{registrando ?  "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion":"Registrate"}</button></h4>
