@@ -4,12 +4,8 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { getAuth, signInWithEmailAndPassword  } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
-import FirebaseApp from "../../../firebase/firebase"
-import { Link } from "@react-navigation/native";
-import Registro from "../registro/register";
-import { useNavigation } from '@react-navigation/native'
+import firebaseConfig  from "../../../firebase/firebase"
   function Login() {
-    const navigation = useNavigation();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errorMesage, setErrorMessage]= useState("");
@@ -21,7 +17,7 @@ import { useNavigation } from '@react-navigation/native'
         return;
       }
       try {
-        const auth= getAuth(FirebaseApp)
+        const auth= getAuth(firebaseConfig)
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         console.log("Usuario autenticado");
         const database = getDatabase();
@@ -65,11 +61,7 @@ import { useNavigation } from '@react-navigation/native'
 
       <Button title="Enviar" onPress={handleLogin} />
       
-    <Text>Crear una cuenta</Text>
-    <Button
-    title="AQUI"
-    onPress=<Link to="../registro/register.jsx"/>
-    />
+    
     </View>
     
   );

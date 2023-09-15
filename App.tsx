@@ -2,10 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { getAuth, onAuthStateChanged, User, signOut} from 'firebase/auth'; // Importa auth de Firebase
 import { getDatabase,ref, DataSnapshot, onValue } from 'firebase/database';
-import FirebaseApp from './firebase/firebase'; // Importa la configuración de Firebase
+import {firebaseConfig}from './firebase/firebase'; // Importa la configuración de Firebase
 //import Login from './assets/src/login/login';
-import Navegacion from './assets/src/navigations/navigation';
-import { NavigationContainer } from '@react-navigation/native';
 import Login from './assets/src/login/login';
 interface AuthenticatedUser {
   uid: string;
@@ -17,14 +15,14 @@ export default function App() {
 
   const handleLogout = async () => {
     try {
-      const auth = getAuth(FirebaseApp);
+      const auth = getAuth(firebaseConfig);
       await signOut(auth);
     } catch (error) {
       console.error("Error al cerrar sesión:", error);
     }
   };
   useEffect(() => {
-    const auth = getAuth(FirebaseApp); // Crea una instancia de autenticación
+    const auth = getAuth(firebaseConfig); // Crea una instancia de autenticación
     const unsubscribe = onAuthStateChanged(auth, (authenticatedUser: User | null) => {
       setUser(authenticatedUser);
     });
@@ -36,7 +34,7 @@ export default function App() {
 
   useEffect(() => {
     if (user) {
-      const database = getDatabase(FirebaseApp);
+      const database = getDatabase(firebaseConfig);
       const databaseRef = ref(database, "pleh-20a48-default-rtdb");
  // Usa db.collection para obtener una referencia a la base de datos
       // Escucha cambios en la base de datos
@@ -55,7 +53,6 @@ export default function App() {
       <View style={styles.iniciar}>
         {/* Asumiendo que Login es un componente válido */}
         <Login/>
-        <Navegacion />
       </View>
     </View>
   );
