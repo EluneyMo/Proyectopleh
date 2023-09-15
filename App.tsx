@@ -8,6 +8,9 @@ import { getAuth, onAuthStateChanged } from 'firebase/auth';
 const auth=getAuth(appFirebase)
 export default function App() {
   const [usuario, setUsuario] = useState();
+  onAuthStateChanged(auth,(usuarioFirebase)=>{
+    
+  })
   const [dataFromDatabase, setDataFromDatabase] = useState(null);
 
   // Función para iniciar sesión
