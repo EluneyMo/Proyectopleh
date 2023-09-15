@@ -15,9 +15,8 @@ export default function App() {
     {
       setUsuario(null)
     }
-  })
-  const [dataFromDatabase, setDataFromDatabase] = useState(null);
-
+  });
+  
   // Función para iniciar sesión
   const handleLogin = async () => {
     try {
