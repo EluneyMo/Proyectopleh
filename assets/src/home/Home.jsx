@@ -11,6 +11,7 @@ const auth=getAuth(appFirebase)
 const Home = ({correoUsuario}) => {
   const history = useHistory();
   const handleButtonClick = () => {
+    history.push('/assets/src/panico/Panicbutton.jsx');
   };
   return (
     <div>
