@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';// Importa las funciones y la instancia de Firebase
 import Login from './assets/src/login/login';
 import Home from './assets/src/home/Home';
+import { ReactDOM } from 'react';
 import appFirebase from './firebase/firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 const auth=getAuth(appFirebase)
@@ -20,7 +21,9 @@ export default function App() {
     <>
     <div>
       {usuario ? <Home correoUsuario={usuario.email}/>: <Login/>}
+      
     </div>
+    
     </>
   );
 }
