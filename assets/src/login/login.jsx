@@ -1,16 +1,13 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import { getAuth, createUserWithEmailandPassword, signInWithEmailAndPassword } from "firebase/auth"
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import appFirebase from "../../../firebase/firebase";
   const auth=getAuth(appFirebase)
  
-    const validateEmail = (email) => {
-      const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-      return emailRegex.test(email);
-    };
+   
   const Login =()=>{
   // Retornar el componente de la pantalla de login
   //funcion para guardar y llamar registro
@@ -22,7 +19,7 @@ import appFirebase from "../../../firebase/firebase";
     console.log(correo, contraseña)
     if (registrando){
       try{
-        await createUserWithEmailandPassword(auth,correo,contraseña)
+        await createUserWithEmailAndPassword(auth,correo,contraseña)
       } catch (error){
         alert("Asegurese de que la contraseña tenga 8 caracteres")
       }
