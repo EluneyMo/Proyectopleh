@@ -4,7 +4,7 @@ import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { getAuth, createUserWithEmailandPassword, signInWithEmailAndPassword } from "firebase/auth"
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
-import firebaseConfig  from "../../../firebase/firebase"
+import appFirebase from "../../../firebase/firebase";
   const auth=getAuth(appFirebase)
  
     const validateEmail = (email) => {
