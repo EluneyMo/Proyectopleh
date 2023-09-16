@@ -13,6 +13,8 @@ const Home = ({correoUsuario}) => {
   const manejarClick = () => {
     setRedirigir(true);
   };
+  if (redirigir) {
+  }
   return (
     <div>
       <h1>Bienvenido {correoUsuario}  <button className='btn btn-primary' onClick={()=>signOut(auth)}>Cerrar sesion</button></h1>
