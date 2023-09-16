@@ -14,14 +14,13 @@ const Home = ({correoUsuario}) => {
     setRedirigir(true);
   };
   if (redirigir) {
+    return <redirect to="/assets/src/panico/Panicbutton.jsx" />
   }
   return (
     <div>
       <h1>Bienvenido {correoUsuario}  <button className='btn btn-primary' onClick={()=>signOut(auth)}>Cerrar sesion</button></h1>
     <Router path="/Boton de panico" >
-    <Link to="/Boton de panico/">
-    <button className='boton' />
-    </Link>
+    <button className='boton'onClick={manejarClick} />
     </Router>
     </div>
   
