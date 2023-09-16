@@ -24,7 +24,7 @@ import appFirebase from "../../../firebase/firebase";
       try{
         await createUserWithEmailandPassword(auth,correo,contraseña)
       } catch (error){
-        alert("Asegurese de que sea un correo electronico real y de 8 caracteres")
+        alert("Asegurese de que la contraseña tenga 8 caracteres")
       }
     } 
     else{
@@ -39,7 +39,6 @@ import appFirebase from "../../../firebase/firebase";
   return (
     <View>
       <Text>Email</Text>
-      <div style={{color: 'red'}}>{errorMesage}</div>
       <form onSubmit={functAutenticacion}>
       <input
         type="email"
