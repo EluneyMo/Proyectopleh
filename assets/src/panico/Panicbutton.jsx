@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Accesodir = () => {
+const Panic = () => {
   return (
     <div>
       
@@ -8,4 +8,4 @@ const Accesodir = () => {
   )
 }
 
-export default Accesodir
+export default Panic
