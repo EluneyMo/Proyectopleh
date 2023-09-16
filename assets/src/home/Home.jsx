@@ -11,6 +11,7 @@ const Home = ({correoUsuario}) => {
 
   const [redirigir, setRedirigir] = useState(false);
   const manejarClick = () => {
+    setRedirigir(true);
   };
   return (
     <div>
