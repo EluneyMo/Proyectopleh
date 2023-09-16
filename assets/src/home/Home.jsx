@@ -10,7 +10,7 @@ const Home = ({correoUsuario}) => {
     <div>
       <h1>Bienvenido {correoUsuario}  <button className='btn btn-primary' onClick={()=>signOut(auth)}>Cerrar sesion</button></h1>
     <Link to="../panico/Panicbutton.jsx">
-    <button/>
+    <button className='boton'/>
     </Link>
     </div>
   
