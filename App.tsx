@@ -1,41 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';// Importa las funciones y la instancia de Firebase
 import Login from './assets/src/login/login';
+import Home from './assets/src/home/Home';
 import appFirebase from './firebase/firebase';
-import { getAuth, onAuthStateChanged } from 'firebase/auth';
+import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 const auth=getAuth(appFirebase)
 export default function App() {
-  const [user, setUser] = useState(null);
-  const [dataFromDatabase, setDataFromDatabase] = useState(null);
-
-  // Función para iniciar sesión
-  const handleLogin = async () => {
-    try {
-      const user = await signInUserWithEmailAndPassword('correo@example.com', 'contraseña');
-      setUser(user);
-    } catch (error) {
-      console.error("Error al iniciar sesión:", error);
+  const [usuario, setUsuario] = useState<User | undefined>();
+  onAuthStateChanged(auth,(usuarioFirebase)=>{
+    if (usuarioFirebase){
+      setUsuario(usuarioFirebase)
+    }else
+    {
+      setUsuario(undefined)
     }
-  };
-
-  useEffect(() => {
-    // Escuchar cambios en la base de datos cuando el usuario esté autenticado
-    if (user) {
-      listenToDatabaseChanges('usuarios/', (data) => {
-        setDataFromDatabase(data);
-      });
-    }
-  }, [user]);
-
-
+  });
+  
   return (
-    <View style={styles.container}>
-      <Text>PLEH</Text>
-      <View style={styles.iniciar}>
-        {/* Asumiendo que Login es un componente válido */}
-        <Login/>
-      </View>
-    </View>
+    <>
+    <div>
+      {usuario ? <Home correoUsuario={usuario.email}/>: <Login/>}
+    </div>
+    </>
   );
 }
 
