@@ -9,7 +9,8 @@ const Home = ({correoUsuario}) => {
   return (
     <div>
       <h1>Bienvenido {correoUsuario}  <button className='btn btn-primary' onClick={()=>signOut(auth)}>Cerrar sesion</button></h1>
-    <Link>
+    <Link to="../panico/Panicbutton.jsx">
+
     </Link>
     </div>
   
