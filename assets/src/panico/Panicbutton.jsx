@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Panic = () => {
+const Panicbutton = () => {
   return (
     <div>
-      
+      mariaaa
     </div>
   )
 }
 
-export default Panic
+export default Panicbutton

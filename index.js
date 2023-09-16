@@ -7,5 +7,6 @@ function Main(){
         <Router>
             <App />
         </Router>
-    )
+    );
 }
+ReactDOM.render(<Main />, document.getElementById('root'));
