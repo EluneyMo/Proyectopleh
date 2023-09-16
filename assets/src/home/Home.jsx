@@ -2,6 +2,7 @@ import React from 'react'
 import appFirebase from '../../../firebase/firebase'
 import { getAuth, signOut } from 'firebase/auth'
 import { Link } from "react-router-dom"
+import Button from "@material-ui/core/Button"
 const auth=getAuth(appFirebase)
 const Home = ({correoUsuario}) => {
   return (
