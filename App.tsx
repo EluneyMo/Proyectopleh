@@ -1,27 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import React, {useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Button } from 'react-native';// Importa las funciones y la instancia de Firebase
 import Login from './assets/src/login/login';
-import Firebase from './firebase/firebase';
-interface AuthenticatedUser{
-  uid:string;
-  email:string|null;
-}
+import Home from './assets/src/home/Home';
+import appFirebase from './firebase/firebase';
+import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+const auth=getAuth(appFirebase)
 export default function App() {
-  const [user, setUser] =useState<Firebase.User | null>(null);
-  useEffect(()=>  {
-    const unsubscribe =Firebase.auth().onAuthStateChanged((authenticatedUser)=>{
-      setUser(authenticatedUser);
-    })
+  const [usuario, setUsuario] = useState<User | undefined>();
+  onAuthStateChanged(auth,(usuarioFirebase)=>{
+    if (usuarioFirebase){
+      setUsuario(usuarioFirebase)
+    }else
+    {
+      setUsuario(undefined)
+    }
   });
+  
   return (
-    <React.Fragment>
-        <Login />
-    </React.Fragment>
+    <>
+    <div>
+      {usuario ? <Home correoUsuario={usuario.email}/>: <Login/>}
+    </div>
+    </>
   );
-};
-
-
+}
 
 const styles = StyleSheet.create({
   container: {
@@ -29,5 +31,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  iniciar: {
+    // Estilos para la vista de inicio
   },
 });

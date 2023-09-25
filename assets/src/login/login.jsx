@@ -1,53 +1,60 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import Firebase from "../../../firebase/firebase";
-
-function Login() {
-  // Crear los estados para el email y la contraseña
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [errorMesage, setErrorMessage]= useState("");
-  // Crear la función para manejar el inicio de sesión
-  const handleLogin = async () => {
-    if (!validateEmail(email)){
-      setErrorMessage("Correo electronico invalido");
-      return;
-    }
-    try {
-      // Usar el servicio de autenticación de Firebase para iniciar sesión con email y contraseña
-      await Firebase.auth().signInWithEmailAndPassword(email, password);
-      console.log("Usuario autenticado");
-    } catch (error) {
-      console.error("Error al iniciar sesión:", error.message);
-    }
-  };
-  const validateEmail=(email)=>{
-    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    return emailRegex.test(email);
-  };
-
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getDatabase, ref, set } from "firebase/database";
+import appFirebase from "../../../firebase/firebase";
+  const auth=getAuth(appFirebase)
+ 
+   
+  const Login =()=>{
   // Retornar el componente de la pantalla de login
+  //funcion para guardar y llamar registro
+  const [registrando, setRegistrando]=useState(false)
+  const functAutenticacion=async(e)=>{
+    e.preventDefault();
+    const correo=e.target.email.value;
+    const contraseña=e.target.password.value;
+    console.log(correo, contraseña)
+    if (registrando){
+      try{
+        await createUserWithEmailAndPassword(auth,correo,contraseña)
+      } catch (error){
+        alert("Asegurese de que la contraseña tenga 8 caracteres")
+      }
+    } 
+    else{
+      try {
+        await signInWithEmailAndPassword(auth,correo,contraseña)
+      }catch(error){
+        alert("El correo o la contraseña son incorrectos")
+      }
+     
+    }
+  }
   return (
     <View>
       <Text>Email</Text>
-      <div style={{color: 'red'}}>{errorMesage}</div>
+      <form onSubmit={functAutenticacion}>
       <input
         type="email"
         placeholder="email-address"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
+        id="email"
       />
       <Text>Tu información no será compartida con nadie.</Text>
       <Text>Contraseña</Text>
       <input
         type="password"
         placeholder="contraseña"
-        value={password}
-        onChangeText={(e) => setPassword(e.target.value)}
+        id="password"
       />
-      <button style={styles.button} title="Enviar" onClick={handleLogin} />
+    <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
+      </form>
+    
+      <h4>{registrando ?  "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion":"Registrate"}</button></h4>
     </View>
+    
   );
 }
 
