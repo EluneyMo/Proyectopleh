@@ -3,7 +3,7 @@ import React from 'react'
 const Panicbutton = () => {
   return (
     <div>
-      mariaaa
+     <h1>Maria</h1> 
     </div>
   )
 }
