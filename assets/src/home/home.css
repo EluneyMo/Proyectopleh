@@ -1,0 +1,9 @@
+.boton{
+    margin: 1rem;
+    border-radius: 50%;
+    padding: 10px 20px;
+    min-width: 120px;
+    min-height: 120px;
+    background-image: url("../../img/logo-boton.png");
+    background-size: cover;
+}
