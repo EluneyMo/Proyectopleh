@@ -5,6 +5,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } f
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import appFirebase from "../../../firebase/firebase";
+import App from "../../../App"
   const auth=getAuth(appFirebase)
  
    
@@ -49,7 +50,7 @@ import appFirebase from "../../../firebase/firebase";
         placeholder="contraseña"
         id="password"
       />
-    <button className="btnform">{registrando ? "Registrate":"Inicia sesion"}</button>
+    <button className="btnform" href="/home">{registrando ? "Registrate":"Inicia sesion"}</button>
       </form>
     
       <h4>{registrando ?  "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={()=>setRegistrando(!registrando)}>{registrando ? "Inicia sesion":"Registrate"}</button></h4>
