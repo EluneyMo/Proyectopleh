@@ -37,7 +37,7 @@ import "./login.css"
   }
   return (
     <View>
-      <h1>PLEH</h1>
+      <h1 className="pleh">PLEH</h1>
       <Text className="email">Email</Text>
       <form onSubmit={functAutenticacion}>
       <input
