@@ -24,8 +24,8 @@ export default function App() {
     <>
     <Router>
       <Routes>
-      
-      <Route path='/' element={<Login/>}/>
+{/*       
+      <Route path='/' element={<Login/>}/> */}
         <Route path='/home' element={<Home correoUsuario={usuario?.email}/>}/>
         <Route path='/boton-panico' element={<Panicbutton/>}/>
       </Routes>
