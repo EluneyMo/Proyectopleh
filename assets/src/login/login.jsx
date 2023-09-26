@@ -36,6 +36,7 @@ import App from "../../../App"
   }
   return (
     <View>
+      <h1>PLEH</h1>
       <Text className="email">Email</Text>
       <form onSubmit={functAutenticacion}>
       <input
