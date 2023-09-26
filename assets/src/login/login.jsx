@@ -6,6 +6,7 @@ import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { getDatabase, ref, set } from "firebase/database";
 import appFirebase from "../../../firebase/firebase";
 import App from "../../../App"
+import "./login.css"
   const auth=getAuth(appFirebase)
  
    
