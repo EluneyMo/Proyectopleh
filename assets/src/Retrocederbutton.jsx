@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
 import { FontAwesomeIcon } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 function RetrocederButton() {
