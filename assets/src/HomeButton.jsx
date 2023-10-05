@@ -7,5 +7,13 @@ function iralhome() {
   };
   return <Button title="home" onPress={iralhome} />;
 }
+const styles = StyleSheet.create({
+  RetrocederButton: {
+    backgroundColor: "white",
+    color: "purpura",
+    borderRadius: 5,
+    margin: 50,
+  },
+});
 
 export default iralhome;
