@@ -7,5 +7,12 @@ function iralusuario() {
   };
   return <Button title="usuario" onPress={iralusuario} />;
 }
-
+const styles = StyleSheet.create({
+  RetrocederButton: {
+    backgroundColor: "white",
+    color: "purpura",
+    borderRadius: 5,
+    margin: 50,
+  },
+});
 export default iralusuario;
