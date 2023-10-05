@@ -4,20 +4,22 @@ import { getAuth, signOut } from "firebase/auth";
 import x from "./../preguntas/Buttonpreguntas.jsx";
 import Buttonpreguntas from "./../preguntas/Buttonpreguntas.jsx";
 import x from "/proyectopleh/assets/searchpoleh/.searchone.jsx";
-const auth = getAuth(appFirebase);
 const Home = ({ correoUsuario }) => {
+  const Navigate = useNavigate();
+  function handlePanic() {
+    Navigate("assets/src/panico/Panicbutton.jsx");
+  }
   return (
     <div>
-      <h1>PLEH</h1>
+      <searchone></searchone>
       <h1>
         Bienvenido {correoUsuario}{" "}
         <button className="btn btn-primary" onClick={() => signOut(auth)}>
           Cerrar sesion
         </button>
       </h1>
-      <Buttonpreguntas></Buttonpreguntas>
+
+      <button className="boton" onClick={handlePanic} />
     </div>
   );
 };
-
-export default Home;

@@ -3,9 +3,7 @@ import React from "react";
 const Buttonpreguntas = () => {
   return (
     <div>
-      <button>
-        <Link></Link>
-      </button>
+      <button>INICIAR ENCUESTA?</button>
     </div>
   );
 };
