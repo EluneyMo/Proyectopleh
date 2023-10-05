@@ -7,3 +7,5 @@ function iralusuario() {
   };
   return <Button title="usuario" onPress={iralusuario} />;
 }
+
+export default iralusuario;

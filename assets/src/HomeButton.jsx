@@ -7,3 +7,5 @@ function iralhome() {
   };
   return <Button title="home" onPress={iralhome} />;
 }
+
+export default iralhome;
