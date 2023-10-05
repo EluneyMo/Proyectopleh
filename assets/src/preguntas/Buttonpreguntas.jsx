@@ -1,11 +1,11 @@
 import React from "react";
-
 const Buttonpreguntas = () => {
   return (
     <div>
-      <button>INICIAR ENCUESTA?</button>
+      <Link to="./pagepreguntas">
+        <button>Iniciar encuesta?</button>
+      </Link>
     </div>
   );
 };
-
 export default Buttonpreguntas;
