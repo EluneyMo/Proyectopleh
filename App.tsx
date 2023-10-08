@@ -7,6 +7,7 @@ import { ReactDOM } from 'react';
 import appFirebase from './firebase/firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Cartita from './assets/src/cuestionario/cajapreguntas';
 
 const auth=getAuth(appFirebase)
 export default function App() {
@@ -24,8 +25,10 @@ export default function App() {
     <>
     <Router>
       <Routes>
-        <Route path='assets/src/login' element={<Login/>}/>
-        <Route path='assets/src/panico/Panicbutton.jsx' element={<Panicbutton/>}/>
+        <Route path='/' element={<Home correoUsuario={usuario?.email}/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/boton-panico' element={<Panicbutton/>}/>
+        <Route path="/preguntas" element={<Cartita/>}/>
       </Routes>
     </Router>
     <div>

@@ -13,6 +13,7 @@ function cardT(){
     )
 }
 
+
 function Card(){
     return(
         <div className='card' style='width:18rem;'>
@@ -26,3 +27,5 @@ function Card(){
         </div>
     )    
 } 
+
+export default Cartita; 
