@@ -22,6 +22,7 @@ function cardT(){
 
 function Card(){
     return(
+        <h2>Noticias Recientes</h2>,
         <div className='card' style='width:18rem;'>
             <img src="..." className="card-img-top" alt="..." />
             <div className="card-body">
