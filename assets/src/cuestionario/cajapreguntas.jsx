@@ -1,5 +1,9 @@
 import React from "react";
 
+
+<i className="bi bi-chevron-left">#</i>
+
+
 function cardT(){
     return(
         <div className="card text-bg-dark">
@@ -13,6 +17,7 @@ function cardT(){
     )
 }
 
+    <i className="bi bi-chevron-right">#</i>
 
 function Card(){
     return(
