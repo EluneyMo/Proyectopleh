@@ -6,6 +6,7 @@ import React from "react";
 
 function cardT(){
     return(
+        <h2>Tipos de violencias</h2>,
         <div className="card text-bg-dark">
             <img src="..." className="card-img" alt="..." />
             <div className="card-img-overlay">
@@ -17,7 +18,7 @@ function cardT(){
     )
 }
 
-    <i className="bi bi-chevron-right">#</i>
+<i className="bi bi-chevron-right">#</i>
 
 function Card(){
     return(
