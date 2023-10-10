@@ -55,6 +55,10 @@ function cajaTipos(){
                 </div>
 
             </div>
+        </div>,
+
+        <div className="VMediatica">
+
         </div>
 
 
