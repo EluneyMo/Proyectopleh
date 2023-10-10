@@ -1,70 +1,69 @@
 // Importar los componentes y los paquetes necesarios
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth"
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { getDatabase, ref, set } from "firebase/database";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import appFirebase from "../../../firebase/firebase";
-import App from "../../../App";
-import "./login.css"
-  const auth=getAuth(appFirebase)
- 
-   
-  const Login = () => {
-    const [registrando, setRegistrando] = useState(false);
-  
-    const functAutenticacion = async (e: React.FormEvent<HTMLFormElement>) => {
-      e.preventDefault();
-      const correo = e.currentTarget.email.value;
-      const contraseña = e.currentTarget.password.value;
-  
+import { useNavigation } from '@react-navigation/native';  // Importa el hook de navegación
+
+const auth = getAuth(appFirebase);
+
+const Login = () => {
+  const [registrando, setRegistrando] = useState(false);
+  const navigation = useNavigation();  // Inicializa el hook de navegación
+
+  const functAutenticacion = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const correo = e.currentTarget.email.value;
+    const contraseña = e.currentTarget.password.value;
+
+    try {
       if (registrando) {
-        try {
-          await createUserWithEmailAndPassword(auth, correo, contraseña);
-        } catch (error) {
-          alert("Asegurese de que la contraseña tenga 8 caracteres");
-        }
+        await createUserWithEmailAndPassword(auth, correo, contraseña);
       } else {
-        try {
-          await signInWithEmailAndPassword(auth, correo, contraseña);
-        } catch (error) {
-          alert("El correo o la contraseña son incorrectos");
-        }
+        await signInWithEmailAndPassword(auth, correo, contraseña);
+        // Si el inicio de sesión es exitoso, navega a la pantalla Home
+        navigation.navigate('Home', { correoUsuario: correo });
       }
-    };
-  
-    return (
-      <View>
-        <h1 className="pleh">PLEH</h1>
-        <Text style={styles.emailText}>Email</Text>
-        <form onSubmit={functAutenticacion}>
-          <input
-            type="email"
-            placeholder="email-address"
-            id="email"
-          />
-          <Text>Tu información no será compartida con nadie.</Text>
-          <Text>Contraseña</Text>
-          <input
-            type="password"
-            placeholder="contraseña"
-            id="password"
-          />
-          <button className="btnform" type="submit">{registrando ? "Registrate" : "Inicia sesion"}</button>
-        </form>
-  
-        <h4>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={() => setRegistrando(!registrando)}>{registrando ? "Inicia sesion" : "Registrate"}</button></h4>
-      </View>
-    );
-  }
-  
-  // Crear el objeto de estilo con el paquete StyleSheet
-  const styles = StyleSheet.create({
-    
-    emailText:{
-      color:"blue"
+    } catch (error) {
+      if (registrando) {
+        alert("Asegúrate de que la contraseña tenga 8 caracteres");
+      } else {
+        alert("El correo o la contraseña son incorrectos");
+      }
     }
-  });
-  
-  // Exportar el componente de login
-  export default Login;
+  };
+
+  return (
+    <View>
+      <h1 className="pleh">PLEH</h1>
+      <Text style={styles.emailText}>Email</Text>
+      <form onSubmit={functAutenticacion}>
+        <input
+          type="email"
+          placeholder="email-address"
+          id="email"
+        />
+        <Text>Tu información no será compartida con nadie.</Text>
+        <Text>Contraseña</Text>
+        <input
+          type="password"
+          placeholder="contraseña"
+          id="password"
+        />
+        <button className="btnform" type="submit">{registrando ? "Regístrate" : "Inicia sesión"}</button>
+      </form>
+
+      <h4>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={() => setRegistrando(!registrando)}>{registrando ? "Inicia sesión" : "Regístrate"}</button></h4>
+    </View>
+  );
+}
+
+// Crear el objeto de estilo con el paquete StyleSheet
+const styles = StyleSheet.create({
+  emailText: {
+    color: "blue"
+  }
+});
+
+// Exportar el componente de login
+export default Login;

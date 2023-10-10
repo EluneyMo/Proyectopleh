@@ -4,16 +4,13 @@ import Botonpanico from './botonpanico';
 import React from 'react';
 import { View, Text, Button as RNButton, StyleSheet } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from './/types';
+import { RouteProp } from '@react-navigation/native';
+import { RootStackParamList } from './types';
 import AppNavigator from "../../../Appnavigator"
 const auth = getAuth(appFirebase);
 
 interface HomeProps {
-  route: {
-    params: {
-      correoUsuario?: string;
-    };
-  };
+  route: RouteProp<RootStackParamList, "Home">;
   navigation: StackNavigationProp<RootStackParamList, 'Home'>;
 }
 
@@ -21,7 +18,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const { correoUsuario } = route.params || {};
 
   const handlePress = () => {
-    navigation.navigate('PanicButton');
+    navigation.navigate('Panico');
   };
 
   const handleSignOut = async () => {
