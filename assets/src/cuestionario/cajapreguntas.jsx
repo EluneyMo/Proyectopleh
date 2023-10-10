@@ -19,7 +19,8 @@ function cajaTipos(){
             <i className="bi bi-chevron-right">#</i>
         </div>,
 
-        <div className="Noticias">
+        <div className="VSexual">
+            
 
 
         </div>
