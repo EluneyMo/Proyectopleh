@@ -32,7 +32,10 @@ function cajaTipos(){
         <div className="VLaboral">
             <div className="card text-bg-dark">
                 <img src="..." className="imagen3" alt="..." />
-               
+                <div className=" card-img3">
+                    
+                </div>
+
             </div>
 
 
