@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import Home from './assets/src/home/Home';
 import Panicbutton from './assets/src/panico/Panicbutton';
 import Login from './assets/src/login/login';
+import CajaTipos from './assets/src/cuestionario/cajapreguntas';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
