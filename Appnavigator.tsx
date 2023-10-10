@@ -14,6 +14,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name='Login' component={Login}/>
         <Stack.Screen name="Panico" component={Panicbutton} />
+        <Stack.Screen name='Preguntas' component={CajaTipos}/>
         {/* ... otras pantallas según tus necesidades */}
       </Stack.Navigator>
     </NavigationContainer>
