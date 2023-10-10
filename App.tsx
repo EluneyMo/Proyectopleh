@@ -1,35 +1,37 @@
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { BrowserRouter as Router, Link, Routes, Route} from 'react-router-dom';
 import Login from './assets/src/login/login';
 import Home from './assets/src/home/Home';
-import Panicbutton from './assets/src/panico/Panicbutton';
-import { ReactDOM } from 'react';
 import appFirebase from './firebase/firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
+import AppNavigator from './Appnavigator';
 
 const auth = getAuth(appFirebase);
-export default function App() {
-  const [usuario, setUsuario] = useState<User | undefined>();
-  onAuthStateChanged(auth, (usuarioFirebase) => {
-    if (usuarioFirebase) {
-      setUsuario(usuarioFirebase);
-    } else {
-      setUsuario(undefined);
-    }
-  });
-  
+
+const App: React.FC = () => {
+  const [usuario, setUsuario] = useState<User | null | undefined>(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (usuarioFirebase) => {
+      if (usuarioFirebase) {
+        setUsuario(usuarioFirebase);
+      } else {
+        setUsuario(null);
+      }
+    });
+
+    // Cleanup
+    return () => {
+      unsubscribe();
+    };
+  }, []); // el array vacío asegura que useEffect solo se ejecute después del montaje inicial
+
   return (
     <>
-    <Router>
-      <Routes>
-        <Route path='/home' element={<Home correoUsuario={usuario?.email}/>}/>
-        <Route path='/botonpanico' element={<Panicbutton/>}/>
-      </Routes>
-    </Router>
-    <div>
-      {usuario ? <Home correoUsuario={usuario.email}/> : <Login/>}
-    </div>
+      <AppNavigator />
     </>
   );
-}
+};
+
+export default App;
+
