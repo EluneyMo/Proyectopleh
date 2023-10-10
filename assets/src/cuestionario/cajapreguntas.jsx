@@ -4,7 +4,7 @@ import React from "react";
 <i className="bi bi-chevron-left">#</i>
 
 
-function cardT(){
+function cajaTipos(){
     return(
         <h2>Tipos de violencias</h2>,
         <div className="card text-bg-dark">
