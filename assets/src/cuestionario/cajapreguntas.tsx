@@ -105,7 +105,7 @@ function CajaTipos() {
           <div className="card-body">
             <h5 className="card-title">Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</h5>
             <p className="card-text">Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios</p>
-            
+            <a href="#" className="btn btn-primary">Ver más información</a>
           </div>
         </div>
       </div>
