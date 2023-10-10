@@ -4,8 +4,8 @@ import Botonpanico from './botonpanico';
 import React from 'react';
 import { View, Text, Button as RNButton, StyleSheet } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from './types';
-import AppNavigator from "../../"
+import { RootStackParamList } from './/types';
+import AppNavigator from "../../../Appnavigator"
 const auth = getAuth(appFirebase);
 
 interface HomeProps {
