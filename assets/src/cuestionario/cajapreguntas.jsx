@@ -76,7 +76,9 @@ function cajaTipos(){
         </div>,
 
         <div className="VPsicologica">
+            <div className="card text-bg-dark">
 
+            </div>
         </div>
 
 
