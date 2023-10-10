@@ -73,6 +73,10 @@ function cajaTipos(){
                     <h5 className="title7">Acoso</h5>
                 </div>
             </div>
+        </div>,
+
+        <div className="VPsicologica">
+
         </div>
 
 
