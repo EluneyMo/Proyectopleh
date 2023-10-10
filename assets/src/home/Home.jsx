@@ -9,12 +9,12 @@ const auth = getAuth(appFirebase);
 
 const Home = ({correoUsuario}) => {
   function handleclick(){
-    
+    window.location.href="../panico/Panicbutton.jsx"
   }
   return (
     <div>
       <h1>Bienvenido {correoUsuario}  <button className='btn btn-primary' onClick={()=>signOut(auth)}>Cerrar sesion</button></h1>
-      <Link to='/botonpanico' className='boton'></Link>
+      <Link to='/botonpanico' className='boton' onClick={handleclick}></Link>
 
     </div>
   )
