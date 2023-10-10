@@ -59,7 +59,7 @@ function cajaTipos(){
 
         <div className="VMediatica">
             <div className="card text-bg-dark">
-
+                <img src="..." className="imagen6" alt="..." />
             </div>
         </div>
 
