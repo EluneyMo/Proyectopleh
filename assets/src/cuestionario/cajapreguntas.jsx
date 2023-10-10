@@ -5,7 +5,7 @@ import React from "react";
 
 function cajaTipos(){
     return(
-        <div className="Tviolencias">
+        <div className="Vfisica">
             <i className="bi bi-chevron-left">#</i>,
             <h2>Tipos de violencias</h2>,
             <div className="card text-bg-dark">
@@ -20,7 +20,7 @@ function cajaTipos(){
         </div>,
 
         <div className="Noticias">
-            
+
 
         </div>
     )
