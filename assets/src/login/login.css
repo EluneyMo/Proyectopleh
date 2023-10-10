@@ -1,4 +1,7 @@
 .pleh{
     position: relative;
     align-self: center;
+};
+ *{
+background:linear-gradient(to left, purple, rgb(185, 65, 185));
 }
