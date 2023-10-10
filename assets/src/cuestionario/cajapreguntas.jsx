@@ -1,5 +1,19 @@
 import React from "react";
 
+function cardT(){
+    return(
+        <div className="card text-bg-dark">
+            <img src="..." className="card-img" alt="..." />
+            <div className="card-img-overlay">
+               <h5 className="card-title">Violencia Domestica</h5>
+               <p className="card-text">La violencia no es solo matar a otro</p> 
+            </div>
+
+        </div>
+    )
+}
+
+
 function Card(){
     return(
         <div className='card' style='width:18rem;'>
@@ -13,3 +27,5 @@ function Card(){
         </div>
     )    
 } 
+
+export default Cartita; 

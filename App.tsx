@@ -1,31 +1,47 @@
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';// Importa las funciones y la instancia de Firebase
+import { StyleSheet, Text, View, Button } from 'react-native';
 import Login from './assets/src/login/login';
 import Home from './assets/src/home/Home';
-import Panicbutton from './assets/src/panico/Panicbutton';
-import { ReactDOM } from 'react';
 import appFirebase from './firebase/firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
-import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+<<<<<<< HEAD
+import AppNavigator from './Appnavigator';
 
-const auth=getAuth(appFirebase)
-export default function App() {
-  const [usuario, setUsuario] = useState<User | undefined>();
-  onAuthStateChanged(auth,(usuarioFirebase)=>{
-    if (usuarioFirebase){
-      setUsuario(usuarioFirebase)
-    }else
-    {
-      setUsuario(undefined)
-    }
-  });
-  
+const auth = getAuth(appFirebase);
+
+const App: React.FC = () => {
+  const [usuario, setUsuario] = useState<User | null | undefined>(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (usuarioFirebase) => {
+      if (usuarioFirebase) {
+        setUsuario(usuarioFirebase);
+      } else {
+        setUsuario(null);
+      }
+    });
+
+    // Cleanup
+    return () => {
+      unsubscribe();
+    };
+  }, []); // el array vacío asegura que useEffect solo se ejecute después del montaje inicial
+=======
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import Cartita from './assets/src/cuestionario/cajapreguntas';
+>>>>>>> 90c8ad60eeb74ccba4cb71618ca9278145aedd01
+
   return (
     <>
+<<<<<<< HEAD
+      <AppNavigator />
+=======
     <Router>
       <Routes>
-        <Route path='assets/src/login' element={<Login/>}/>
-        <Route path='assets/src/panico/Panicbutton.jsx' element={<Panicbutton/>}/>
+        <Route path='/' element={<Home correoUsuario={usuario?.email}/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/boton-panico' element={<Panicbutton/>}/>
+        <Route path="/preguntas" element={<Cartita/>}/>
       </Routes>
     </Router>
     <div>
@@ -34,18 +50,10 @@ export default function App() {
       
     </div>
    
+>>>>>>> 90c8ad60eeb74ccba4cb71618ca9278145aedd01
     </>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  iniciar: {
-    // Estilos para la vista de inicio
-  },
-});
+export default App;
+
