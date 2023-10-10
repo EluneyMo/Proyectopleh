@@ -79,7 +79,7 @@ function cajaTipos(){
             <div className="card text-bg-dark">
                 <img src="..." className="imagen8" alt="..." />
                 <div className="card-img8">
-
+                    <h5 className="title8">Violencia Psicológica</h5>
                 </div>
             </div>
         </div>
