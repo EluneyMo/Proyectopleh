@@ -45,7 +45,13 @@ function cajaTipos(){
                     <h5 className="title4">Femicidio</h5>
                 </div>
             </div>
+        </div>,
+
+        <div className="VInstitucional">
+
         </div>
+
+
     )
 }
 
@@ -64,6 +70,6 @@ function Card(){
 
         </div>
     )    
-} 
+}
 
 export default Cartita; 
