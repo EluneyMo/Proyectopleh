@@ -1,11 +1,12 @@
 import React from "react";
 
 
-<i className="bi bi-chevron-left">#</i>
 
 
 function cajaTipos(){
     return(
+        
+        <i className="bi bi-chevron-left">#</i>,
         <h2>Tipos de violencias</h2>,
         <div className="card text-bg-dark">
             <img src="..." className="card-img" alt="..." />
@@ -14,11 +15,12 @@ function cajaTipos(){
                <p className="card-text">La violencia no es solo matar a otro</p> 
             </div>
 
-        </div>
+        </div>,
+        <i className="bi bi-chevron-right">#</i>
     )
 }
 
-<i className="bi bi-chevron-right">#</i>
+
 
 function Card(){
     return(
