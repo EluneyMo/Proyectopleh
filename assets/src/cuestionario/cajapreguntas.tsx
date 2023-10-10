@@ -99,8 +99,10 @@ function CajaTipos() {
 
       <h2>Noticias Recientes</h2>
 
-      <div className="card" style={{ width: '18rem'}}>
-
+      <div className="">
+        <div className="card" style={{ width: '18rem'}}>
+        
+        </div>
       </div>
     </>
   );
