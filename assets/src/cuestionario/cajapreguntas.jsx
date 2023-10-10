@@ -21,7 +21,7 @@ function cajaTipos(){
 
         <div className="VSexual">
             <div className="card text-bg-dark">
-                
+               <img src="..." className="imagen2" alt="..." /> 
 
             </div>
 
