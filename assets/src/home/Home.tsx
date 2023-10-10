@@ -2,7 +2,8 @@ import { getAuth, signOut } from 'firebase/auth';
 import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
 import React from 'react';
-import { View, Text, Button as RNButton, StyleSheet } from 'react-native';
+
+import { View, Text, Button as RNButton, StyleSheet, Button } from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
@@ -20,6 +21,10 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const handlePress = () => {
     navigation.navigate('Panico');
   };
+  const presionar=()=>{
+    //funciondebotondeabi
+    navigation.navigate('Preguntas');
+  };
 
   const handleSignOut = async () => {
     try {
@@ -36,6 +41,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
       <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
       <Botonpanico title="BOTONPANICO" onPress={handlePress} />
+      <Button title='Preguntas' onPress={presionar}></Button>
     </View>
   );
 };
