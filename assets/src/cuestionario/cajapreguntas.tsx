@@ -89,7 +89,9 @@ function CajaTipos() {
       </div>
 
       <div className="VFisica">
-        
+        <div className="card text-bg-dark">
+
+        </div>
       </div>
     </>
   );
