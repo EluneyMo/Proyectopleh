@@ -90,7 +90,7 @@ function CajaTipos() {
 
       <div className="VFisica">
         <div className="card text-bg-dark">
-
+          <img src="..." className="imagen10" alt="..." />
         </div>
       </div>
     </>
