@@ -10,10 +10,7 @@ import { RootStackParamList } from './types';
 import AppNavigator from "../../../Appnavigator"
 const auth = getAuth(appFirebase);
 
-Type '["Preguntas"]' is not assignable to type '[screen: "Login"]'.
-        Type '"Preguntas"' is not assignable to type '"Login"'.
-  Overload 2 of 2, '(options: { key: string; params?: { correoUsuario: string; } | undefined; merge?: boolean | undefined; } | { name: "Home"; key?: string | undefined; params: { correoUsuario: string; }; merge?: boolean | undefined; } | { ...; } | { ...; } | { ...; } | { ...; }): void', gave the following error.
-    Argument of type 'string' is not assignable to parameter of type '{ key: string; params?: { correoUsuario: string; } | undefined; merge?: boolean | undefined; } | { name: "Home"; key?: string | undefined; params: { correoUsuario: string; }; merge?: boolean | undefined; } | { ...; } | { ...; } | { ...; } | { ...; }'.ts(2769)interface HomeProps {
+interface HomeProps {
   route: RouteProp<RootStackParamList, "Home">;
   navigation: StackNavigationProp<RootStackParamList, 'Home'>;
 }
