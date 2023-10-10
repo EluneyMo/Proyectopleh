@@ -103,7 +103,7 @@ function CajaTipos() {
         <div className="card" style={{ width: '18rem'}}>
           <img src="..." className="card-img-top" alt="..." />
           <div className="card-body">
-
+            <h5 className="card-title">Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</h5>
           </div>
         </div>
       </div>
