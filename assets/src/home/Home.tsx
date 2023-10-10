@@ -22,6 +22,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     navigation.navigate('Panico');
   };
   const presionar=()=>{
+    //funciondebotondeabi
     
   }
 
