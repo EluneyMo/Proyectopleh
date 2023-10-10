@@ -29,7 +29,11 @@ function cajaTipos(){
             </div>
         </div>,
 
-        <div className="VInfantil">
+        <div className="VLaboral">
+            <div className="card text-bg-dark">
+
+            </div>
+
 
         </div>
     )
