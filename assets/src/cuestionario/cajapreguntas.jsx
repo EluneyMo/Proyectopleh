@@ -70,7 +70,7 @@ function cajaTipos(){
             <div className="card text-bg-dark">
                 <img src="..." className="imagen7" alt="..." />
                 <div className="card-img7">
-                    
+                    <h5 className="title7">Acoso</h5>
                 </div>
             </div>
         </div>
