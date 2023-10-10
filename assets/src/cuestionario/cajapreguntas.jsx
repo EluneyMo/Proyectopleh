@@ -69,6 +69,9 @@ function cajaTipos(){
         <div className="Acoso">
             <div className="card text-bg-dark">
                 <img src="..." className="imagen7" alt="..." />
+                <div className="card-img7">
+                    
+                </div>
             </div>
         </div>
 
