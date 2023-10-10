@@ -95,7 +95,9 @@ function CajaTipos() {
             <h5 className="title10">Violencia Física</h5>
           </div>
         </div>
-      </div>
+      </div> 
+
+      <h2>Noticias Recientes</h2>
     </>
   );
 }
