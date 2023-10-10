@@ -49,6 +49,8 @@ function cajaTipos(){
 
         <div className="VInstitucional">
             <div className="card text-bg-dark">
+                <img src="..." className="imagen5" alt="..." />
+                
 
             </div>
         </div>
