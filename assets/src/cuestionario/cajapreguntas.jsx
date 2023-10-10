@@ -78,6 +78,9 @@ function cajaTipos(){
         <div className="VPsicologica">
             <div className="card text-bg-dark">
                 <img src="..." className="imagen8" alt="..." />
+                <div className="card-img8">
+
+                </div>
             </div>
         </div>
 
