@@ -27,7 +27,7 @@ function CajaTipos() {
         <View style={{ alignItems: "center" }}>
           <Text style={{ color: "#555", fontSize: 18 }}>Violencia Sexual </Text>
           <Image 
-          source={require("")}
+          source={require("../tipos/images.jpeg")}
           style={{ width: 200, height: 200 }}/>
         </View>
       </View>
