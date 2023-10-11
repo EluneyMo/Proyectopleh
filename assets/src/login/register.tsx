@@ -2,14 +2,14 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import appFirebase from "../../../firebase/firebase";
-import { LoginFormProps } from "../home/types";
+import { LoginFormProps} from "../home/types";
 import { RegistrationData } from "../home/types";
 import { useNavigation } from "@react-navigation/native";
 import AppNavigator from "../../../Appnavigator";
 
 const auth = getAuth();
 
-const RegistroForm = ({ onRegister, buttonText }: LoginFormProps) => {
+const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [nombre, setNombre] = useState("");
@@ -25,7 +25,7 @@ const RegistroForm = ({ onRegister, buttonText }: LoginFormProps) => {
         const uid = userCredential.user.uid;
         const registrationData: RegistrationData = { nombre, dni, uid };
         console.log("Usuario registrado con ID:", registrationData.uid);
-        await onRegister(email, password, registrationData);
+        await RegisterUser(email, password, registrationData);
         navigation.navigate('Login');
       } else {
         alert("Por favor, completa todos los campos para el registro.");
@@ -35,6 +35,7 @@ const RegistroForm = ({ onRegister, buttonText }: LoginFormProps) => {
     }
   };
   const onRegister = async (email, password, registrationData) => {
+    
   };
 
   return (

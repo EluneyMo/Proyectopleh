@@ -8,7 +8,7 @@ export type RootStackParamList = {
   export interface LoginFormProps {
     onAuthenticate: (email: string, password: string) => Promise<void>;
     buttonText: string;
-    onRegister: (email: string, password: string, registrationData: RegistrationData) => Promise<void>;
+    RegisterUser: (email: string, password: string, registrationData: RegistrationData) => Promise<void>;
     
     // Otras propiedades según las necesidades de tu formulario de inicio de sesión
   }
