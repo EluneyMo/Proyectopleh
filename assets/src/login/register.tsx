@@ -34,10 +34,7 @@ const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
       console.log("Error en el registro", error);
     }
   };
-  const onRegister = async (email, password, registrationData) => {
-    
-  };
-
+  
   return (
     <View style={styles.container}>
       <Text style={styles.title}>PLEH</Text>
