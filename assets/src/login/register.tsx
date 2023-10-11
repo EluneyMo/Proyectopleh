@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 import appFirebase from "../../../firebase/firebase";
 import { LoginFormProps} from "../home/types";
 import { RegistrationData } from "../home/types";
