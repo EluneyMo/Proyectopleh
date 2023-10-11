@@ -35,7 +35,7 @@ const Login = () => {
 
   return (
     <View>
-      <h1 className="pleh">PLEH</h1>
+      <Text className="pleh">PLEH</Text>
       <Text style={styles.emailText}>Email</Text>
       <form onSubmit={functAutenticacion}>
         <input
@@ -50,10 +50,10 @@ const Login = () => {
           placeholder="contraseña"
           id="password"
         />
-        <button className="btnform" type="submit">{registrando ? "Regístrate" : "Inicia sesión"}</button>
+        <Button className="btnform" type="submit">{registrando ? "Regístrate" : "Inicia sesión"}</Button>
       </form>
 
-      <h4>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<button onClick={() => setRegistrando(!registrando)}>{registrando ? "Inicia sesión" : "Regístrate"}</button></h4>
+      <Text>{registrando ? "Si ya tienes cuenta" : "No tienes cuenta"}<Button onClick={() => setRegistrando(!registrando)}>{registrando ? "Inicia sesión" : "Regístrate"}</Button></Text>
     </View>
   );
 }
