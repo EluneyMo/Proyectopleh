@@ -35,7 +35,7 @@ const RegistroForm = ({ onRegister, buttonText }: LoginFormProps) => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Registro</Text>
+      <Text style={styles.title}>PLEH</Text>
       <Text style={styles.label}>Email</Text>
       <TextInput
         placeholder="Email"
