@@ -125,7 +125,7 @@ function CajaTipos() {
 
       
         <Image
-          source={require("")}
+          source={require("../tipos/noticia1.png")}
           style={{ width: 200, height: 200 }}
         />
         <View>
