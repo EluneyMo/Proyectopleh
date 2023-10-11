@@ -17,7 +17,7 @@ function CajaTipos() {
           <Text style={{ color: "#555", fontSize: 18 }}>Violencia Domestica</Text>
           <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
           <Image 
-          source={require("")}
+          source={require("../tipos/Domestica.jpg")}
           style={{ width: 200, height: 200 }}/>
         </View>
       </View>
