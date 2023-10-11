@@ -5,6 +5,7 @@ import Home from './assets/src/home/Home';
 import Panicbutton from './assets/src/panico/Panicbutton';
 import Login from './assets/src/login/login';
 import CajaTipos from './assets/src/cuestionario/cajapreguntas';
+import RegistroForm from './assets/src/login/register';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -13,6 +14,7 @@ const AppNavigator: React.FC = () => {
       <Stack.Navigator initialRouteName="Home">
         <Stack.Screen name="Home" component={Home} />
         <Stack.Screen name='Login' component={Login}/>
+        <Stack.Screen name='Registro' component={RegistroForm}/>
         <Stack.Screen name="Panico" component={Panicbutton} />
         <Stack.Screen name='Preguntas' component={CajaTipos}/>
         {/* ... otras pantallas según tus necesidades */}
