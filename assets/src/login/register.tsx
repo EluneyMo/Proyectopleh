@@ -5,6 +5,7 @@ import appFirebase from "../../../firebase/firebase";
 import { LoginFormProps } from "../home/types";
 import { RegistrationData } from "../home/types";
 import { useNavigation } from "@react-navigation/native";
+import AppNavigator from "../../../Appnavigator";
 
 const auth = getAuth();
 
@@ -19,7 +20,8 @@ const RegistroForm = ({ onRegister, buttonText }: LoginFormProps) => {
   const handleRegister = async () => {
     try {
       if (nombre && dni && password) {
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+        console.log("Datos de registro:", email, password, nombre, dni);
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);        
         const uid = userCredential.user.uid;
         const registrationData: RegistrationData = { nombre, dni, uid };
         console.log("Usuario registrado con ID:", registrationData.uid);
@@ -29,8 +31,10 @@ const RegistroForm = ({ onRegister, buttonText }: LoginFormProps) => {
         alert("Por favor, completa todos los campos para el registro.");
       }
     } catch (error) {
-      console.log("Error en el registro");
+      console.log("Error en el registro", error);
     }
+  };
+  const onRegister = async (email, password, registrationData) => {
   };
 
   return (
