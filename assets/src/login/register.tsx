@@ -1,14 +1,15 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet } from "react-native";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 import appFirebase from "../../../firebase/firebase";
-import { LoginFormProps} from "../home/types";
+import { LoginFormProps } from "../home/types";
 import { RegistrationData } from "../home/types";
 import { useNavigation } from "@react-navigation/native";
-import AppNavigator from "../../../Appnavigator";
 
 const auth = getAuth();
+const db = getFirestore(appFirebase);
 
 const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
   const [email, setEmail] = useState("");
@@ -16,15 +17,19 @@ const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
   const [nombre, setNombre] = useState("");
   const [dni, setDni] = useState("");
 
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   const handleRegister = async () => {
     try {
       if (nombre && dni && password) {
         console.log("Datos de registro:", email, password, nombre, dni);
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);        
+        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
         const uid = userCredential.user.uid;
         const registrationData: RegistrationData = { nombre, dni, uid };
+
+        // Guardar datos en Firestore
+        await addDoc(collection(db, "usuarios"), registrationData);
+
         console.log("Usuario registrado con ID:", registrationData.uid);
         await RegisterUser(email, password, registrationData);
         navigation.navigate('Login');
@@ -35,7 +40,7 @@ const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
       console.log("Error en el registro", error);
     }
   };
-  
+
   return (
     <View style={styles.container}>
       <Text style={styles.title}>PLEH</Text>
@@ -67,37 +72,38 @@ const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
         value={dni}
         onChangeText={setDni}
       />
-      <Button title="Registrarte" onPress={() => handleRegister()} />
+      <Button title={buttonText} onPress={() => handleRegister()} />
     </View>
   );
 };
+
 const styles = StyleSheet.create({
-    container: {
-      padding: 16,
-    },
-    title: {
-      fontSize: 24,
-      fontWeight: "bold",
-      marginBottom: 16,
-    },
-    label: {
-      fontSize: 16,
-      marginBottom: 8,
-    },
-    input: {
-      height: 40,
-      borderColor: "gray",
-      borderWidth: 1,
-      marginBottom: 16,
-      paddingHorizontal: 8,
-    },
-    button: {
-      backgroundColor: "blue",
-      color: "white",
-      padding: 12,
-      textAlign: "center",
-      fontSize: 16,
-    },
-  });
-  
+  container: {
+    padding: 16,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 16,
+  },
+  label: {
+    fontSize: 16,
+    marginBottom: 8,
+  },
+  input: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 16,
+    paddingHorizontal: 8,
+  },
+  button: {
+    backgroundColor: "blue",
+    color: "white",
+    padding: 12,
+    textAlign: "center",
+    fontSize: 16,
+  },
+});
+
 export default RegistroForm;
