@@ -26,11 +26,10 @@ const RegistroForm = () => {
         const uid = userCredential.user.uid;
         const registrationData: RegistrationData = { nombre: inputNombre, dni: inputDni, uid };
 
-        // Guardar datos en Firestore
+        // Guardando datos en Firestore
         await addDoc(collection(db, "usuarios"), registrationData);
 
         console.log("Usuario registrado con ID:", registrationData.uid);
-        // Note: It's not necessary to call RegisterUser here; you've already registered the user
         alert("Usuario registrado de forma exitosa");
         navigation.navigate('Login');
       } else {

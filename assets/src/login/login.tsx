@@ -20,7 +20,7 @@ const Login = () => {
       
       setPasswordError("");
 
-      // Validar campos
+      // Validando campos
       if (!email) {
         setEmailError("Por favor, ingresa tu email");
         return;
@@ -31,22 +31,22 @@ const Login = () => {
         return;
       }
 
-      // Autenticación utilizando Firebase
+      // Autenticando utilizando Firebase
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
       // Usuario autenticado
       const user = userCredential.user;
       console.log("Usuario autenticado:", user);
 
-      // Navegar a la pantalla Home después de la autenticación exitosa
+      // Navegando a la pantalla Home después de la autenticación exitosa
       navigation.navigate("Home", { correoUsuario: email });
     } catch (error) {
-      // Manejar errores de autenticación
+      // Manejando errores de autenticación
       const authError = error as FirebaseError;
       console.error("Error en el inicio de sesion ", authError);
       Alert.alert('Error en el inicio de sesión', authError.message || 'Error desconocido');
 
-      // Actualizar mensajes de error específicos
+      // Actualizando mensajes de error específicos
       if (authError.code === "auth/invalid-email") {
         setEmailError("El formato del email no es válido");
       } else if (authError.code === "auth/wrong-password") {
@@ -56,6 +56,7 @@ const Login = () => {
   };
   const handleGoogleSignIn= async()=> {
   try{
+    //Agregando creacion de usuario con google
     const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
     console.log('Usuario de Google:', result.user);
@@ -64,7 +65,7 @@ const Login = () => {
   }
   }
   const navigateToRegistro = () => {
-    // Navegar a la pantalla de registro
+    // Navegando a la pantalla de registro
     navigation.navigate("Registro");
   };
 
