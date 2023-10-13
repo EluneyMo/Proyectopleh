@@ -1,37 +1,37 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { useNavigation } from "@react-navigation/native";
 
 import appFirebase from "../../../firebase/firebase";
-import { LoginFormProps } from "../home/types";
 import { RegistrationData } from "../home/types";
-import { useNavigation } from "@react-navigation/native";
 
 const auth = getAuth();
 const db = getFirestore(appFirebase);
 
-const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [nombre, setNombre] = useState("");
-  const [dni, setDni] = useState("");
+const RegistroForm = () => {
+  const [inputEmail, setEmail] = useState("");
+  const [inputPassword, setPassword] = useState("");
+  const [inputNombre, setNombre] = useState("");
+  const [inputDni, setDni] = useState("");
 
   const navigation = useNavigation();
 
   const handleRegister = async () => {
     try {
-      if (nombre && dni && password) {
-        console.log("Datos de registro:", email, password, nombre, dni);
-        const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      if (inputNombre && inputDni && inputPassword) {
+        console.log("Datos de registro:", inputEmail, inputPassword, inputNombre, inputDni);
+        const userCredential = await createUserWithEmailAndPassword(auth, inputEmail, inputPassword);
         const uid = userCredential.user.uid;
-        const registrationData: RegistrationData = { nombre, dni, uid };
+        const registrationData: RegistrationData = { nombre: inputNombre, dni: inputDni, uid };
 
         // Guardar datos en Firestore
         await addDoc(collection(db, "usuarios"), registrationData);
 
         console.log("Usuario registrado con ID:", registrationData.uid);
-        await RegisterUser(email, password, registrationData);
+        // Note: It's not necessary to call RegisterUser here; you've already registered the user
+        alert("Usuario registrado de forma exitosa");
         navigation.navigate('Login');
       } else {
         alert("Por favor, completa todos los campos para el registro.");
@@ -48,31 +48,31 @@ const RegistroForm = ({ RegisterUser, buttonText }: LoginFormProps) => {
       <TextInput
         placeholder="Email"
         style={styles.input}
-        value={email}
+        value={inputEmail}
         onChangeText={setEmail}
       />
       <Text style={styles.label}>Contraseña</Text>
       <TextInput
         placeholder="Contraseña"
         style={styles.input}
-        value={password}
+        value={inputPassword}
         onChangeText={setPassword}
       />
       <Text style={styles.label}>Nombre</Text>
       <TextInput
         placeholder="Nombre"
         style={styles.input}
-        value={nombre}
+        value={inputNombre}
         onChangeText={setNombre}
       />
       <Text style={styles.label}>DNI</Text>
       <TextInput
         placeholder="DNI"
         style={styles.input}
-        value={dni}
+        value={inputDni}
         onChangeText={setDni}
       />
-      <Button title={buttonText} onPress={() => handleRegister()} />
+      <Button title="Registrate" onPress={() => handleRegister()} />
     </View>
   );
 };
