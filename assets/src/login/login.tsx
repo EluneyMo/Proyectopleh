@@ -55,6 +55,11 @@ const Login = () => {
     }
   };
   const handleGoogleSignIn= async()=> {
+  try{
+
+  }catch(error){
+    
+  }
   }
   const navigateToRegistro = () => {
     // Navegar a la pantalla de registro
