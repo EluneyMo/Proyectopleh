@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
@@ -57,6 +57,7 @@ const Login = () => {
   const handleGoogleSignIn= async()=> {
   try{
     const provider = new GoogleAuthProvider();
+    const result = await signInWithPopup(auth, provider);
   }catch(error){
 
   }
