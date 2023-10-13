@@ -62,7 +62,7 @@ const Login = () => {
     console.log('Usuario de Google:', result.user);
     navigation.navigate('Home');
   }catch(error){
-
+    console.error('Error en el inicio de sesión con Google:', error);
   }
   }
   const navigateToRegistro = () => {
