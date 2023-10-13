@@ -54,6 +54,8 @@ const Login = () => {
       }
     }
   };
+  const handleGoogleSignIn= async()=> {
+  }
   const navigateToRegistro = () => {
     // Navegar a la pantalla de registro
     navigation.navigate("Registro");
