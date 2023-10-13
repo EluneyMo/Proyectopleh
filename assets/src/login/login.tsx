@@ -97,6 +97,7 @@ const Login = () => {
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
       <GoogleSigninButton
       style={{ width: 192, height: 48 }}
+      size={GoogleSigninButton.Size.Wide}
       />
     </View>
   );
