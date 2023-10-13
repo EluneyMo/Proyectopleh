@@ -60,7 +60,7 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
     console.log('Usuario de Google:', result.user);
-    navigation.navigate('Home');
+    navigation.navigate('Home' as never);
   }catch(error){
     console.error('Error en el inicio de sesión con Google:', error);
   }
