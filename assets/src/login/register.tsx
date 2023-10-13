@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useNavigation } from "@react-navigation/native";
 
