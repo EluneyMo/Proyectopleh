@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, signInWithEmailAndPassword, } from "firebase/auth"
+import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
