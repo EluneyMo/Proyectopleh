@@ -95,6 +95,8 @@ const Login = () => {
 
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
+      <GoogleSigninButton
+      />
     </View>
   );
 };
