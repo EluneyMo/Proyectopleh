@@ -98,6 +98,7 @@ const Login = () => {
       <GoogleSigninButton
       style={{ width: 192, height: 48 }}
       size={GoogleSigninButton.Size.Wide}
+      onPress={handleGoogleSignIn}
       />
     </View>
   );
