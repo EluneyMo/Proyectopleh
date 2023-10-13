@@ -60,6 +60,7 @@ const Login = () => {
     const provider = new GoogleAuthProvider();
     const result = await signInWithPopup(auth, provider);
     console.log('Usuario de Google:', result.user);
+    navigation.navigate('Home');
   }catch(error){
 
   }
