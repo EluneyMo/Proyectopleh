@@ -56,9 +56,9 @@ const Login = () => {
   };
   const handleGoogleSignIn= async()=> {
   try{
-
+    const provider = new GoogleAuthProvider();
   }catch(error){
-    
+
   }
   }
   const navigateToRegistro = () => {
