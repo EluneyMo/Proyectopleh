@@ -4,7 +4,7 @@ import { View, Text, StyleSheet } from 'react-native';
 const Panicbutton: React.FC = () => {
   return (
     <View style={styles.container}>
-      <Text>¡Estás en la siguiente pantalla!</Text>
+      <Text>¡IMPORTANTE!</Text>
     </View>
   );
 };
