@@ -5,6 +5,7 @@ import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
+import * as AuthSession from "expo-auth-session"
 import * as Firebase from "firebase/app";
 import Toast from "react-native-toast-message";
 
@@ -56,27 +57,25 @@ const Login = () => {
       }
     }
   };
-  const handleGoogleSignIn= async()=> {
-  try{
-    //Agregando creacion de usuario con google
-    const result = await Google.logInAsync({
-      androidClientId: firebase.app().options.clientId,
+  const handleGoogleSignIn = async () => {
+    try {
+      const result = await Google.logInAsync({
+      androidClientId: '&client_id=215017658521-cs984qi5s9hsnp2flshqsduj3bcg4ueu.apps.googleusercontent.com',
       scopes: ['profile', 'email'],
-    });
+ 
+      if (result.type === "success") {
+        const credential = Google.auth.GoogleAuthProvider.credential(
+          null,
+          result.accessToken
+        );
 
-    if (result.type === 'success') {
-      const credential = firebase.auth.GoogleAuthProvider.credential(
-        null,
-        result.accessToken
-      );
-
-      await firebase.auth().signInWithCredential(credential);
-    } else {
-      console.log('Google login canceled.');
+        await appFirebase.auth().signInWithCredential(credential);
+      } else {
+        console.log("Google login canceled.");
+      }
+    } catch (error) {
+      console.error("Error en el inicio de sesión con Google:", error);
     }
-  }catch(error){
-    console.error('Error en el inicio de sesión con Google:', error);
-  }
   }
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
