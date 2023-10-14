@@ -187,7 +187,7 @@ const styles = StyleSheet.create({
     verticalAlign: "middle",
     width: 50,
     height:50,
-    borderRadius:20,
+    borderRadius:40,
     backgroundColor:"white"
   },
   imageButton: {
