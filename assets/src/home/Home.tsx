@@ -62,10 +62,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   panic:{
-    height:50,
-    width:50,
+    height:70,
+    width:70,
     alignItems:"flex-end",
-    alignSelf:"flex-end"
+    alignSelf:"flex-end",
+
   },
   botonpanico:{
     width:"100%",
