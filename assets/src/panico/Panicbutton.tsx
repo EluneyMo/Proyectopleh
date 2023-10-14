@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   te:{
-    
+    textAlign:"center"
   }
 });
 
