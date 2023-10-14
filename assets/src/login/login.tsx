@@ -82,7 +82,8 @@ const Login = () => {
   };
 
   return (
-    <linearGradient
+    <LinearGradient
+    >
     <View style={styles.container }>
       <Text style={styles.header}>Iniciar Sesión</Text>
       <Text>Email</Text>
@@ -109,6 +110,7 @@ const Login = () => {
       <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
       <Button title="Ingresar como invitado" onPress={signInasGuest}/>
     </View>
+    </LinearGradient>
   );
 };
 
