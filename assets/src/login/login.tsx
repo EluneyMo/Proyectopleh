@@ -120,7 +120,7 @@ const Login = () => {
         />
         </TouchableOpacity >
       <TouchableOpacity onPress={signInasGuest} style={styles.botontransparente}>
-      <Text>Ingresar como invitado</Text>
+      <Text style={styles.invitado}>Ingresar como invitado</Text>
 
       </TouchableOpacity>
       <Button title="" onPress={signInasGuest}/>
