@@ -43,7 +43,8 @@ const styles = StyleSheet.create({
     width:300,
   },
   imp:{
-
+    color:"red",
+    fontSize:200
   }
 });
 
