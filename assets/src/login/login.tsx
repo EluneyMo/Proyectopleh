@@ -119,7 +119,10 @@ const Login = () => {
           resizeMode="contain"
         />
         </TouchableOpacity>
-      
+      <TouchableOpacity>
+
+        
+      </TouchableOpacity>
       <Button title="Ingresar como invitado" onPress={signInasGuest}/>
       
     </View>
