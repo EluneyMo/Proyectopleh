@@ -137,9 +137,11 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    width: 500,
+    width: 400,
+    display:"flex",
     justifyContent:"center",
     alignItems: "center",
+    alignContent: "center",
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 16,
@@ -152,6 +154,7 @@ const styles = StyleSheet.create({
   inputError: {
     borderColor: 'red',
     borderWidth: 1,
+    display:"flex"
   },
   errorText: {
     color: 'red',
