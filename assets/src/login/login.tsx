@@ -112,8 +112,14 @@ const Login = () => {
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
       <View style={styles.imageButtonContainer}>
       <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
-      <Button title="Ingresar como invitado" onPress={signInasGuest}/>
+      <Image
+          source={require('../../img/googleicon.png')}
+          style={styles.imageButton}
+          resizeMode="contain"
+        />
       </View>
+      <Button title="Ingresar como invitado" onPress={signInasGuest}/>
+      
     </View>
     </LinearGradient>
   );
