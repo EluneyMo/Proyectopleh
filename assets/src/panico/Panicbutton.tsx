@@ -8,6 +8,8 @@ const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
   const playAlarmSound = async () => {
     try {
       const { sound } = await Audio.Sound.createAsync(
+        { uri: soundUri },
+        { shouldPlay: true }
       );
     }catch (error) {
       
