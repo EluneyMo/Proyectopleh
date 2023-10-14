@@ -203,8 +203,6 @@ const styles = StyleSheet.create({
   botontransparente:{
     backgroundColor: 'transparent',
     alignSelf:"center",
-    width:20,
-    height:20,
   },
   invitado:{
     color:"white",
