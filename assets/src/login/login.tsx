@@ -70,7 +70,7 @@ const Login = () => {
       
     await signInAnonymously(auth);
   }catch (error){
-
+    console.error("Error al iniciar sesión como invitado:", error);
   }
   
 };
