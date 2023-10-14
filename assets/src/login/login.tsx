@@ -116,6 +116,7 @@ const styles = StyleSheet.create({
     height:48
   },
   container: {
+    background: "linear-gradient(to left, from right, #800080, #9400D3)",
     flex: 1,
     justifyContent: "center",
     padding: 16,
