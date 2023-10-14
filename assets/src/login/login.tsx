@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
 import "firebase/auth"
+import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
@@ -81,6 +82,7 @@ const Login = () => {
   };
 
   return (
+    <linearGradient
     <View style={styles.container }>
       <Text style={styles.header}>Iniciar Sesión</Text>
       <Text>Email</Text>
