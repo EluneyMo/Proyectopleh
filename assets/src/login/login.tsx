@@ -10,7 +10,6 @@ import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
 const auth = getAuth(appFirebase);
-
 const provider = new GoogleAuthProvider();
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -67,7 +66,7 @@ const Login = () => {
     }
   }
   const signInasGuest=async()=>{
-
+    await firebase.auth().signInAnonymously();
   }
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
