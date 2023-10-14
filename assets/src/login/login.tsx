@@ -183,6 +183,8 @@ const styles = StyleSheet.create({
     height:100,
     overflow: 'hidden',
   },
+  imageButton: {
+  },
 });
 
 export default Login;
