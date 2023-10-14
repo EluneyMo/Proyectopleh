@@ -66,8 +66,14 @@ const Login = () => {
     }
   }
   const signInasGuest=async()=>{
-    
+    try{
+      
+    await signInAnonymously(auth);
+  }catch (error){
+
   }
+  
+};
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
     navigation.navigate("Registro");
