@@ -104,7 +104,7 @@ const Login = () => {
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
       <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
-      <Button title="Ingresar como invitado" onPress={signInasGuest}
+      <Button title="Ingresar como invitado" onPress={signInasGuest}/>
     </View>
   );
 };
