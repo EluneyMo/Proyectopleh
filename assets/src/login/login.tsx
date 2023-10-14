@@ -177,6 +177,9 @@ const styles = StyleSheet.create({
     color: 'red',
     marginTop: 5,
   },
+  imageButtonContainer: {
+    
+  },
 });
 
 export default Login;
