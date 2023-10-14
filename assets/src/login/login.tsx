@@ -79,7 +79,7 @@ const Login = () => {
 };
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
-    navigation.navigate("Registro");
+    navigation.navigate("Registro" as never);
   };
 
   return (
@@ -151,7 +151,7 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    width: 400,
+    width: 350,
     display:"flex",
     alignSelf:"center",
     justifyContent:"center",
@@ -203,13 +203,16 @@ const styles = StyleSheet.create({
   botontransparente:{
     backgroundColor: 'transparent',
     alignSelf:"flex-end",
-    alignItems:"flex-end"
+    justifyContent: 'flex-end',
+    alignItems:"flex-end",
+    marginTop:"90%",
+    marginBottom:"auto"
   },
   invitado:{
     color:"white",
     textDecorationLine:"underline",
     fontSize:20,
-    textAlign:"left",
+    textAlign:"justify",
     textAlignVertical:"bottom"
   }
 });
