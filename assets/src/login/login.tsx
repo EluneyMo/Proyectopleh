@@ -179,6 +179,7 @@ const styles = StyleSheet.create({
   },
   imageButtonContainer: {
     marginTop: 16,
+    width: 100,
   },
 });
 
