@@ -6,6 +6,10 @@ interface SoundButtonProps {
   }
 const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
   const playAlarmSound = async () => {
+    try {
+    }catch (error) {
+      
+    }
   }
   return (
     <View style={styles.container}>
