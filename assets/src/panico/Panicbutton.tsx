@@ -5,6 +5,7 @@ const Panicbutton: React.FC = () => {
   return (
     <View style={styles.container}>
       <Text>¡IMPORTANTE!</Text>
+      <Text>Presione el boton rojo de panico si esta en peligro</Text>
     </View>
   );
 };
