@@ -29,8 +29,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const handleSignOut = async () => {
     try {
       await signOut(auth);
-      // Después de cerrar sesión, navegar a la pantalla de inicio de sesión
-      navigation.navigate('Login'); // Ajusta la ruta según tu estructura
+      // Después de cerrar sesión, navega a la pantalla de inicio de sesión
+      navigation.navigate('Login'); // Ajustando la ruta según tu estructura
     } catch (error) {
       console.error('Error al cerrar sesión', error);
     }

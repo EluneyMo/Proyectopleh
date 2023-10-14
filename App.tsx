@@ -25,7 +25,7 @@ const App: React.FC = () => {
     return () => {
       unsubscribe();
     };
-  }, []); // el array vacío asegura que useEffect solo se ejecute después del montaje inicial
+  }, []); // el array vacío= useEffect ejecutandose después del montaje inicial
   return (
     <>
       <AppNavigator />
