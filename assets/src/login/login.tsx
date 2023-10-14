@@ -151,6 +151,7 @@ const styles = StyleSheet.create({
     height: 40,
     width: 400,
     display:"flex",
+    alignSelf:"center"
     justifyContent:"center",
     alignItems: "center",
     alignContent: "center",
