@@ -184,6 +184,8 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   imageButton: {
+    width: '100%',
+    height: '100%',
   },
 });
 
