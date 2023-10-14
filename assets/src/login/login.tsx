@@ -9,6 +9,7 @@ import { FirebaseError } from "firebase/app";
 import Toast from "react-native-toast-message";
 
 const auth = getAuth(appFirebase);
+const provider = new GoogleAuthProvider();
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
