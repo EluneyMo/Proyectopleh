@@ -81,7 +81,7 @@ const Login = () => {
   };
 
   return (
-    <View style={styles.container, }>
+    <View style={styles.container }>
       <Text style={styles.header}>Iniciar Sesión</Text>
       <Text>Email</Text>
       <TextInput
@@ -116,8 +116,7 @@ const styles = StyleSheet.create({
     height:48
   },
   container: {
-    backgroundImage: 'linear-gradient(to left, from bottom, darkmagenta, darkviolet)',
-  
+   
     flex: 1,
     justifyContent: "center",
     padding: 16,
