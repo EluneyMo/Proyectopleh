@@ -156,6 +156,10 @@ const styles = StyleSheet.create({
     borderRadius:20,
     height: 40,
     width: 400,
+    display:"flex",
+    justifyContent:"center",
+    alignItems: "center",
+    alignContent: "center",
     borderColor: 'red',
     borderWidth: 1,
     display:"flex"
