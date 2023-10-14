@@ -64,6 +64,8 @@ const styles = StyleSheet.create({
   panic:{
     height:50,
     width:50,
+    alignItems:"flex-end",
+    alignSelf:"flex-end"
   },
   botonpanico:{
     width:"100%",
