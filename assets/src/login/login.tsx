@@ -141,6 +141,7 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     marginBottom: 16,
     paddingHorizontal: 8,
+    borderRadius:20
   },
   textito:{
     color:"white"
