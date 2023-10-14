@@ -87,7 +87,7 @@ const Login = () => {
     style={styles.container}
     >
     <View style={styles.container }>
-      <Text style={styles.header}>Iniciar Sesión</Text>
+      <Text style={styles.header}>PLEH</Text>
       <Text style={styles.textito}>Email</Text>
       <TextInput
         placeholder="Ingresa tu email"
