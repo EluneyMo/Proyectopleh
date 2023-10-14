@@ -61,6 +61,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 10,
   },
+  panic:{
+
+  },
+  botonpanico:{
+    
+  }
 });
 
 export default Home;
