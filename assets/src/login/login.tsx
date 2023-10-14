@@ -6,9 +6,11 @@ import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
+import firebase from "firebase/app"
+import "firebase/auth"
 import Toast from "react-native-toast-message";
-
 const auth = getAuth(appFirebase);
+
 const provider = new GoogleAuthProvider();
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -59,7 +61,7 @@ const Login = () => {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, provider);
-      
+      navigation.navigate("Home" as never)
     } catch (error) {
       console.error("Error en el inicio de sesión con Google:", error);
     }
@@ -93,10 +95,7 @@ const Login = () => {
 
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
-      <Button
-      style={styles.botoncito}
-      onPress={handleGoogleSignIn}
-      />
+      <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
     </View>
   );
 };
