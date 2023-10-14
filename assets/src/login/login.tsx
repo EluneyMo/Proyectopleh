@@ -66,6 +66,9 @@ const Login = () => {
       console.error("Error en el inicio de sesión con Google:", error);
     }
   }
+  const signInasGuest=async()=>{
+
+  }
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
     navigation.navigate("Registro");
