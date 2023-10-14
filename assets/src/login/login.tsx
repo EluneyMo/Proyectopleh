@@ -88,7 +88,7 @@ const Login = () => {
     >
     <View style={styles.container }>
       <Text style={styles.header}>Iniciar Sesión</Text>
-      <Text>Email</Text>
+      <Text style={styles.textito}>Email</Text>
       <TextInput
         placeholder="Ingresa tu email"
         value={email}
@@ -97,7 +97,7 @@ const Login = () => {
       />
       {emailError ? <Text style={styles.errorText}>{emailError}</Text> : null}
 
-      <Text>Contraseña</Text>
+      <Text style={styles.textito}>Contraseña</Text>
       <TextInput
         placeholder="Ingresa tu contraseña"
         secureTextEntry
