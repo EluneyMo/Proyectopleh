@@ -162,7 +162,8 @@ const styles = StyleSheet.create({
     borderRadius:20
   },
   textito:{
-    color:"white"
+    color:"white",
+    textAlign:"center"
   },
   inputError: {
     borderRadius:20,
