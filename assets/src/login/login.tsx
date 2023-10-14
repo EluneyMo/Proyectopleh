@@ -190,7 +190,8 @@ const styles = StyleSheet.create({
     width: 50,
     height:50,
     borderRadius:40,
-    backgroundColor:"white"
+    backgroundColor:"white",
+    marginTop:"0%"
   },
   imageButton: {
     width: '80%',
@@ -205,7 +206,7 @@ const styles = StyleSheet.create({
     alignSelf:"flex-end",
     justifyContent: 'flex-end',
     alignItems:"flex-end",
-    marginTop:"90%",
+    marginTop:"0%",
     marginBottom:"auto"
   },
   invitado:{

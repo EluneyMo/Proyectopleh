@@ -3,7 +3,7 @@ import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
 import React from 'react';
 
-import { View, Text, Button as RNButton, StyleSheet, Button } from 'react-native';
+import { View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
@@ -40,7 +40,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
       <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
+      <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Botonpanico title="BOTONPANICO" onPress={handlePress} />
+      </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
     </View>
   );
