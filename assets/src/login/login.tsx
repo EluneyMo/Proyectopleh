@@ -62,7 +62,9 @@ const Login = () => {
       const result = await Google.logInAsync({
       androidClientId: '&client_id=215017658521-cs984qi5s9hsnp2flshqsduj3bcg4ueu.apps.googleusercontent.com',
       scopes: ['profile', 'email'],
-        
+      });
+      if (result.type === 'success') {
+        }
       
     } catch (error) {
       console.error("Error en el inicio de sesión con Google:", error);
