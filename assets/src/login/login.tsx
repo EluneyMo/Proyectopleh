@@ -163,7 +163,7 @@ const styles = StyleSheet.create({
     alignContent: "center",
     borderColor: 'red',
     borderWidth: 1,
-    display:"flex"
+    
   },
   errorText: {
     color: 'red',
