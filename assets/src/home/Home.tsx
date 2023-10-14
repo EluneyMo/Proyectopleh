@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
     width:70,
     alignItems:"flex-end",
     alignSelf:"flex-end",
-    overflow: "hidden",
+    
     position:"absolute"
   },
   botonpanico:{
