@@ -8,7 +8,8 @@ const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
   const playAlarmSound = async () => {
     const soundObject = new Audio.Sound();
     try {
-      
+      await soundObject.loadAsync(require('../../sonidos/alaema.mp3')); // Reemplaza 'ruta_del_sonido.mp3' con la ruta real de tu sonido
+      await soundObject.playAsync();
     }catch (error) {
       console.error('Error al reproducir el sonido:', error);
     }
