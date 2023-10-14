@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup} from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
 import "firebase/auth"
 import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
@@ -66,7 +66,7 @@ const Login = () => {
     }
   }
   const signInasGuest=async()=>{
-    await firebase.auth().signInAnonymously();
+    
   }
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
