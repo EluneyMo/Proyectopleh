@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
 import "firebase/auth"
+import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
@@ -81,9 +82,13 @@ const Login = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Iniciar Sesión</Text>
-      <Text>Email</Text>
+    <LinearGradient
+    colors={['darkmagenta', 'darkviolet']}
+    style={styles.container}
+    >
+    <View style={styles.container }>
+      <Text style={styles.header}>PLEH</Text>
+      <Text style={styles.textito}>Email</Text>
       <TextInput
         placeholder="Ingresa tu email"
         value={email}
@@ -92,7 +97,7 @@ const Login = () => {
       />
       {emailError ? <Text style={styles.errorText}>{emailError}</Text> : null}
 
-      <Text>Contraseña</Text>
+      <Text style={styles.textito}>Contraseña</Text>
       <TextInput
         placeholder="Ingresa tu contraseña"
         secureTextEntry
@@ -107,6 +112,7 @@ const Login = () => {
       <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
       <Button title="Ingresar como invitado" onPress={signInasGuest}/>
     </View>
+    </LinearGradient>
   );
 };
 
@@ -116,21 +122,32 @@ const styles = StyleSheet.create({
     height:48
   },
   container: {
+   
     flex: 1,
     justifyContent: "center",
     padding: 16,
   },
   header: {
-    fontSize: 24,
+    color:"white",
+    fontSize: 40,
     fontWeight: "bold",
     marginBottom: 16,
+    justifyContent:"center",
+    textAlign:"center"
   },
   input: {
     height: 40,
+    width: 500,
+    justifyContent:"center",
+    alignItems: "center",
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 16,
     paddingHorizontal: 8,
+    borderRadius:20
+  },
+  textito:{
+    color:"white"
   },
   inputError: {
     borderColor: 'red',
