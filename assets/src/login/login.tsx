@@ -180,7 +180,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   imageButtonContainer: {
-    marginTop: 16,
+    
     width: 50,
     height:50,
     backgroundColor:"white"
