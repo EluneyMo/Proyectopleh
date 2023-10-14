@@ -130,6 +130,7 @@ const styles = StyleSheet.create({
   },
   header: {
     color:"white",
+    fontFamily:"ArchivoBlack-Regular",
     fontSize: 40,
     fontWeight: "bold",
     marginBottom: 16,
