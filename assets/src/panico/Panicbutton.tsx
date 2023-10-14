@@ -46,8 +46,8 @@ const styles = StyleSheet.create({
     color:"red",
     fontSize:200,
   },
-  pre{
-
+  pre:{
+    fontSize:50
   },
 });
 
