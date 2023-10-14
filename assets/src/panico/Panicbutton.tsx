@@ -21,7 +21,7 @@ const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
       <Text>Presione el boton rojo de panico si esta en peligro</Text>
       <Text>Al accionar el boton de panico se lanzara una alarma a las autoridades y contactos de confianza. 
         MUCHO CUIDADO, el accionarla solo para bromas podria ocasionar problemas legales.</Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={playAlarmSound}>
       <Image 
        source={require('../../img/sirena.png')}
        style={styles.sirena}
