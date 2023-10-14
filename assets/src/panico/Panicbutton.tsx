@@ -22,6 +22,9 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
+  sirena:{
+    
+  }
 });
 
 export default Panicbutton;
