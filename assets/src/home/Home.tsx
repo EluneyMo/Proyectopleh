@@ -41,7 +41,10 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
       <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
-      <Botonpanico title="BOTONPANICO" onPress={handlePress} />
+      <Image 
+       source={require('../../img/logo-boton.png')}
+       style={styles.botonpanico}
+       resizeMode="contain" />
       </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
     </View>
