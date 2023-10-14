@@ -141,7 +141,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 8,
   },
   textitos:{
-
+    color:"white"
   },
   inputError: {
     borderColor: 'red',
