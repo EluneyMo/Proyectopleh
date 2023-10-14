@@ -183,7 +183,8 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   imageButtonContainer: {
-    
+    alignContent: "center",
+    verticalAlign: "middle",
     width: 50,
     height:50,
     backgroundColor:"white"
@@ -191,6 +192,7 @@ const styles = StyleSheet.create({
   imageButton: {
     width: '80%',
     height: '80%',
+    marginTop:"10%",
     alignSelf:"center",
     verticalAlign:"middle",
     alignContent:"center"
