@@ -178,7 +178,7 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
   imageButtonContainer: {
-    
+    marginTop: 16,
   },
 });
 
