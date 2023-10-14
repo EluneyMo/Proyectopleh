@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   input: {
-    height: 30,
+    height: 40,
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 16,
