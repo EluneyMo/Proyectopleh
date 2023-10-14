@@ -183,7 +183,7 @@ const styles = StyleSheet.create({
     marginTop: 16,
     width: 50,
     height:50,
-    color:"white"
+    backgroundColor:"white"
   },
   imageButton: {
     width: '100%',
