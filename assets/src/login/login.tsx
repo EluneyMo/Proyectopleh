@@ -84,6 +84,7 @@ const Login = () => {
   return (
     <LinearGradient
     colors={['darkmagenta', 'darkviolet']}
+    style={styles.container}
     >
     <View style={styles.container }>
       <Text style={styles.header}>Iniciar Sesión</Text>
