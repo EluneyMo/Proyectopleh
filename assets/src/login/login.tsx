@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
     marginBottom: 16,
     paddingHorizontal: 8,
   },
-  textitos:{
+  textito:{
     color:"white"
   },
   inputError: {
