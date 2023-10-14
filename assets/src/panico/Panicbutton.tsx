@@ -39,7 +39,8 @@ const styles = StyleSheet.create({
     
   },
   sirena:{
-
+    height:100,
+    width:100,
   }
 });
 
