@@ -44,8 +44,11 @@ const styles = StyleSheet.create({
   },
   imp:{
     color:"red",
-    fontSize:200
-  }
+    fontSize:200,
+  },
+  pre{
+
+  },
 });
 
 export default Panicbutton;
