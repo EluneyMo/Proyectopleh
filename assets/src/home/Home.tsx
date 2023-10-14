@@ -62,10 +62,12 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   panic:{
-
+    height:50,
+    width:50,
   },
   botonpanico:{
-    
+    width:"100%",
+    height:"100%",
   }
 });
 
