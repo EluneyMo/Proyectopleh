@@ -185,8 +185,8 @@ const styles = StyleSheet.create({
   imageButtonContainer: {
     alignContent: "center",
     verticalAlign: "middle",
-    width: 50,
-    height:50,
+    width: 60,
+    height:60,
     borderRadius:40,
     backgroundColor:"white"
   },
