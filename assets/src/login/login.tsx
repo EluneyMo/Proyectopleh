@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, Alert, Image} from "react-native";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
@@ -110,8 +110,10 @@ const Login = () => {
 
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
+      <View style={styles.imageButtonContainer}>
       <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
       <Button title="Ingresar como invitado" onPress={signInasGuest}/>
+      </View>
     </View>
     </LinearGradient>
   );
