@@ -206,8 +206,8 @@ const styles = StyleSheet.create({
   },
   invitado:{
     color:"white",
-    textDecorationLine:"underline"
-    
+    textDecorationLine:"underline",
+    fontSize:20
   }
 });
 
