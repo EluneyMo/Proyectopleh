@@ -153,6 +153,7 @@ const styles = StyleSheet.create({
     color:"white"
   },
   inputError: {
+    borderRadius:20,
     height: 40,
     width: 400,
     borderColor: 'red',
