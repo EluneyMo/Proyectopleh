@@ -5,6 +5,7 @@ import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
+import * as Firebase from "firebase/app";
 import Toast from "react-native-toast-message";
 
 const auth = getAuth(appFirebase);
@@ -58,10 +59,21 @@ const Login = () => {
   const handleGoogleSignIn= async()=> {
   try{
     //Agregando creacion de usuario con google
-    const provider = new GoogleAuthProvider();
-    const result = await signInWithPopup(auth, provider);
-    console.log('Usuario de Google:', result.user);
-    navigation.navigate('Home' as never);
+    const result = await Google.logInAsync({
+      androidClientId: firebase.app().options.clientId,
+      scopes: ['profile', 'email'],
+    });
+
+    if (result.type === 'success') {
+      const credential = firebase.auth.GoogleAuthProvider.credential(
+        null,
+        result.accessToken
+      );
+
+      await firebase.auth().signInWithCredential(credential);
+    } else {
+      console.log('Google login canceled.');
+    }
   }catch(error){
     console.error('Error en el inicio de sesión con Google:', error);
   }
@@ -95,9 +107,8 @@ const Login = () => {
 
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
-      <GoogleSigninButton
-      style={{ width: 192, height: 48 }}
-      size={GoogleSigninButton.Size.Wide}
+      <Button
+      style={styles.botoncito}
       onPress={handleGoogleSignIn}
       />
     </View>
@@ -105,6 +116,10 @@ const Login = () => {
 };
 
 const styles = StyleSheet.create({
+  botoncito:{
+    width: 192,
+    height:48
+  },
   container: {
     flex: 1,
     justifyContent: "center",
