@@ -4,7 +4,7 @@ import { Audio } from 'expo-av';
 interface SoundButtonProps {
   soundUri: string;
   }
-const Panicbutton: React.FC = () => {
+const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
   return (
     <View style={styles.container}>
       <Text>¡IMPORTANTE!</Text>
