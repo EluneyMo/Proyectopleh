@@ -12,7 +12,7 @@ const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
         { shouldPlay: true }
       );
     }catch (error) {
-      
+      console.error('Error al reproducir el sonido:', error);
     }
   }
   return (
