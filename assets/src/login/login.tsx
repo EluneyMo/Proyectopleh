@@ -186,8 +186,11 @@ const styles = StyleSheet.create({
     backgroundColor:"white"
   },
   imageButton: {
-    width: '100%',
-    height: '100%',
+    width: '80%',
+    height: '80%',
+    alignSelf:"center",
+    verticalAlign:"middle",
+    alignContent:"center"
   },
 });
 
