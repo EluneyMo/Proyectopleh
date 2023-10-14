@@ -111,7 +111,7 @@ const Login = () => {
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
       <View style={styles.imageButtonContainer}>
-      <TouchableOpacity onPress={handleGoogleSignIn} style={styles.botoncito}>
+      <TouchableOpacity onPress={handleGoogleSignIn} style={styles.imageButtonContainer}>
   
       <Image
           source={require('../../img/googleicon.png')}
@@ -181,9 +181,9 @@ const styles = StyleSheet.create({
   },
   imageButtonContainer: {
     marginTop: 16,
-    width: 100,
-    height:100,
-    overflow: 'hidden',
+    width: 50,
+    height:50,
+    color:"white"
   },
   imageButton: {
     width: '100%',
