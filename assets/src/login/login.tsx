@@ -123,7 +123,6 @@ const Login = () => {
       <Text style={styles.invitado}>Ingresar como invitado</Text>
 
       </TouchableOpacity>
-      <Button title="" onPress={signInasGuest}/>
       
     </View>
     </LinearGradient>
@@ -201,6 +200,12 @@ const styles = StyleSheet.create({
     verticalAlign:"middle",
     alignContent:"center"
   },
+  botontransparente:{
+
+  },
+  invitado:{
+    
+  }
 });
 
 export default Login;
