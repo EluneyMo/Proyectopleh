@@ -1,6 +1,9 @@
 import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity, Button} from 'react-native';
 import { Audio } from 'expo-av';
+interface SoundButtonProps {
+
+  }
 const Panicbutton: React.FC = () => {
   return (
     <View style={styles.container}>
