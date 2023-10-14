@@ -202,7 +202,7 @@ const styles = StyleSheet.create({
   },
   botontransparente:{
     backgroundColor: 'transparent',
-    
+    alignSelf:"center",
   },
   invitado:{
     color:"white",
