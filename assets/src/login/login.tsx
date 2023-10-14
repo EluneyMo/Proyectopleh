@@ -58,7 +58,7 @@ const Login = () => {
   };
   const handleGoogleSignIn = async () => {
     try {
-      
+      await signInWithPopup(auth, provider);
       
     } catch (error) {
       console.error("Error en el inicio de sesión con Google:", error);
