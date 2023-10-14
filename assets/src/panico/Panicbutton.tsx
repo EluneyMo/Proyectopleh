@@ -44,10 +44,11 @@ const styles = StyleSheet.create({
   },
   imp:{
     color:"red",
-    fontSize:200,
+    fontSize:50,
   },
   pre:{
-    fontSize:50
+    fontSize:20,
+    textAlign:"center"
   },
 });
 
