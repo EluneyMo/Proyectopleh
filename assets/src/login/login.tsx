@@ -201,10 +201,10 @@ const styles = StyleSheet.create({
     alignContent:"center"
   },
   botontransparente:{
-
+    backgroundColor: 'transparent'
   },
   invitado:{
-    
+
   }
 });
 
