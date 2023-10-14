@@ -202,12 +202,15 @@ const styles = StyleSheet.create({
   },
   botontransparente:{
     backgroundColor: 'transparent',
-    alignSelf:"center",
+    alignSelf:"flex-end",
+    alignItems:"flex-end"
   },
   invitado:{
     color:"white",
     textDecorationLine:"underline",
-    fontSize:20
+    fontSize:20,
+    textAlign:"left",
+    textAlignVertical:"bottom"
   }
 });
 
