@@ -110,7 +110,7 @@ const Login = () => {
 
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
-      <View style={styles.imageButtonContainer}>
+      
       <TouchableOpacity onPress={handleGoogleSignIn} style={styles.imageButtonContainer}>
   
       <Image
@@ -119,7 +119,7 @@ const Login = () => {
           resizeMode="contain"
         />
         </TouchableOpacity>
-      </View>
+      
       <Button title="Ingresar como invitado" onPress={signInasGuest}/>
       
     </View>
