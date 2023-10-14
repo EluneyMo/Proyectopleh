@@ -1,16 +1,14 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
-import { getAuth, signInWithEmailAndPassword, signInWithCredential } from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider} from "firebase/auth"
+import "firebase/auth"
 import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
-import * as AuthSession from "expo-auth-session"
-import * as Firebase from "firebase/app";
 import Toast from "react-native-toast-message";
 
 const auth = getAuth(appFirebase);
-
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -59,13 +57,7 @@ const Login = () => {
   };
   const handleGoogleSignIn = async () => {
     try {
-      const result = await Google.logInAsync({
-      androidClientId: '&client_id=215017658521-cs984qi5s9hsnp2flshqsduj3bcg4ueu.apps.googleusercontent.com',
-      scopes: ['profile', 'email'],
-      });
-      if (result.type === 'success') {
-
-        }
+      
       
     } catch (error) {
       console.error("Error en el inicio de sesión con Google:", error);
