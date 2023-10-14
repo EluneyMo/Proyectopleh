@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
+import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
 import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
@@ -10,6 +10,7 @@ import { FirebaseError } from "firebase/app";
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
+import "../../fuentes/ArchivoBlack-Regular.ttf"
 const auth = getAuth(appFirebase);
 const provider = new GoogleAuthProvider();
 const Login = () => {
@@ -78,7 +79,7 @@ const Login = () => {
 };
   const navigateToRegistro = () => {
     // Navegando a la pantalla de registro
-    navigation.navigate("Registro");
+    navigation.navigate("Registro" as never);
   };
 
   return (
@@ -109,8 +110,20 @@ const Login = () => {
 
       <Button title="Iniciar Sesión" onPress={handleSignIn} />
       <Button title="¿No tienes cuenta? Regístrate aquí." onPress={navigateToRegistro} />
-      <Button title="Sign in with Google" onPress={handleGoogleSignIn} />
-      <Button title="Ingresar como invitado" onPress={signInasGuest}/>
+      
+      <TouchableOpacity onPress={handleGoogleSignIn} style={styles.imageButtonContainer}>
+  
+      <Image
+          source={require('../../img/googleicon.png')}
+          style={styles.imageButton}
+          resizeMode="contain"
+        />
+        </TouchableOpacity >
+      <TouchableOpacity onPress={signInasGuest} style={styles.botontransparente}>
+      <Text style={styles.invitado}>Ingresar como invitado</Text>
+
+      </TouchableOpacity>
+      
     </View>
     </LinearGradient>
   );
@@ -129,6 +142,7 @@ const styles = StyleSheet.create({
   },
   header: {
     color:"white",
+    fontFamily:"ArchivoBlack-Regular",
     fontSize: 40,
     fontWeight: "bold",
     marginBottom: 16,
@@ -137,9 +151,12 @@ const styles = StyleSheet.create({
   },
   input: {
     height: 40,
-    width: 500,
+    width: 350,
+    display:"flex",
+    alignSelf:"center",
     justifyContent:"center",
     alignItems: "center",
+    alignContent: "center",
     borderColor: "gray",
     borderWidth: 1,
     marginBottom: 16,
@@ -147,16 +164,58 @@ const styles = StyleSheet.create({
     borderRadius:20
   },
   textito:{
-    color:"white"
+    color:"white",
+    textAlign:"center"
   },
   inputError: {
+    borderRadius:20,
+    height: 40,
+    width: 400,
+    display:"flex",
+    alignSelf:"center",
+    justifyContent:"center",
+    alignItems: "center",
+    alignContent: "center",
     borderColor: 'red',
     borderWidth: 1,
+    
   },
   errorText: {
     color: 'red',
     marginTop: 5,
   },
+  imageButtonContainer: {
+    alignContent: "center",
+    verticalAlign: "middle",
+    width: 50,
+    height:50,
+    borderRadius:40,
+    backgroundColor:"white",
+    marginTop:"0%"
+  },
+  imageButton: {
+    width: '80%',
+    height: '80%',
+    marginTop:"10%",
+    alignSelf:"center",
+    verticalAlign:"middle",
+    alignContent:"center"
+  },
+  botontransparente:{
+    backgroundColor: 'transparent',
+    alignSelf:"flex-end",
+    justifyContent: 'flex-end',
+    alignItems:"flex-end",
+    marginTop:"0%",
+    marginBottom:"auto"
+  },
+  invitado:{
+    color:"white",
+    textDecorationLine:"underline",
+    fontSize:20,
+    textAlign:"justify",
+    textAlignVertical:"bottom"
+  }
 });
 
 export default Login;
