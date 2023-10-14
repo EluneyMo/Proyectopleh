@@ -118,10 +118,10 @@ const Login = () => {
           style={styles.imageButton}
           resizeMode="contain"
         />
-        </TouchableOpacity>
-      <TouchableOpacity>
+        </TouchableOpacity >
+      <TouchableOpacity onPress={signInasGuest} style={styles.botontransparente}>
 
-        
+
       </TouchableOpacity>
       <Button title="Ingresar como invitado" onPress={signInasGuest}/>
       
