@@ -69,6 +69,7 @@ const Login = () => {
     try{
       
     await signInAnonymously(auth);
+    navigation.navigate("Home" as never)
   }catch (error){
     console.error("Error al iniciar sesión como invitado:", error);
   }
