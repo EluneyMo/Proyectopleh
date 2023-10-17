@@ -3,7 +3,7 @@ import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
 import React from 'react';
 
-import { View, Text, Button as RNButton, StyleSheet, Button } from 'react-native';
+import { View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
@@ -29,8 +29,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const handleSignOut = async () => {
     try {
       await signOut(auth);
-      // Después de cerrar sesión, navegar a la pantalla de inicio de sesión
-      navigation.navigate('Login'); // Ajusta la ruta según tu estructura
+      // Después de cerrar sesión, navega a la pantalla de inicio de sesión
+      navigation.navigate('Login'); // Ajustando la ruta según tu estructura
     } catch (error) {
       console.error('Error al cerrar sesión', error);
     }
@@ -40,7 +40,12 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
       <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
-      <Botonpanico title="BOTONPANICO" onPress={handlePress} />
+      <TouchableOpacity onPress={handlePress} style={styles.panic}>
+      <Image 
+       source={require('../../img/logo-boton.png')}
+       style={styles.botonpanico}
+       resizeMode="contain" />
+      </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
     </View>
   );
@@ -56,6 +61,18 @@ const styles = StyleSheet.create({
     fontSize: 18,
     marginBottom: 10,
   },
+  panic:{
+    height:70,
+    width:70,
+    alignItems:"flex-end",
+    alignSelf:"flex-end",
+    
+    position:"absolute"
+  },
+  botonpanico:{
+    width:"100%",
+    height:"100%",
+  }
 });
 
 export default Home;
