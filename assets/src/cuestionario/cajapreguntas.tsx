@@ -1,7 +1,11 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
+import { RootStackParamList } from "../home/types";
 
 function CajaTipos() {
+  const movete =()=>{
+
+  }
   return (
     <View>
       <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
