@@ -1,8 +1,8 @@
 import React from "react";
+import { View, Text, Image } from 'react-native';
 
 function Tipos() {
-/*import { View, Text, Image } from 'react-native';
-  return (
+/*  return (
     <View>
       <Text>Violencia de Género</Text>
       <Image source={require('../tipos/violenciagenero.jpeg')} style={{ width: 100, height: 100 }} />
