@@ -1,7 +1,9 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
 import { RootStackParamList } from "../home/types";
-
+interface PreguntasProps{
+  
+}
 function CajaTipos() {
   const movete =()=>{
 
