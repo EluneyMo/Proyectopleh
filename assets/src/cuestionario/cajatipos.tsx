@@ -20,4 +20,5 @@ function Tipos() {
   );
 }
 
+export default Tipos;
 
