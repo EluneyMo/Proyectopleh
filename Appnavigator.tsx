@@ -7,6 +7,7 @@ import Login from './assets/src/login/login';
 import CajaTipos from './assets/src/cuestionario/cajapreguntas';
 import RegistroForm from './assets/src/login/register';
 import { LoginFormProps } from './assets/src/home/types';
+import Tipos from './assets/src/cuestionario/cajatipos';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -18,7 +19,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name='Registro'>{(props: LoginFormProps) => <RegistroForm {...props} />}</Stack.Screen> 
         <Stack.Screen name="Panico" component={Panicbutton} />
         <Stack.Screen name='Preguntas' component={CajaTipos}/>
-        
+        <Stack.Screen name='Tipos' component={Tipos}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
