@@ -1,6 +1,5 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
-import {Card} from "react-native-elements" 
 
 function CajaTipos() {
   return (
@@ -139,7 +138,11 @@ function CajaTipos() {
             <Text>Ver más información</Text>
           </TouchableOpacity>
         </View>
-      
+
+      <View>
+         
+      </View>
+
     </View>
   );
 }
