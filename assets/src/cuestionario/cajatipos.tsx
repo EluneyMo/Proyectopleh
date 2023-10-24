@@ -1,7 +1,7 @@
 import React from "react";
 
-/*function Tipos() {
-import { View, Text, Image } from 'react-native';
+function Tipos() {
+/*import { View, Text, Image } from 'react-native';
   return (
     <View>
       <Text>Violencia de Género</Text>
@@ -16,7 +16,7 @@ import { View, Text, Image } from 'react-native';
         Con esta guía vas a poder informarte acerca de los distintos tipos de violencia que se ejercen contra las mujeres y personas LGBTI+. Además, vas a poder conocer los derechos que tenés si sufrís violencia por motivos de género.
       </Text>
     </View>
-  );
+  );*/
 }
 
-export default Tipos;*/
+
