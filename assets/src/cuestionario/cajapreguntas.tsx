@@ -1,5 +1,9 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3c4f769cf94a259d20f7512bbbd0085bfdfe24b8
 
 function CajaTipos() {
   return (
@@ -46,7 +50,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Femicidio</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -56,7 +60,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Institucional</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -66,7 +70,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Mediática</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -76,7 +80,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Acoso</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -86,7 +90,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Psicologica</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -96,7 +100,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Economica y Patrimonial</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -106,7 +110,7 @@ function CajaTipos() {
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Física</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/Domestica.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>

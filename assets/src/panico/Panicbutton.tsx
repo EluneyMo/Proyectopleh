@@ -16,9 +16,9 @@ const Panicbutton: React.FC <SoundButtonProps> = ({ soundUri }) => {
   }
   return (
     <View style={styles.container}>
-      <Text>¡IMPORTANTE!</Text>
-      <Text>Presione el boton rojo de panico si esta en peligro</Text>
-      <Text>Al accionar el boton de panico se lanzara una alarma a las autoridades y contactos de confianza. 
+      <Text style={styles.imp}>¡IMPORTANTE!</Text>
+      <Text style={styles.pre}>Presione el boton rojo de panico si esta en peligro</Text>
+      <Text style={styles.te}>Al accionar el boton de panico se lanzara una alarma a las autoridades y contactos de confianza. 
         MUCHO CUIDADO, el accionarla solo para bromas podria ocasionar problemas legales.</Text>
       <TouchableOpacity onPress={playAlarmSound}>
       <Image 
@@ -35,11 +35,24 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    backgroundColor: "#ffffff"
     
   },
   sirena:{
-    height:100,
-    width:100,
+    height:300,
+    width:300,
+  },
+  imp:{
+    color:"red",
+    fontSize:50,
+  },
+  pre:{
+    fontSize:20,
+    textAlign:"center"
+  },
+  te:{
+    textAlign:"center",
+    fontSize:16
   }
 });
 
