@@ -9,7 +9,7 @@ function CajaTipos() {
         <Text>Tipos de violencias</Text>
         <Text>#</Text>
       </View>
-
+    <TouchableOpacity onPress={movete} style={StyleSheet.domestica}>
       <View style={{ backgroundColor: "#fff", width:400,}}>
        
         <View style={{ alignItems: "center" }}>
@@ -20,7 +20,7 @@ function CajaTipos() {
           style={{ width: 200, height: 200 }}/>
         </View>
       </View>
-
+      </TouchableOpacity>
        <View style={{ backgroundColor: "#fff", width:400,}}>
        
         <View style={{ alignItems: "center" }}>
