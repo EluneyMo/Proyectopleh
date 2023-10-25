@@ -1,7 +1,7 @@
 import { getAuth, signOut } from 'firebase/auth';
 import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 
 import { Modal, View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -20,6 +20,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const { correoUsuario } = route.params || {};
   const [modalVisible, setModalVisible] = useState(false);
   const [contacto, setContacto] = useState('');
+  useEffect(() => {
   const verificarPrimerRegistro = async () => {
     try {
       const primerRegistro = await AsyncStorage.getItem('primerRegistro');
@@ -27,8 +28,12 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
         setModalVisible(true);
       }
     }catch (error) {
+      console.error('Error al verificar el primer registro:', error);
     }
   }
+    verificarPrimerRegistro();
+   
+  },[]);
   const handlePress = () => {
     navigation.navigate('Panico');  };
   const presionar=()=>{
