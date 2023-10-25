@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
@@ -39,7 +39,8 @@ const RegistroForm = () => {
       console.log("Error en el registro", error);
     }
   };
-
+  useEffect(() => {
+  },[]);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>PLEH</Text>
