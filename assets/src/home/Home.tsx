@@ -1,7 +1,7 @@
 import { getAuth, signOut } from 'firebase/auth';
 import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
-import React {useState}from 'react';
+import React, {useState} from 'react';
 
 import { Modal, View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
@@ -9,7 +9,6 @@ import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
 import AppNavigator from "../../../Appnavigator"
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { useState } from 'react';
 const auth = getAuth(appFirebase);
 
 interface HomeProps {
@@ -22,6 +21,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [contacto, setContacto] = useState('');
   const verificarPrimerRegistro = async () => {
+
   }
   const handlePress = () => {
     navigation.navigate('Panico');  };
