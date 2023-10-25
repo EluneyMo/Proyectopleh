@@ -3,7 +3,7 @@ import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useNavigation } from "@react-navigation/native";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import appFirebase from "../../../firebase/firebase";
 import { RegistrationData } from "../home/types";
 
