@@ -19,8 +19,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const { correoUsuario } = route.params || {};
 
   const handlePress = () => {
-    navigation.navigate('Panico');
-  };
+    navigation.navigate('Panico');  };
   const presionar=()=>{
     //funciondebotondeabi
     navigation.navigate('Preguntas' as never);

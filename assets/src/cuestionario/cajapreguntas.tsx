@@ -1,9 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
-<<<<<<< HEAD
-=======
 
->>>>>>> 3c4f769cf94a259d20f7512bbbd0085bfdfe24b8
 
 function CajaTipos() {
   return (
