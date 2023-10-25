@@ -22,6 +22,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const [contacto, setContacto] = useState('');
   const verificarPrimerRegistro = async () => {
     try {
+      const primerRegistro = await AsyncStorage.getItem('primerRegistro');
+
     }catch (error) {
     }
   }
