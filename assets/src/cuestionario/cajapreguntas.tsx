@@ -1,8 +1,22 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
 
+import { RootStackParamList } from "../home/types";
+import { RouteProp } from "@react-navigation/native";
+import { StackNavigationProp } from "@react-navigation/stack";
+interface PreguntasProps{
+  route: RouteProp<RootStackParamList,"Preguntas" >
+  navigation: StackNavigationProp <RootStackParamList, "Preguntas">
+}
+const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
+  const movete =()=>{
+    navigation.navigate("Tipos")
+  }
+
+
 
 function CajaTipos() {
+
   return (
     <View>
       <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
@@ -10,8 +24,8 @@ function CajaTipos() {
         <Text>Tipos de violencias</Text>
         <Text>#</Text>
       </View>
-
-      <View style={{ backgroundColor: "#fff", width:400,}}>
+    <TouchableOpacity onPress={movete} style={{ backgroundColor: "#fff", width:400,}}>
+      
        
         <View style={{ alignItems: "center" }}>
           <Text style={{ color: "#555", fontSize: 18 }}>Violencia Domestica</Text>
@@ -20,8 +34,7 @@ function CajaTipos() {
           source={require("../tipos/Domestica.jpg")}
           style={{ width: 200, height: 200 }}/>
         </View>
-      </View>
-
+      </TouchableOpacity>
        <View style={{ backgroundColor: "#fff", width:400,}}>
        
         <View style={{ alignItems: "center" }}>
@@ -139,7 +152,11 @@ function CajaTipos() {
             <Text>Ver más información</Text>
           </TouchableOpacity>
         </View>
-      
+
+      <View>
+         
+      </View>
+
     </View>
   );
 }
