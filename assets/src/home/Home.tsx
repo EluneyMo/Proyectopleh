@@ -52,6 +52,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   };
   const handleGuardarContacto = async () => {
     try {
+      const db = appFirebase.firestore();
+      const userCollection = collection(db, 'numeros');
     } catch (error) {
     }
   }
