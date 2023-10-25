@@ -13,7 +13,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
   }
   return (
     <View>
-      <View style={{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+      <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
         <Text>#</Text>
         <Text>Tipos de violencias</Text>
         <Text>#</Text>
@@ -54,7 +54,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Femicidio</Text>
          <Image 
-         source={require("")}
+         source={require("../tipos/femicidios.jpg")}
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
