@@ -51,6 +51,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     }
   };
   const handleGuardarContacto = async () => {
+    try {
+    } catch (error) {
+    }
   }
   return (
     <View style={styles.container}>
