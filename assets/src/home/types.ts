@@ -4,7 +4,7 @@ export type RootStackParamList = {
     Panico: undefined;
     Login:undefined;
     Preguntas:undefined;
-    Tipod:undefined;
+    Tipos:undefined;
   };
   export interface LoginFormProps {
     onAuthenticate: (email: string, password: string) => Promise<void>;
