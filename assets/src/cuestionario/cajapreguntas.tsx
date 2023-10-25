@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
+
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -11,6 +12,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
   const movete =()=>{
     navigation.navigate("Tipos")
   }
+
+
+
+function CajaTipos() {
+
   return (
     <View>
       <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
@@ -54,7 +60,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Femicidio</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/femicidios.jpg")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -64,7 +74,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Institucional</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/institucional.jpeg")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -74,7 +88,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Mediática</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/mediatica.png")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -84,7 +102,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Acoso</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/acoso.jpeg")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -94,7 +116,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Psicologica</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/psicologica.jpeg")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -104,7 +130,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Economica y Patrimonial</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/economica.jpeg")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>
@@ -114,7 +144,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
        <View style={{ alignItems: "center" }}>
          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Física</Text>
          <Image 
+<<<<<<< HEAD
          source={require("../tipos/fisica.jpg")}
+=======
+         source={require("../tipos/Domestica.jpg")}
+>>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
          style={{ width: 200, height: 200 }}/>
        </View>
      </View>

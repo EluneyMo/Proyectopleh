@@ -23,7 +23,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   };
   const presionar=()=>{
     //funciondebotondeabi
-    navigation.navigate('Preguntas');
+    navigation.navigate('Preguntas' as never);
   };
 
   const handleSignOut = async () => {

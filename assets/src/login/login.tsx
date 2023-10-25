@@ -10,7 +10,6 @@ import { FirebaseError } from "firebase/app";
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
-import "../../fuentes/ArchivoBlack-Regular.ttf"
 const auth = getAuth(appFirebase);
 const provider = new GoogleAuthProvider();
 const Login = () => {
