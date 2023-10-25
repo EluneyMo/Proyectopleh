@@ -14,7 +14,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
     navigation.navigate("Tipos")
   }
   return (
-    <View>
+    <View >
       <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
         <Text>#</Text>
         <Text>Tipos de violencias</Text>
@@ -155,6 +155,8 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   );
 }
 
-
+const styles = StyleSheet.create({
+  
+})
 
 export default CajaTipos;
