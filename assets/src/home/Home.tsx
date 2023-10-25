@@ -54,6 +54,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     try {
       const db = appFirebase.firestore();
       const userCollection = collection(db, 'numeros');
+      const userDoc = doc(userCollection, auth.currentUser.uid);
     } catch (error) {
     }
   }
