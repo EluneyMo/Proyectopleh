@@ -41,6 +41,9 @@ const RegistroForm = () => {
   };
   useEffect(() => {
     const verificarPrimerRegistro = async () => {
+      try {
+      } catch (error) {
+      }
     }
   },[]);
   return (
