@@ -42,6 +42,8 @@ const RegistroForm = () => {
   useEffect(() => {
     const verificarPrimerRegistro = async () => {
       try {
+        const registroAnterior = await AsyncStorage.getItem('primerRegistro');
+
       } catch (error) {
       }
     }
