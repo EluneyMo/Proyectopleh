@@ -21,7 +21,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [contacto, setContacto] = useState('');
   const verificarPrimerRegistro = async () => {
-
+    try {
+    }catch (error) {
+    }
   }
   const handlePress = () => {
     navigation.navigate('Panico');  };
