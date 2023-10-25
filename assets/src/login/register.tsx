@@ -40,6 +40,8 @@ const RegistroForm = () => {
     }
   };
   useEffect(() => {
+    const verificarPrimerRegistro = async () => {
+    }
   },[]);
   return (
     <View style={styles.container}>
