@@ -24,6 +24,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     try {
       const primerRegistro = await AsyncStorage.getItem('primerRegistro');
       if (primerRegistro) {
+        setModalVisible(true);
       }
     }catch (error) {
     }
