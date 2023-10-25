@@ -7,9 +7,9 @@ interface PreguntasProps{
   route: RouteProp<RootStackParamList,"Preguntas" >
   navigation: StackNavigationProp <RootStackParamList, "Preguntas">
 }
-function CajaTipos() {
+const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) {
   const movete =()=>{
-
+    nav
   }
   return (
     <View>
