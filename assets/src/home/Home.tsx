@@ -23,7 +23,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const verificarPrimerRegistro = async () => {
     try {
       const primerRegistro = await AsyncStorage.getItem('primerRegistro');
-
+      if (primerRegistro) {
+      }
     }catch (error) {
     }
   }
