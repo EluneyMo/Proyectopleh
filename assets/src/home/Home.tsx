@@ -50,7 +50,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       console.error('Error al cerrar sesión', error);
     }
   };
-
+  const handleGuardarContacto = async () => {
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
