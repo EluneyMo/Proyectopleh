@@ -1,8 +1,7 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
 
-<<<<<<< HEAD
-=======
+
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -16,9 +15,6 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) =>{
   }
 
 
->>>>>>> 6cd27b317afae2a710734a5b77d6b5569a98a078
-
-function CajaTipos() {
 
   return (
     <View>
