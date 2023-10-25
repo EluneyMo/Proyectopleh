@@ -45,10 +45,13 @@ const RegistroForm = () => {
         const registroAnterior = await AsyncStorage.getItem('primerRegistro');
         if (!registroAnterior) {
           await AsyncStorage.setItem('primerRegistro', 'true');
+          
         }
       } catch (error) {
+        console.error('Error al verificar el primer registro:', error);
       }
     }
+    verificarPrimerRegistro();
   },[]);
   return (
     <View style={styles.container}>
