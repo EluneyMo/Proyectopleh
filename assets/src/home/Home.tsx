@@ -8,6 +8,7 @@ import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
 import AppNavigator from "../../../Appnavigator"
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const auth = getAuth(appFirebase);
 
 interface HomeProps {
