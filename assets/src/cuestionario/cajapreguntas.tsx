@@ -62,7 +62,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
      
        
        
-         <Text style={}>Violencia Institucional</Text>
+         <Text style={styles.cardText}>Violencia Institucional</Text>
          <Image 
          source={require("../tipos/institucional.jpeg")}
          style={{ width: 200, height: 200 }}/>
