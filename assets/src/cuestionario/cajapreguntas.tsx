@@ -25,7 +25,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
         
           <Text style={styles.cardText}>Violencia Domestica</Text>
           <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
-          <Image source={require("../tipos/Domestica.jpg") style={styles.cardimagen}} />
+          <Image source={require("../tipos/Domestica.jpg")} style={styles.cardimagen} />
          
            
       </TouchableOpacity>
@@ -33,19 +33,19 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
        
           <Text style={styles.cardText}>Violencia Sexual </Text>
-          <Image source={require("../tipos/images.jpeg") style={styles.cardimagen}} />
-        
-               
+          <Image source={require("../tipos/images.jpeg")} style={styles.cardimagen} />
+
+
       
          <Text style={styles.cardText}>Violencia Laboral</Text>
-         <Image source={require("../tipos/laboral.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/laboral.jpeg")} style={styles.cardimagen} />
          
         
          
        
        
          <Text style={styles.cardText}>Femicidio</Text>
-         <Image source={require("../tipos/femicidios.jpg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/femicidios.jpg")} style={styles.cardimagen} />
                 
      
 
@@ -53,34 +53,34 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
        
        
          <Text style={styles.cardText}>Violencia Institucional</Text>
-         <Image source={require("../tipos/institucional.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/institucional.jpeg")} style={styles.cardimagen} />
          
          
        
           
          <Text style={styles.cardText}>Violencia Mediática</Text>
-         <Image source={require("../tipos/mediatica.png") style={styles.cardimagen}} />
+         <Image source={require("../tipos/mediatica.png")} style={styles.cardimagen} />
             
        
       
          <Text style={styles.cardText}>Acoso</Text>
-         <Image source={require("../tipos/acoso.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/acoso.jpeg")} style={styles.cardimagen} />
          
        
        
        
          <Text style={styles.cardText}>Violencia Psicologica</Text>
-         <Image source={require("../tipos/psicologica.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/psicologica.jpeg")} style={styles.cardimagen} />
        
        
        
          <Text style={styles.cardText}>Violencia Economica y Patrimonial</Text>
-         <Image source={require("../tipos/economica.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/economica.jpeg")} style={styles.cardimagen} />
              
        
        
          <Text style={styles.cardText}>Violencia Física</Text>
-         <Image source={require("../tipos/fisica.jpg")style={styles.cardimagen}} />
+         <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
          
          
       
@@ -139,6 +139,10 @@ const styles = StyleSheet.create({
     textAlign: 'center',
 
   },
+
+  cardimagen: {
+    
+  }
 
 
 })
