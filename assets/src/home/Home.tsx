@@ -55,6 +55,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       const db = appFirebase.firestore();
       const userCollection = collection(db, 'numeros');
       const userDoc = doc(userCollection, auth.currentUser.uid);
+      await setDoc(userDoc, { contacto: contacto }, { merge: true });
+
     } catch (error) {
     }
   }
