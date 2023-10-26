@@ -10,7 +10,7 @@ import { RootStackParamList } from './types';
 import AppNavigator from "../../../Appnavigator"
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const auth = getAuth(appFirebase);
-
+const db = getFirestore(appFirebase);
 interface HomeProps {
   route: RouteProp<RootStackParamList, "Home">;
   navigation: StackNavigationProp<RootStackParamList, 'Home'>;
