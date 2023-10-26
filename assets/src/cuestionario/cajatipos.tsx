@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
   },
 
   descripcion: {
-    
+    fontSize: 16,
   }
 
 
