@@ -73,7 +73,8 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
       <Modal
-      animationType="slide">
+      animationType="slide"
+      transparent={true}>
 
       </Modal>
     </View>
