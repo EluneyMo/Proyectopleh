@@ -80,6 +80,11 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
          <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
           <Text>Ingrese un número de contacto:</Text>
+          <TextInput
+              style={styles.input}
+              placeholder="Número de contacto"
+              onChangeText={(text) => setContacto(text)}
+            />
             </View>
           </View>
       </Modal>
