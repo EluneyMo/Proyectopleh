@@ -74,8 +74,13 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       <Button title='Preguntas' onPress={presionar}></Button>
       <Modal
       animationType="slide"
-      transparent={true}>
-
+      transparent={true}
+      visible={modalVisible}
+      onRequestClose={() => setModalVisible(false)}>
+         <View style={styles.modalContainer}>
+          <View style={styles.modalContent}>
+            </View>
+          </View>
       </Modal>
     </View>
   );
