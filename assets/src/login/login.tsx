@@ -8,6 +8,7 @@ import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getFirestore, collection, doc, setDoc,DocumentReference, DocumentData  } from 'firebase/firestore';
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
