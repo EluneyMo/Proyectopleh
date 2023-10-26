@@ -127,7 +127,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 const styles = StyleSheet.create({
 
   container:{
-    
+    width:300,
   }
 
   card: {
