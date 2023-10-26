@@ -79,6 +79,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       onRequestClose={() => setModalVisible(false)}>
          <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
+          <Text>Ingrese un número de contacto:</Text>
             </View>
           </View>
       </Modal>
