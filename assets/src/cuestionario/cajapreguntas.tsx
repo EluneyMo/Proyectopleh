@@ -147,6 +147,7 @@ const styles = StyleSheet.create({
   },
 
   cardNoticias: {
+    backgroundColor: '#fff',
     
   }
 
