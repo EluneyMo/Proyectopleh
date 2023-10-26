@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Tipos() {
   return (
-    <View>
+    <View  style={styles.container}>
       <Text>Violencia de Género</Text>
       <Image source={require('../tipos/violenciagenero.jpeg')} style={{ width: 100, height: 100 }} />
       <Text>
@@ -20,8 +20,10 @@ function Tipos() {
   );
 }
 
-const.style = StyleSheet.create({
- 
+const styles = StyleSheet.create({
+  container: {
+
+  }
 
 
 })
