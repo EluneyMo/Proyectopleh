@@ -164,8 +164,8 @@ const styles = StyleSheet.create({
   },
 
   newsDescripcion: {
-    
-  }
+    textAlign: 'center',
+  },
 
 
 })
