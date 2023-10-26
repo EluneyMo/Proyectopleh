@@ -22,13 +22,13 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
       </View>
      
      <TouchableOpacity onPress={movete} style={styles.card}>
-        <View style={{ alignItems: "center" }}>
-          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Domestica</Text>
+        
+          <Text style={styles.cardText}>Violencia Domestica</Text>
           <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
           <Image 
           source={require("../tipos/Domestica.jpg")}
           style={{ width: 200, height: 200 }}/>
-        </View>
+        
       </TouchableOpacity>
 
 
@@ -170,7 +170,9 @@ const styles = StyleSheet.create({
     shadowRadius: 3.84,
     elevation: 5,
 
-  }
+  },
+
+
 })
 
 
