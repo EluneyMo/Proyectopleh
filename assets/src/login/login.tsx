@@ -7,6 +7,7 @@ import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";

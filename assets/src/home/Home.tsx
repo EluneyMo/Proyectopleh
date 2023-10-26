@@ -2,7 +2,7 @@ import { getAuth, signOut } from 'firebase/auth';
 import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
 import React, {useState, useEffect} from 'react';
-import { DocumentData, DocumentReference, getFirestore, doc, setDoc, collection } from 'firebase/firestore';
+import { DocumentData, DocumentReference, getFirestore, doc, setDoc, getDoc, collection } from 'firebase/firestore';
 import { TextInput, Modal, View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
@@ -26,11 +26,15 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       const primerRegistro = await AsyncStorage.getItem('primerRegistro');
       if (!primerRegistro && auth.currentUser) {
         const userCollection = collection(db, 'numeros');
-        const userDoc = doc(userCollection, auth.currentUser.uid);
-        const userDocSnapshot = await userDoc.get();
+        const userDocRef: DocumentReference<DocumentData> = doc(userCollection, auth.currentUser?.uid || '');
+        try{
+        const userDocSnapshot = await getDoc(userDocRef);;
         if (!userDocSnapshot.exists() || !userDocSnapshot.data()?.contacto) {
         setModalVisible(true);
       }
+    }catch (error) {
+      console.error('Error al verificar el primer registro:', error);
+    }
     }
     }catch (error) {
       console.error('Error al verificar el primer registro:', error);
@@ -38,7 +42,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   }
     verificarPrimerRegistro();
    
-  },[]);
+  },[auth.currentUser]);
   const handlePress = () => {
     navigation.navigate('Panico');  };
   const presionar=()=>{
