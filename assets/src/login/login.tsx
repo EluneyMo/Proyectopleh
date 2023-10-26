@@ -43,7 +43,7 @@ const Login = () => {
       // Usuario autenticado
       const user = userCredential.user;
       console.log("Usuario autenticado:", user);
-
+      await AsyncStorage.setItem('primerRegistro', 'true');
       // Navegando a la pantalla Home después de la autenticación exitosa
       navigation.navigate("PLEH", { correoUsuario: email });
     } catch (error) {
