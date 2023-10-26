@@ -56,7 +56,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       const userCollection = collection(db, 'numeros');
       const userDoc = doc(userCollection, auth.currentUser.uid);
       await setDoc(userDoc, { contacto: contacto }, { merge: true });
-
+      setModalVisible(false);
     } catch (error) {
     }
   }
