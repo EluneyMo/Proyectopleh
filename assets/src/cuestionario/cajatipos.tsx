@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 function Tipos() {
   return (
     <View  style={styles.container}>
-      <Text>Violencia de Género</Text>
+      <Text style={styles.title}>Violencia de Género</Text>
       <Image source={require('../tipos/violenciagenero.jpeg')} style={{ width: 100, height: 100 }} />
       <Text>
         La violencia por motivos de género es una práctica estructural que
@@ -26,7 +26,18 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 16,
+  },
+
+  title:{
+    
   }
+
+
+
+
+
+
+
 
 
 })
