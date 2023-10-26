@@ -92,6 +92,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
 
       
+      <View style={styles.cardNoticias}>
         <Image
           source={require("../tipos/noticia1.png")}
           style={{ width: 200, height: 200 }}
@@ -108,7 +109,6 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
           </TouchableOpacity>
         </View>
 
-      <View>
          
       </View>
 
