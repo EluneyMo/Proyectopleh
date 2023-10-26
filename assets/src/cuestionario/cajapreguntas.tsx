@@ -156,7 +156,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 }
 
 
-
+const styles = StyleSheet.create({})
 
 
 export default CajaTipos;
