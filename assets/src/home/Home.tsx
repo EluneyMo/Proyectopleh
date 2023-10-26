@@ -72,6 +72,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
        resizeMode="contain" />
       </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
+      <Modal>
+        
+      </Modal>
     </View>
   );
 };
