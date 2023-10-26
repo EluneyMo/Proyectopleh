@@ -52,10 +52,14 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   };
   const handleGuardarContacto = async () => {
     try {
-      const userCollection = collection(db, 'numeros');
-      const userDoc = doc(userCollection, auth.currentUser.uid);
-      await setDoc(userDoc, { contacto: contacto }, { merge: true });
-      setModalVisible(false);
+      if (auth.currentUser) {
+        const userCollection = collection(db, 'numeros');
+        const userDoc = doc(userCollection, auth.currentUser.uid);
+        await setDoc(userDoc, { contacto: contacto }, { merge: true });
+        setModalVisible(false);
+      } else {
+        console.error('Usuario no autenticado');
+      }
     } catch (error) {
       console.error('Error al guardar el contacto en Firebase:', error);
     }
