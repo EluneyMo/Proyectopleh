@@ -159,7 +159,8 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 const styles = StyleSheet.create({
 
   card: {
-    
+    backgroundColor: '#fff',
+
   }
 })
 
