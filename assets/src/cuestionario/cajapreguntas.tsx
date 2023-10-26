@@ -1,10 +1,5 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity, Linking } from "react-native";
-<<<<<<< HEAD
-
-
-=======
->>>>>>> b467414bef737a6a03b774e01ff4dd8ef1d59fc8
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -18,12 +13,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   const movete =()=>{
     navigation.navigate("Tipos")
   }
-<<<<<<< HEAD
 
-
-
-=======
->>>>>>> b467414bef737a6a03b774e01ff4dd8ef1d59fc8
   return (
     <View>
       <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
