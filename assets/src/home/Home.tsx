@@ -137,6 +137,14 @@ const styles = StyleSheet.create({
   buttonText: {
     color: "white",
   },
+  input: {
+    height: 40,
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 10,
+    paddingHorizontal: 10,
+    width: "100%",
+  },
 });
 
 export default Home;
