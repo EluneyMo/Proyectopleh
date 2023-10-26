@@ -158,7 +158,7 @@ const styles = StyleSheet.create({
   },
   
   title: {
-    
+    color: '#555',
   }
 
 
