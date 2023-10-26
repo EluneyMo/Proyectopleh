@@ -169,12 +169,13 @@ const styles = StyleSheet.create({
 
   newsLink:{
     textAlign: 'center',
-  }
+    color: 'blue',
+  },
 
 
 
 
-})
+});
 
 
 export default CajaTipos;
