@@ -166,6 +166,7 @@ const styles = StyleSheet.create({
   },
 
   cardText:{
+    color: '#555',
 
   },
 
