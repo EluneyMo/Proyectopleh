@@ -26,9 +26,9 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
           <Text style={styles.cardText}>Violencia Domestica</Text>
           <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
           <Image 
-          source={require("../tipos/Domestica.jpg")}
-          style={{ width: 200, height: 200 }}/>
-        
+          source={require("../tipos/Domestica.jpg") style={styles.cardimagen}} />
+         
+           
       </TouchableOpacity>
 
 
@@ -63,9 +63,8 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
        
        
          <Text style={styles.cardText}>Violencia Institucional</Text>
-         <Image 
-         source={require("../tipos/institucional.jpeg")}
-         style={{ width: 200, height: 200 }}/>
+         <Image source={require("../tipos/institucional.jpeg") } />
+         
        
      
 
