@@ -85,6 +85,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
               placeholder="Número de contacto"
               onChangeText={(text) => setContacto(text)}
             />
+             <TouchableOpacity onPress={handleGuardarContacto} style={styles.button}>
+              
+             </TouchableOpacity>
             </View>
           </View>
       </Modal>
