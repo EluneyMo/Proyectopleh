@@ -5,7 +5,7 @@ function Tipos() {
   return (
     <View  style={styles.container}>
       <Text style={styles.title}>Violencia de Género</Text>
-      <Image source={require('../tipos/violenciagenero.jpeg')} style={{ width: 100, height: 100 }} />
+      <Image source={require('../tipos/violenciagenero.jpeg')} style={styles.imagen} />
       <Text>
         La violencia por motivos de género es una práctica estructural que
         viola los derechos humanos y las libertades fundamentales.
@@ -32,6 +32,10 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     marginBottom: 10,
+  },
+
+  imagen: {
+    
   }
 
 
