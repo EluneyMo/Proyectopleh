@@ -33,7 +33,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
 
        
-          <Text style={}>Violencia Sexual </Text>
+          <Text style={styles.cardText}>Violencia Sexual </Text>
           <Image 
           source={require("../tipos/images.jpeg")}
           style={{ width: 200, height: 200 }}/>
@@ -43,7 +43,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
       
        
       
-         <Text style={}>Violencia Laboral</Text>
+         <Text style={styles.cardText}>Violencia Laboral</Text>
          <Image 
          source={require("../tipos/laboral.jpeg")}
          style={{ width: 200, height: 200 }}/>
