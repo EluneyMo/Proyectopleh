@@ -143,7 +143,8 @@ const styles = StyleSheet.create({
   cardimagen: {
     width: 200,
     height: 200,
-  }
+    alignSelf: 'center',
+  },
 
 
 })
