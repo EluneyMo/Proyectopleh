@@ -32,15 +32,13 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
       </TouchableOpacity>
 
 
-       <View style={{ backgroundColor: "#fff", width:400,}}>
        
-        <View style={{ alignItems: "center" }}>
-          <Text style={{ color: "#555", fontSize: 18 }}>Violencia Sexual </Text>
+          <Text style={}>Violencia Sexual </Text>
           <Image 
           source={require("../tipos/images.jpeg")}
           style={{ width: 200, height: 200 }}/>
-        </View>
-      </View>
+       
+      
 
       <View style={{ backgroundColor: "#fff", width:400,}}>
        
