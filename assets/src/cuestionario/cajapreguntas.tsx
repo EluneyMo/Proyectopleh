@@ -97,7 +97,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
           source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
         <View>
           <Text style={styles.title}>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
-          <Text>
+          <Text style={styles.newsDescripcion}>
             Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la
             localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
             celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios
