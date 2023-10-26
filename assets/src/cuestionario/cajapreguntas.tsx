@@ -20,6 +20,13 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
         <Text>Tipos de violencias</Text>
         <Text>#</Text>
       </View>
+
+      <FlatList
+        horizontal
+        data={data}
+        keyExtractor={(item, index) => index.toString()}
+        renderItem={({ item }) => (
+          
      
      <TouchableOpacity onPress={movete} style={styles.card}>
         
@@ -113,6 +120,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
     </View>
   );
 }
+
 
 
 const styles = StyleSheet.create({
