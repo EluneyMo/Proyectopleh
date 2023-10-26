@@ -58,6 +58,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       await setDoc(userDoc, { contacto: contacto }, { merge: true });
       setModalVisible(false);
     } catch (error) {
+      console.error('Error al guardar el contacto en Firebase:', error);
     }
   }
   return (
