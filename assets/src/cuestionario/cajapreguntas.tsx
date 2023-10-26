@@ -26,7 +26,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
         data={data}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item }) => (
-          
+          <view style={Styles.container}>
      
      <TouchableOpacity onPress={movete} style={styles.card}>
         
