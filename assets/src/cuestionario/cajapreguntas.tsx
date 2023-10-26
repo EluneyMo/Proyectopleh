@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
   
   title: {
     color: '#555',
+    fontSize: 18,
   }
 
 
