@@ -128,6 +128,7 @@ const styles = StyleSheet.create({
 
   container:{
     width:300,
+    margin: 10,
   }
 
   card: {
