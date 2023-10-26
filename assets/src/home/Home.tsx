@@ -3,7 +3,7 @@ import appFirebase from '../../../firebase/firebase';
 import Botonpanico from './botonpanico';
 import React, {useState, useEffect} from 'react';
 import { doc, setDoc, collection } from 'firebase/firestore';
-import { Modal, View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
+import { TextInput, Modal, View, Text, Button as RNButton, StyleSheet, Button, Image, TouchableOpacity} from 'react-native';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
