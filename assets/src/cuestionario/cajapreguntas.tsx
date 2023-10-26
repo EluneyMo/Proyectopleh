@@ -83,8 +83,8 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
       
          <Text style={styles.cardText}>Acoso</Text>
          <Image 
-         source={require("../tipos/acoso.jpeg")}
-         />
+         source={require("../tipos/acoso.jpeg") style={styles.cardimagen}} />
+         
        
      
 
