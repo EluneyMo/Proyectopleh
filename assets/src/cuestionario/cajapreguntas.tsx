@@ -102,7 +102,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
             localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
             celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios
           </Text>
-          <TouchableOpacity onPress={() => Linking.openURL("https://www.lanacion.com.ar/seguridad/misiones-una-mujer-denuncio-que-un-amigo-la-acompano-a-su-casa-la-amenazo-con-un-cuchillo-y-la-violo-nid04102023/")}>
+          <TouchableOpacity onPress={() => Linking.openURL("https://www.lanacion.com.ar/seguridad/misiones-una-mujer-denuncio-que-un-amigo-la-acompano-a-su-casa-la-amenazo-con-un-cuchillo-y-la-violo-nid04102023/")} style={styles.Link}>
             <Text>Ver más información</Text>
           </TouchableOpacity>
         </View>
