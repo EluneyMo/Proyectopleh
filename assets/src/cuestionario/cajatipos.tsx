@@ -6,7 +6,7 @@ function Tipos() {
     <View  style={styles.container}>
       <Text style={styles.title}>Violencia de Género</Text>
       <Image source={require('../tipos/violenciagenero.jpeg')} style={styles.imagen} />
-      <Text>
+      <Text style={styles.descripcion}>
         La violencia por motivos de género es una práctica estructural que
         viola los derechos humanos y las libertades fundamentales.
         La violencia por motivos de género afecta gravemente a mujeres y personas LGBTI+. Se produce cuando sufren algún tipo de discriminación, agresión, hostigamiento o degradación por su identidad de género, expresión de género u orientación sexual.
@@ -37,6 +37,10 @@ const styles = StyleSheet.create({
   imagen: {
     width: 100,
     height: 100,
+  },
+
+  descripcion: {
+    
   }
 
 
