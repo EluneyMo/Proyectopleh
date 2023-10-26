@@ -24,9 +24,14 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const verificarPrimerRegistro = async () => {
     try {
       const primerRegistro = await AsyncStorage.getItem('primerRegistro');
-      if (!primerRegistro) {
+      if (!primerRegistro && auth.currentUser) {
+        const userCollection = collection(db, 'numeros');
+        const userDoc = doc(userCollection, auth.currentUser.uid);
+        const userDocSnapshot = await userDoc.get();
+        if (!userDocSnapshot.exists() || !userDocSnapshot.data()?.contacto) {
         setModalVisible(true);
       }
+    }
     }catch (error) {
       console.error('Error al verificar el primer registro:', error);
     }
