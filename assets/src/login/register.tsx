@@ -31,6 +31,7 @@ const RegistroForm = () => {
 
         console.log("Usuario registrado con ID:", registrationData.uid);
         alert("Usuario registrado de forma exitosa");
+        await AsyncStorage.setItem('primerRegistro', 'true');
         navigation.navigate('Login');
       } else {
         alert("Por favor, completa todos los campos para el registro.");
@@ -44,6 +45,7 @@ const RegistroForm = () => {
       try {
         const registroAnterior = await AsyncStorage.getItem('primerRegistro');
         if (!registroAnterior) {
+          console.log('Estableciendo primerRegistro en AsyncStorage');
           await AsyncStorage.setItem('primerRegistro', 'true');
           
         }

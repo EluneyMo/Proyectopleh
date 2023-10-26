@@ -43,7 +43,7 @@ const Login = () => {
       console.log("Usuario autenticado:", user);
 
       // Navegando a la pantalla Home después de la autenticación exitosa
-      navigation.navigate("Home", { correoUsuario: email });
+      navigation.navigate("PLEH", { correoUsuario: email });
     } catch (error) {
       // Manejando errores de autenticación
       const authError = error as FirebaseError;
