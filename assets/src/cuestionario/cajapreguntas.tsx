@@ -163,6 +163,7 @@ const styles = StyleSheet.create({
     width: 300,
     margin: 10,
     padding: 10,
+    borderRadius: 10,
 
   }
 })
