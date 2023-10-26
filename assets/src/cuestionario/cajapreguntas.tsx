@@ -75,7 +75,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
          <Text style={styles.cardText}>Violencia Mediática</Text>
          <Image 
          source={require("../tipos/mediatica.png")}
-         style={{ width: 200, height: 200 }}/>
+        />
       
 
     
