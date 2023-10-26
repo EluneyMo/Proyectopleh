@@ -81,22 +81,21 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
     
        
       
-         <Text style={{ color: "#555", fontSize: 18 }}>Acoso</Text>
+         <Text style={}>Acoso</Text>
          <Image 
          source={require("../tipos/acoso.jpeg")}
          style={{ width: 200, height: 200 }}/>
        
      
 
-     <View style={{ backgroundColor: "#fff", width:400,}}>
+     
        
-       <View style={{ alignItems: "center" }}>
-         <Text style={{ color: "#555", fontSize: 18 }}>Violencia Psicologica</Text>
+       
+         <Text style={}>Violencia Psicologica</Text>
          <Image 
          source={require("../tipos/psicologica.jpeg")}
          style={{ width: 200, height: 200 }}/>
-       </View>
-     </View>
+      
 
      <View style={{ backgroundColor: "#fff", width:400,}}>
        
