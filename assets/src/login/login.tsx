@@ -52,7 +52,7 @@ const Login = () => {
 
       // Actualizando mensajes de error específicos
       if (authError.code === "auth/invalid-email") {
-        setEmailError("El formato del email no es válido");
+        setEmailError("El email no es válido");
       } else if (authError.code === "auth/wrong-password") {
         setPasswordError("Contraseña incorrecta");
       }
