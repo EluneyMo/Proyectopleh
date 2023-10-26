@@ -94,11 +94,9 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
       
       <View style={styles.cardNoticias}>
         <Image
-          source={require("../tipos/noticia1.png")}
-          style={{ width: 200, height: 200 }}
-        />
+          source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
         <View>
-          <Text>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
+          <Text style={styles.title}>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
           <Text>
             Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la
             localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
