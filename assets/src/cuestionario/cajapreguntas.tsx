@@ -15,108 +15,109 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   }
   return (
     <View  >
-      <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
-        <Text>#</Text>
-        <Text>Tipos de violencias</Text>
-        <Text>#</Text>
-      </View>
-
-      <FlatList
-        horizontal
-        data={data}
-        keyExtractor={(item, index) => index.toString()}
-        renderItem={({ item }) => (
-          <view style={Styles.container}>
-     
-     <TouchableOpacity onPress={movete} style={styles.card}>
-        
-          <Text style={styles.cardText}>Violencia Domestica</Text>
-          <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
-          <Image source={require("../tipos/Domestica.jpg")} style={styles.cardimagen} />
-         
-           
-      </TouchableOpacity>
-
-
-       
-          <Text style={styles.cardText}>Violencia Sexual </Text>
-          <Image source={require("../tipos/images.jpeg")} style={styles.cardimagen} />
-
-
-      
-         <Text style={styles.cardText}>Violencia Laboral</Text>
-         <Image source={require("../tipos/laboral.jpeg")} style={styles.cardimagen} />
-         
-        
-         
-       
-       
-         <Text style={styles.cardText}>Femicidio</Text>
-         <Image source={require("../tipos/femicidios.jpg")} style={styles.cardimagen} />
-                
-     
-
-     
-       
-       
-         <Text style={styles.cardText}>Violencia Institucional</Text>
-         <Image source={require("../tipos/institucional.jpeg")} style={styles.cardimagen} />
-         
-         
-       
-          
-         <Text style={styles.cardText}>Violencia Mediática</Text>
-         <Image source={require("../tipos/mediatica.png")} style={styles.cardimagen} />
-            
-       
-      
-         <Text style={styles.cardText}>Acoso</Text>
-         <Image source={require("../tipos/acoso.jpeg")} style={styles.cardimagen} />
-         
-       
-       
-       
-         <Text style={styles.cardText}>Violencia Psicologica</Text>
-         <Image source={require("../tipos/psicologica.jpeg")} style={styles.cardimagen} />
-       
-       
-       
-         <Text style={styles.cardText}>Violencia Economica y Patrimonial</Text>
-         <Image source={require("../tipos/economica.jpeg")} style={styles.cardimagen} />
-             
-       
-       
-         <Text style={styles.cardText}>Violencia Física</Text>
-         <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
-         
-         
-      
- 
-
-      
-      
-      <Text>Noticias Recientes</Text>
-
-
-      
-      <View style={styles.cardNoticias}>
-        <Image
-          source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
-        <View>
-          <Text style={styles.title}>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
-          <Text style={styles.newsDescripcion}>
-            Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la
-            localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
-            celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios
-          </Text>
-          <TouchableOpacity onPress={() => Linking.openURL('https://www.lanacion.com.ar/seguridad/misiones-una-mujer-denuncio-que-un-amigo-la-acompano-a-su-casa-la-amenazo-con-un-cuchillo-y-la-violo-nid04102023/')} style={styles.newsLink}>
-            <Text>Ver más información</Text>
-          </TouchableOpacity>
+        <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
+          <Text>#</Text>
+          <Text>Tipos de violencias</Text>
+          <Text>#</Text>
         </View>
 
-         
-      </View>
+        <FlatList
+          horizontal
+          data={data}
+          keyExtractor={(item, index) => index.toString()}
+          renderItem={({ item }) => (
+            <View style={styles.container}>
+              
+              <TouchableOpacity onPress={movete} style={styles.card}>
+                  
+                <Text style={styles.cardText}>Violencia Domestica</Text>
+                <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
+                <Image source={require("../tipos/Domestica.jpg")} style={styles.cardimagen} />
+              
+                    
+              </TouchableOpacity>
 
+
+                
+                <Text style={styles.cardText}>Violencia Sexual </Text>
+                <Image source={require("../tipos/images.jpeg")} style={styles.cardimagen} />
+
+
+                  
+                <Text style={styles.cardText}>Violencia Laboral</Text>
+                <Image source={require("../tipos/laboral.jpeg")} style={styles.cardimagen} />
+                
+                
+                
+              
+              
+                <Text style={styles.cardText}>Femicidio</Text>
+                <Image source={require("../tipos/femicidios.jpg")} style={styles.cardimagen} />
+                        
+            
+
+            
+              
+              
+                <Text style={styles.cardText}>Violencia Institucional</Text>
+                <Image source={require("../tipos/institucional.jpeg")} style={styles.cardimagen} />
+                
+                
+              
+                  
+                <Text style={styles.cardText}>Violencia Mediática</Text>
+                <Image source={require("../tipos/mediatica.png")} style={styles.cardimagen} />
+                    
+              
+              
+                <Text style={styles.cardText}>Acoso</Text>
+                <Image source={require("../tipos/acoso.jpeg")} style={styles.cardimagen} />
+                
+              
+              
+              
+                <Text style={styles.cardText}>Violencia Psicologica</Text>
+                <Image source={require("../tipos/psicologica.jpeg")} style={styles.cardimagen} />
+              
+              
+              
+                <Text style={styles.cardText}>Violencia Economica y Patrimonial</Text>
+                <Image source={require("../tipos/economica.jpeg")} style={styles.cardimagen} />
+                    
+              
+              
+                <Text style={styles.cardText}>Violencia Física</Text>
+                <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
+                
+            </View>   
+          )}
+        />    
+    
+
+          
+          
+          <Text>Noticias Recientes</Text>
+
+
+          
+          <View style={styles.cardNoticias}>
+            <Image
+              source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
+            <View>
+              <Text style={styles.title}>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
+              <Text style={styles.newsDescripcion}>
+                Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la
+                localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
+                celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios
+              </Text>
+              <TouchableOpacity onPress={() => Linking.openURL('https://www.lanacion.com.ar/seguridad/misiones-una-mujer-denuncio-que-un-amigo-la-acompano-a-su-casa-la-amenazo-con-un-cuchillo-y-la-violo-nid04102023/')} style={styles.newsLink}>
+                <Text>Ver más información</Text>
+              </TouchableOpacity>
+            </View>
+
+         
+        </View>
+    
     </View>
   );
 }
@@ -124,6 +125,10 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
 
 const styles = StyleSheet.create({
+
+  container:{
+    
+  }
 
   card: {
     backgroundColor: '#fff',
