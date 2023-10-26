@@ -21,7 +21,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
         <Text>#</Text>
       </View>
      
-     <TouchableOpacity onPress={movete} style={{ backgroundColor: "#fff", width:400,}}>
+     <TouchableOpacity onPress={movete} style={styles.card}>
         <View style={{ alignItems: "center" }}>
           <Text style={{ color: "#555", fontSize: 18 }}>Violencia Domestica</Text>
           <Text style={{ color: "#999" }}>La violencia no es solo matar a otro</Text>
@@ -156,7 +156,12 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 }
 
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+  card: {
+    
+  }
+})
 
 
 export default CajaTipos;
