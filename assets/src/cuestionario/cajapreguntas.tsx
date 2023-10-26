@@ -167,6 +167,12 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
 
+  Link:{
+    
+  }
+
+
+
 
 })
 
