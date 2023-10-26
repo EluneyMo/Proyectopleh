@@ -34,29 +34,19 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
        
           <Text style={styles.cardText}>Violencia Sexual </Text>
           <Image source={require("../tipos/images.jpeg") style={styles.cardimagen}} />
-         
-       
-      
-
-      
-       
+        
+               
       
          <Text style={styles.cardText}>Violencia Laboral</Text>
-         <Image 
-         source={require("../tipos/laboral.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/laboral.jpeg") style={styles.cardimagen}} />
          
         
-      
-     
-
-     
+         
        
        
          <Text style={styles.cardText}>Femicidio</Text>
-         <Image 
-         source={require("../tipos/femicidios.jpg") style={styles.cardimagen}} />
-         
-         
+         <Image source={require("../tipos/femicidios.jpg") style={styles.cardimagen}} />
+                
      
 
      
@@ -67,57 +57,34 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
          
          
        
-     
-
-     
-       
-       
+          
          <Text style={styles.cardText}>Violencia Mediática</Text>
-         <Image 
-         source={require("../tipos/mediatica.png") style={styles.cardimagen}} />
-        
-      
-
-    
+         <Image source={require("../tipos/mediatica.png") style={styles.cardimagen}} />
+            
        
       
          <Text style={styles.cardText}>Acoso</Text>
-         <Image 
-         source={require("../tipos/acoso.jpeg") style={styles.cardimagen}} />
+         <Image source={require("../tipos/acoso.jpeg") style={styles.cardimagen}} />
          
        
-     
-
-     
        
        
          <Text style={styles.cardText}>Violencia Psicologica</Text>
-         <Image 
-         source={require("../tipos/psicologica.jpeg") style={styles.cardimagen}} />
-         
-      
-
-    
+         <Image source={require("../tipos/psicologica.jpeg") style={styles.cardimagen}} />
+       
        
        
          <Text style={styles.cardText}>Violencia Economica y Patrimonial</Text>
-         <Image 
-         source={require("../tipos/economica.jpeg") style={styles.cardimagen}} />
-         
-      
-
-    
+         <Image source={require("../tipos/economica.jpeg") style={styles.cardimagen}} />
+             
        
        
          <Text style={styles.cardText}>Violencia Física</Text>
-         <Image 
-         source={require("../tipos/fisica.jpg")style={styles.cardimagen}} />
+         <Image source={require("../tipos/fisica.jpg")style={styles.cardimagen}} />
          
          
       
-
-
-      
+ 
 
       
       
