@@ -165,6 +165,10 @@ const styles = StyleSheet.create({
 
   },
 
+  cardText:{
+
+  },
+
 
 })
 
