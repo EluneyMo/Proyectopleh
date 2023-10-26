@@ -86,7 +86,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
               onChangeText={(text) => setContacto(text)}
             />
              <TouchableOpacity onPress={handleGuardarContacto} style={styles.button}>
-              
+             <Text style={styles.buttonText}>Cerrar</Text>
              </TouchableOpacity>
             </View>
           </View>
