@@ -160,6 +160,7 @@ const styles = StyleSheet.create({
 
   card: {
     backgroundColor: '#fff',
+    width: 300,
 
   }
 })
