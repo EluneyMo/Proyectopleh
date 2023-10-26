@@ -69,15 +69,14 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
        
      
 
-     <View style={{ backgroundColor: "#fff", width:400,}}>
+     
        
-       <View style={{ alignItems: "center" }}>
-         <Text style={{ color: "#555", fontSize: 18 }}>Violencia Mediática</Text>
+       
+         <Text style={}>Violencia Mediática</Text>
          <Image 
          source={require("../tipos/mediatica.png")}
          style={{ width: 200, height: 200 }}/>
-       </View>
-     </View>
+      
 
      <View style={{ backgroundColor: "#fff", width:400,}}>
        
