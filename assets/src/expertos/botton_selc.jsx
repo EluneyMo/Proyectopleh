@@ -26,6 +26,7 @@ const BootstrapButton = styled(Button)({
       ].join(','),
       '&:hover': {
         backgroundColor: '#0069d9',
+        borderColor: '#0062cc',
       },
   });
   
