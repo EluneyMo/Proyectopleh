@@ -77,7 +77,7 @@ const ExpandMore = styled((props) => {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
       <CardContent>
-      <Typography>
+      <Typography paragraph>
             bla bla
           </Typography>
       </CardContent>
