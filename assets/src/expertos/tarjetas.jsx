@@ -49,7 +49,7 @@ const ExpandMore = styled((props) => {
       subheader="septimbre 14, 2016"
       />
           <CardMedia
-        
+            component="img"
       />
     </Card> 
   );
