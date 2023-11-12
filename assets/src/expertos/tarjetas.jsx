@@ -19,7 +19,7 @@ const ExpandMore = styled((props) => {
     return <IconButton {...other} />;
   })(({ theme, expand }) => ({
     transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    
+    marginLeft: 'auto',
     }),
   }));
 
