@@ -25,7 +25,7 @@ const BootstrapButton = styled(Button)({
         '"Segoe UI Symbol"',
       ].join(','),
       '&:hover': {
-
+        backgroundColor: '#0069d9',
       },
   });
   
