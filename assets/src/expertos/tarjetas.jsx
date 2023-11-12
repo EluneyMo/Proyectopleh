@@ -67,7 +67,8 @@ const ExpandMore = styled((props) => {
              <ShareIcon />
         </IconButton>
         <ExpandMore
-          expand={expanded}  
+          expand={expanded}
+          onClick={handleExpandClick}  
         >
             <ExpandMoreIcon />
         </ExpandMore>
