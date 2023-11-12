@@ -11,6 +11,7 @@ const BootstrapButton = styled(Button)({
     border: '1px solid',
     lineHeight: 1.5,
     backgroundColor: '#0063cc',
+    borderColor: '#0063cc',
   });
   
     
