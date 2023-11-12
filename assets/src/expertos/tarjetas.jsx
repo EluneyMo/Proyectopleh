@@ -52,6 +52,7 @@ const ExpandMore = styled((props) => {
             component="img"
             height="194"
             image="/static/images/cards/paella.jpg"
+            alt="Paella dish"
       />
     </Card> 
   );
