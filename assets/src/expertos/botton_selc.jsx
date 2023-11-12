@@ -27,6 +27,7 @@ const BootstrapButton = styled(Button)({
       '&:hover': {
         backgroundColor: '#0069d9',
         borderColor: '#0062cc',
+        boxShadow: 'none',
       },
   });
   
