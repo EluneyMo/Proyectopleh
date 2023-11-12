@@ -28,6 +28,7 @@ const ExpandMore = styled((props) => {
     const [expanded, setExpanded] = React.useState(false);
     
     const handleExpandClick = () => {
+        setExpanded(!expanded);
 };
 
   return (
