@@ -35,7 +35,7 @@ const ExpandMore = styled((props) => {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
       avatar={
-        <Avatar>
+        <Avatar sx={{ bgcolor: red[500] }} >
           R
         </Avatar>
       } 
