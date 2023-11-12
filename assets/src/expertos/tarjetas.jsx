@@ -24,6 +24,9 @@ const ExpandMore = styled((props) => {
         duration: theme.transitions.duration.shortest,
     }),
   }));
+  export default function RecipeReviewCard() {
+
+    };
 
   return (
 
