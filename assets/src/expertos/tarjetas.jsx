@@ -55,7 +55,9 @@ const ExpandMore = styled((props) => {
             alt="Paella dish"
       />
       <CardContent>
-  
+      <Typography>
+          bla  bla bla 
+        </Typography>
       </CardContent>
     </Card> 
     
