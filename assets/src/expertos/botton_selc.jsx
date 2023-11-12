@@ -23,7 +23,7 @@ const BootstrapButton = styled(Button)({
         '"Apple Color Emoji"',
         '"Segoe UI Emoji"',
         '"Segoe UI Symbol"',
-      ]
+      ].join(','),
   });
   
     
