@@ -68,7 +68,8 @@ const ExpandMore = styled((props) => {
         </IconButton>
         <ExpandMore
           expand={expanded}
-          onClick={handleExpandClick}  
+          onClick={handleExpandClick}
+          aria-expanded={expanded}  
         >
             <ExpandMoreIcon />
         </ExpandMore>
