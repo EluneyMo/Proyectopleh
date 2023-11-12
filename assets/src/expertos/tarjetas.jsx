@@ -50,6 +50,7 @@ const ExpandMore = styled((props) => {
       />
           <CardMedia
             component="img"
+            height="194"
       />
     </Card> 
   );
