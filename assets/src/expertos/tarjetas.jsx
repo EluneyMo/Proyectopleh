@@ -48,12 +48,16 @@ const ExpandMore = styled((props) => {
       title="Contacto"
       subheader="septimbre 14, 2016"
       />
-          <CardMedia
+     <CardMedia
             component="img"
             height="194"
             image="/static/images/cards/paella.jpg"
             alt="Paella dish"
       />
+      <CardContent>
+  
+      </CardContent>
     </Card> 
+    
   );
   }
