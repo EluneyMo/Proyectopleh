@@ -51,6 +51,7 @@ const ExpandMore = styled((props) => {
           <CardMedia
             component="img"
             height="194"
+            image="/static/images/cards/paella.jpg"
       />
     </Card> 
   );
