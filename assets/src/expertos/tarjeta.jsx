@@ -5,84 +5,82 @@ import CardHeader from '@mui/material/CardHeader';
 import CardContent from '@mui/material/CardContent';
 import CardActions from '@mui/material/CardActions';
 import Collapse from '@mui/material/Collapse';
-import Avatar from '@mui/material/Avatar'; 
+import Avatar from '@mui/material/Avatar';
 import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography'; 
+import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
-import FavoriteIcon from '@mui/icons-material/Favorite';
-import ShareIcon from '@mui/icons-material/Share';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
+import PhoneIcon from '@mui/icons-material/Phone';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 const ExpandMore = styled((props) => {
-    const { expand, ...other } = props;
-    return <IconButton {...other} />;
-  })(({ theme, expand }) => ({
-    transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-    marginLeft: 'auto',
-    transition: theme.transitions.create('transform',{
-        duration: theme.transitions.duration.shortest,
-    }),
-  }));
-  export default function RecipeReviewCard() {
-    const [expanded, setExpanded] = React.useState(false);
-    
-    const handleExpandClick = () => {
-        setExpanded(!expanded);
-};
+  const { expand, ...other } = props;
+  return <IconButton {...other} />;
+})(({ theme, expand }) => ({
+  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
+  marginLeft: 'auto',
+  transition: theme.transitions.create('transform', {
+    duration: theme.transitions.duration.shortest,
+  }),
+}));
+
+export default function ProfileCard() {
+  const [expanded, setExpanded] = React.useState(false);
+
+  const handleExpandClick = () => {
+    setExpanded(!expanded);
+  };
 
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-      avatar={
-        <Avatar sx={{ bgcolor: red[500] }} >
-          R
-        </Avatar>
-        
-      } 
-      action={
-        <IconButton aria-label="settings">
+        avatar={
+          <Avatar sx={{ bgcolor: red[500] }}>R</Avatar>
+        }
+        action={
+          <IconButton aria-label="settings">
             <MoreVertIcon />
           </IconButton>
-      }
-      title="Contacto"
-      subheader="septimbre 14, 2016"
-      />
-     <CardMedia
-            component="img"
-            height="194"
-            image="/static/images/cards/paella.jpg"
-            alt="Paella dish"
+        }
+        title="Nombre Completo"
+        subheader="Psicólogo"
       />
       <CardContent>
-      <Typography variant="body2" color="text.secondary">
-          bla  bla bla 
+        <Typography variant="body2" color="text.secondary">
+          <IconButton color="primary" aria-label="location">
+            <LocationOnIcon />
+          </IconButton>
+          Ubicación: avenida tarabajador 500
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+          <IconButton color="primary" aria-label="phone">
+            <PhoneIcon />
+          </IconButton>
+          Teléfono: +123456789
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-            <FavoriteIcon />
+          <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="share">
-             <ShareIcon />
+          <ShareIcon />
         </IconButton>
         <ExpandMore
           expand={expanded}
           onClick={handleExpandClick}
           aria-expanded={expanded}
-          aria-label="show more"  
+          aria-label="show more"
         >
-            <ExpandMoreIcon />
+          <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-      <CardContent>
-      <Typography paragraph>
-            bla bla
-          </Typography>
-      </CardContent>
-      </Collapse> 
-    </Card> 
-    
+        <CardContent>
+          <Typography paragraph>información adicional</Typography>
+        </CardContent>
+      </Collapse>
+    </Card>
   );
-  }
+}
