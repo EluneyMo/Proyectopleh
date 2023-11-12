@@ -66,7 +66,9 @@ const ExpandMore = styled((props) => {
         <IconButton aria-label="share">
              <ShareIcon />
         </IconButton>
-        <ExpandMore>
+        <ExpandMore
+          expand={expanded}  
+        >
             <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
