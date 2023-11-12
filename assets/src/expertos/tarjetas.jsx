@@ -20,6 +20,7 @@ const ExpandMore = styled((props) => {
   })(({ theme, expand }) => ({
     transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
     marginLeft: 'auto',
+    transition: theme.transitions.create('transform',
     }),
   }));
 
