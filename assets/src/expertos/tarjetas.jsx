@@ -42,7 +42,7 @@ const ExpandMore = styled((props) => {
       } 
       action={
         <IconButton aria-label="settings">
-            
+            <MoreVertIcon />
           </IconButton>
       }
         
