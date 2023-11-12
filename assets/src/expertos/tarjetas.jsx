@@ -64,7 +64,7 @@ const ExpandMore = styled((props) => {
             <FavoriteIcon />
         </IconButton>
         <IconButton aria-label="share">
-          
+             <ShareIcon />
         </IconButton>
       </CardActions>
     </Card> 
