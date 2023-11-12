@@ -60,7 +60,7 @@ const ExpandMore = styled((props) => {
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
-        <IconButton >
+        <IconButton aria-label="add to favorites">
           
         </IconButton>
       </CardActions>
