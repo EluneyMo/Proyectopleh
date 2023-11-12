@@ -67,7 +67,7 @@ const ExpandMore = styled((props) => {
              <ShareIcon />
         </IconButton>
         <ExpandMore>
-          
+            <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
     </Card> 
