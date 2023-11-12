@@ -39,7 +39,7 @@ const BootstrapButton = styled(Button)({
       },
   });
   const ColorButton = styled(Button)(({ theme }) => ({
-   
+    color: theme.palette.getContrastText(purple[500]),
   }));
   
     
