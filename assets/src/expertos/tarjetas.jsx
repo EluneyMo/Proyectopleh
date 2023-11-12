@@ -75,6 +75,7 @@ const ExpandMore = styled((props) => {
             <ExpandMoreIcon />
         </ExpandMore>
       </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
     </Card> 
     
   );
