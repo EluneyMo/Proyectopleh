@@ -8,7 +8,7 @@ const BootstrapButton = styled(Button)({
     textTransform: 'none',
     fontSize: 16,
     padding: '6px 12px',
-    border: '1px ',
+    border: '1px solid',
   });
   
     
