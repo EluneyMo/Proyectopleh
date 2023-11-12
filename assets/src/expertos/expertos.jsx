@@ -3,7 +3,7 @@ import Tarjeta from './tarjeta';
 
   return (
         <div>
-            
+            <Tarjeta />
         </div>
   );
 }
