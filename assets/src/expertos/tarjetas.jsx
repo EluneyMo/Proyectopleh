@@ -32,7 +32,7 @@ const ExpandMore = styled((props) => {
 };
 
   return (
-    <Card>
+    <Card sx={{ maxWidth: 345 }}>
     </Card> 
   );
   }
