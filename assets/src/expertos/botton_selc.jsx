@@ -12,6 +12,18 @@ const BootstrapButton = styled(Button)({
     lineHeight: 1.5,
     backgroundColor: '#0063cc',
     borderColor: '#0063cc',
+    fontFamily: [
+        '-apple-system',
+        'BlinkMacSystemFont',
+        '"Segoe UI"',
+        'Roboto',
+        '"Helvetica Neue"',
+        'Arial',
+        'sans-serif',
+        '"Apple Color Emoji"',
+        '"Segoe UI Emoji"',
+        '"Segoe UI Symbol"',
+      ]
   });
   
     
