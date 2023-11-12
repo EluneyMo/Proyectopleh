@@ -49,7 +49,7 @@ const BootstrapButton = styled(Button)({
     
 
 return (
-<Stack spacing={2}>
+<Stack spacing={2} direction="row">
       
     </Stack>
     
