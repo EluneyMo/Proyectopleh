@@ -51,8 +51,8 @@ const BootstrapButton = styled(Button)({
 return (
     <Stack spacing={2} direction="row">
         <ColorButton variant="contained" >ooo</ColorButton>
-        <BootstrapButton>
-       
+        <BootstrapButton  variant="contained">
+        
       </BootstrapButton>
     </Stack>
     
