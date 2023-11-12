@@ -59,6 +59,9 @@ const ExpandMore = styled((props) => {
           bla  bla bla 
         </Typography>
       </CardContent>
+      <CardActions disableSpacing>
+
+      </CardActions>
     </Card> 
     
   );
