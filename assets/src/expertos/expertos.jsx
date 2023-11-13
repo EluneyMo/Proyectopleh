@@ -20,7 +20,7 @@ function ExpertosPage() {
   return (
         <div>
             <h1>Lista de Expertos</h1>
-            {.map(() => (
+            {expertosData.map((experto) => (
         
             ))}
             
