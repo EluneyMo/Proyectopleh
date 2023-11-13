@@ -37,7 +37,7 @@ function AppBar() {
       };
 
   return (
-    <AppBar >
+    <AppBar position="static" >
 
     </AppBar>
     );
