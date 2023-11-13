@@ -29,7 +29,7 @@ function AppBar() {
       };
 
       const handleCloseNavMenu = () => {
-        
+        setAnchorElNav(null);
       };
 
   return (
