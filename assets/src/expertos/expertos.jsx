@@ -21,7 +21,7 @@ function ExpertosPage() {
         <div>
             <h1>Lista de Expertos</h1>
             {expertosData.map((experto) => (
-                <tarjeta key={experto.id} />
+                <tarjeta key={experto.id} data={experto}/>
             ))}
             
         </div>
