@@ -56,7 +56,7 @@ export default function CustomizedButtons() {
         </Button >
 
         <Button variant="contained" onClick={() => handleButtonClick('comisarias')}>
-       
+        Comisarías
        </Button>
 
     </Stack>
