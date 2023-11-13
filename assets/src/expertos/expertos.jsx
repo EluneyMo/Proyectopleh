@@ -12,6 +12,7 @@ const Expertos = () => {
             additionalInfo: 'Trabaja de lunes a viernes de 8am a 3pm solo acepta pacientes con turno. ',
         },
       ];
+      setExpertosData(datosFalsos);
     };
 
 
