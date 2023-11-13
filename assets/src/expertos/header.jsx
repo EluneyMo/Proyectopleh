@@ -101,7 +101,9 @@ function AppBar() {
                     >
                         {settings.map((setting) => (
                             <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                            
+                                <Typography>
+                                    
+                                </Typography>
                             </MenuItem>
                         ))}
                     </menu>
