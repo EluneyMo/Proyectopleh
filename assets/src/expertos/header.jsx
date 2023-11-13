@@ -66,7 +66,10 @@ function AppBar() {
                         <Button
                             key={page}
                             onClick={handleCloseNavMenu}
-                        >
+                            sx={{
+                                 my: 2, 
+                                 }}
+                       >
                             
                         </Button>
                     </Box>
