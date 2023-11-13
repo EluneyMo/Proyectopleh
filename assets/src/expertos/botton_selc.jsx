@@ -55,7 +55,7 @@ export default function CustomizedButtons() {
         Psicólogos
         </Button >
 
-        <Button variant="contained">
+        <Button variant="contained" onClick={() => handleButtonClick('comisarias')}>
        
        </Button>
 
