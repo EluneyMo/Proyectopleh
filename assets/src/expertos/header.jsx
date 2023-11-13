@@ -100,7 +100,7 @@ function AppBar() {
                     onClose={handleCloseUserMenu}
                     >
                         {settings.map((setting) => (
-                            <MenuItem key={setting}>
+                            <MenuItem key={setting} onClick={handleCloseUserMenu}>
                             
                             </MenuItem>
                         ))}
