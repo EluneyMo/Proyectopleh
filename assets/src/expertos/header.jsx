@@ -97,6 +97,7 @@ function AppBar() {
                         horizontal: 'right', 
                     }}
                     open={Boolean(anchorElUser)}
+                    onClose={handleCloseUserMenu}
                     >
 
                     </menu>
