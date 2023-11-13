@@ -20,7 +20,10 @@ function ExpertosPage() {
   return (
         <div>
             <h1>Lista de Expertos</h1>
-            <Tarjeta />
+            {.map(() => (
+        
+            ))}
+            
         </div>
   );
 }
