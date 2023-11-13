@@ -36,7 +36,7 @@ export default function ProfileCard() {
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
         avatar={
-          <Avatar sx={{ bgcolor: red[500] }}>R</Avatar>
+          <Avatar sx={{ bgcolor: red[500] }}>{data.avatar}</Avatar>
         }
         action={
           <IconButton aria-label="settings">
