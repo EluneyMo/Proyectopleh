@@ -44,7 +44,7 @@ export default function ProfileCard() {
           </IconButton>
         }
         title={data.fullName}
-        subheader="Psicólogo"
+        subheader={data.title}
       />
       <CardContent>
         <Typography variant="body2" color="text.secondary">
