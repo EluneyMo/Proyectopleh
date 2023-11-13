@@ -12,3 +12,36 @@ import { getFirestore, collection, doc, setDoc,DocumentReference, DocumentData  
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
+const cambiocon=()=>{
+const handleChangePassword = async () => {
+    try {
+      if (!auth.currentUser) {
+        // Handle the case where the user is not authenticated
+        // You might want to redirect the user to the login screen or show a message
+        console.warn("User not authenticated");
+        return;
+      }
+  
+      if (!newPassword) {
+        setNewPasswordError("Por favor, ingresa tu nueva contraseña");
+        return;
+      }
+  
+      // Change password using Firebase
+      await updatePassword(auth.currentUser, newPassword);
+  
+      // Success in changing the password
+      Toast.show({
+        type: 'success',
+        text1: 'Contraseña cambiada con éxito',
+      });
+  
+      // You can clear the password fields if desired
+      setPassword("");
+      setNewPassword("");
+    } catch (error) {
+      console.error("Error al cambiar la contraseña:", error);
+      // Handle errors and show messages to the user
+    }
+  };
+}
