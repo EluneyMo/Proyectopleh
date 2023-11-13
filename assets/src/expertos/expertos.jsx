@@ -19,7 +19,8 @@ const Expertos = () => {
 
    
   const expertosFiltrados = expertosData.filter((experto) => {
-   
+    if () {
+      }
   });
 
 function Expertos() {
