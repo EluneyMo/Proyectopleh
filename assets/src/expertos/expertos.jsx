@@ -21,7 +21,7 @@ const Expertos = () => {
   const expertosFiltrados = expertosData.filter((experto) => {
     if (!filtro) {
         return true;
-      }
+      } return
   });
 
 function Expertos() {
