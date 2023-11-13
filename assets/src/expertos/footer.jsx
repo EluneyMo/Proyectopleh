@@ -6,8 +6,9 @@ import { styled } from '@mui/material/styles';
         padding: '20px',
     });
 
-    return (
+    const Footer = () => {
+        return (
     
-    );
-
+        );
+    };
 
