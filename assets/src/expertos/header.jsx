@@ -46,6 +46,9 @@ function AppBar() {
                         noWrap
                         component="a"
                         href="#app-bar-with-responsive-menu"
+                        sx={{
+                            mr: 2,
+                          }}
                     >
                         PLEH
                     </Typography>
