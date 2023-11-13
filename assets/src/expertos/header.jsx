@@ -93,7 +93,7 @@ function AppBar() {
                         }}
                     keepMounted
                     transformOrigin={{
-                        
+                        vertical: 'top',
                     }}
                     >
 
