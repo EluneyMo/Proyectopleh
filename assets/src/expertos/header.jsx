@@ -77,7 +77,9 @@ function AppBar() {
                     </Box>
                     <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="abrir usuario">
+                    <IconButton >
 
+                    </IconButton>
                     </Tooltip>
 
                     </Box>
