@@ -21,7 +21,7 @@ function AppBar() {
     const [anchorElUser, setAnchorElUser] = React.useState(null);
    
     const handleOpenNavMenu = (event) => {
-        
+        setAnchorElNav(event.currentTarget);
       };
   return (
     );
