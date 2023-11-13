@@ -64,7 +64,7 @@ function AppBar() {
                         display: { xs: 'none', md: 'flex' }
                     }}>
                         <Button
-                            
+                            key={page}
                         >
                             
                         </Button>
