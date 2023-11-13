@@ -17,6 +17,7 @@ const pages = ['Products', 'Pricing','Blog'];
 const settings = ['Profile''Account', 'Dashboard','Logout'];
 
 function AppBar() {
+    const [anchorElNav, setAnchorElNav] = React.useState(null);
   return (
     );
 }
