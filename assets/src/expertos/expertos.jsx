@@ -5,6 +5,8 @@ const Expertos = () => {
     const datosFalsos = [
         {
             id: 1,
+            fullName: 'Carla Lopez',
+            
         },
       ];
     };
