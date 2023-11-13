@@ -25,7 +25,7 @@ const Expertos = () => {
             {expertosData.map((experto) => (
                 <tarjeta key={experto.id} data={experto}/>
             ))}
-            
+            <Footer/>
         </div>
     );
 }
