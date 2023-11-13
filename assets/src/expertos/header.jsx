@@ -38,7 +38,8 @@ function AppBar() {
 
   return (
     <AppBar position="static" >
-
+        <Container>
+        </Container>
     </AppBar>
     );
 }
