@@ -4,7 +4,7 @@ const Expertos = () => {
     const [expertosData, setExpertosData] = useState([]);
     const datosFalsos = [
         {
-
+            id: 1,
         },
       ];
     };
