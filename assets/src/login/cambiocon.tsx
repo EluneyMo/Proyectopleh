@@ -13,14 +13,13 @@ import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
 const cambiocon=()=>{
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [newPassword, setNewPassword] = useState(""); // Nuevo estado
-    const [emailError, setEmailError] = useState("");
-    const [passwordError, setPasswordError] = useState("");
-    const [newPasswordError, setNewPasswordError] = useState("");
+  
+  const [currentPassword, setCurrentPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+  const [error, setError] = useState('');
 const handleChangePassword = async () => {
     try {
+      const user = auth.currentUser;
       if (!auth.currentUser) {
         // Handle the case where the user is not authenticated
         // You might want to redirect the user to the login screen or show a message
