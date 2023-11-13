@@ -30,7 +30,7 @@ const Expertos = () => {
 function Expertos() {
   return (
         <div>
-            <CustomizedButtons  />
+            <CustomizedButtons  onSelect={(categoria) => setFiltro(categoria)} />
             <h1>Lista de Expertos</h1>
             {expertosData.map((experto) => (
                 <tarjeta key={experto.id} data={experto}/>
