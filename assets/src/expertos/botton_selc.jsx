@@ -49,7 +49,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 }));
 
     const CustomizedButtons = ({ onSelect }) =>{
-        const handleButtonClick {
+        const handleButtonClick  = (categoria) =>  {
         };
     };
 
