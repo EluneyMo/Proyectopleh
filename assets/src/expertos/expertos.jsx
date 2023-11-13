@@ -6,7 +6,8 @@ const Expertos = () => {
         {
             id: 1,
             fullName: 'Carla Lopez',
-            
+            title: 'Psicólogo',
+
         },
       ];
     };
