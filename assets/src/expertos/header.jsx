@@ -89,6 +89,7 @@ function AppBar() {
                         anchorEl={anchorElUser}
                         anchorOrigin={{
                             vertical: 'top',
+                            horizontal: 'right',
                         }}
                     >
 
