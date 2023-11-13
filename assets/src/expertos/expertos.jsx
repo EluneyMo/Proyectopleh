@@ -3,7 +3,9 @@ import Tarjeta from './tarjeta';
 const Expertos = () => {
     const [expertosData, setExpertosData] = useState([]);
     const datosFalsos = [
-        
+        {
+
+        },
       ];
     };
 
