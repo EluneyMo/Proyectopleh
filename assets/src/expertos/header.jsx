@@ -99,7 +99,9 @@ function AppBar() {
                     open={Boolean(anchorElUser)}
                     onClose={handleCloseUserMenu}
                     >
-
+                        {settings.map((setting) => (
+                            
+                        ))}
                     </menu>
                     </Box>
                     
