@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword } from "firebase/auth";
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
@@ -59,6 +59,32 @@ const Login = () => {
       } else if (authError.code === "auth/wrong-password") {
         setPasswordError("Contraseña incorrecta");
       }
+    }
+  };
+  const handleChangePassword = async () => {
+    try {
+      if (!auth.currentUser) {
+        setEmailError("Por favor, ingresa tu email");
+        console.warn("User not authenticated");
+        return;
+      }
+
+      if (!newPassword) {
+        setNewPasswordError("Por favor, ingresa tu nueva contraseña");
+        return;
+      }
+
+      await updatePassword(auth.currentUser, newPassword);
+
+      Toast.show({
+        type: 'success',
+        text1: 'Contraseña cambiada con éxito',
+      });
+
+      setPassword("");
+      setNewPassword("");
+    } catch (error) {
+      console.error("Error al cambiar la contraseña:", error);
     }
   };
   const handleGoogleSignIn = async () => {
@@ -125,7 +151,21 @@ const Login = () => {
       <Text style={styles.invitado}>Ingresar como invitado</Text>
 
       </TouchableOpacity>
-      
+      <Text style={styles.textito}>Nueva Contraseña</Text>
+      <TextInput
+        placeholder="Ingresa tu nueva contraseña"
+        secureTextEntry
+        value={newPassword}
+        onChangeText={setNewPassword}
+        style={newPasswordError ? styles.inputError : styles.input}
+      />
+      {newPasswordError ? (
+        <Text style={styles.errorText}>{newPasswordError}</Text>
+      ) : null}
+
+      {/* Botón para cambiar la contraseña */}
+      <Button title="Cambiar Contraseña" onPress={handleChangePassword} />
+
     </View>
     </LinearGradient>
   );
