@@ -48,7 +48,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-    const CustomizedButtons{
+    const CustomizedButtons = ({ onSelect }) =>{
     
     };
 
