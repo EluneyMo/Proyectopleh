@@ -22,8 +22,7 @@ const handleChangePassword = async () => {
     try {
       const user = auth.currentUser;
       if (user) {
-        // Handle the case where the user is not authenticated
-        // You might want to redirect the user to the login screen or show a message
+        const credential = auth.EmailAuthProvider.credential(user.email, currentPassword);
         console.warn("User not authenticated");
         return;
       }
