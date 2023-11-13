@@ -108,9 +108,7 @@ function AppBar() {
                         ))}
                     </menu>
                     </Box>
-                    
                 </Toolbar>    
-
             </Container>
         </AppBar>
     );
