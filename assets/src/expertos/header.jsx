@@ -75,6 +75,10 @@ function AppBar() {
                             {page}
                         </Button>
                     </Box>
+                    <Box >
+
+
+                    </Box>
                     
                 </Toolbar>    
 
