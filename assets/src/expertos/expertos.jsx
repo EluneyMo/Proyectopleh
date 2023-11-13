@@ -7,7 +7,7 @@ const Expertos = () => {
             id: 1,
             fullName: 'Carla Lopez',
             title: 'Psicólogo',
-
+            location: 'Neuquen, Neuquén ',
         },
       ];
     };
