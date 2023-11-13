@@ -94,7 +94,9 @@ function AppBar() {
                     keepMounted
                     transformOrigin={{
                         vertical: 'top',
+                        horizontal: 'right', 
                     }}
+                    open={Boolean(anchorElUser)}
                     >
 
                     </menu>
