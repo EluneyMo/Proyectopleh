@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, EmailAuthProvider } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from "firebase/auth";
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
@@ -33,8 +33,7 @@ const handleChangePassword = async () => {
     console.error('Error changing password:', error.message);
   }
 };
-    }
-  }
+    
 
   return(
     <View style={styles.container}>
