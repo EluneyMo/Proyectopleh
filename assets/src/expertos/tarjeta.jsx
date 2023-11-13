@@ -57,7 +57,7 @@ export default function ProfileCard() {
           <IconButton color="primary" aria-label="phone">
             <PhoneIcon />
           </IconButton>
-          Teléfono: +123456789
+          Teléfono:{data.phoneNumber}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
