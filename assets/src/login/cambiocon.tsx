@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, auth } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, EmailAuthProvider } from "firebase/auth";
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
@@ -23,6 +23,7 @@ const handleChangePassword = async () => {
       const user = auth.currentUser;
       if (user) {
         const credential = auth.EmailAuthProvider.credential(user.email, currentPassword);
+        await reauthenticateWithCredential(user, credential);
         console.warn("User not authenticated");
         return;
       }
