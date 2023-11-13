@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, auth } from "firebase/auth";
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
@@ -20,7 +20,7 @@ const cambiocon=()=>{
 const handleChangePassword = async () => {
     try {
       const user = auth.currentUser;
-      if (!auth.currentUser) {
+      if (user) {
         // Handle the case where the user is not authenticated
         // You might want to redirect the user to the login screen or show a message
         console.warn("User not authenticated");
