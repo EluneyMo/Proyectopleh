@@ -59,6 +59,8 @@ function AppBar() {
                     >
                         PLEH
                     </Typography>
+                    <Box>
+                    </Box>
                     
                 </Toolbar>    
 
