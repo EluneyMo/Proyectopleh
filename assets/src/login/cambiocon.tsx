@@ -24,6 +24,7 @@ const handleChangePassword = async () => {
       if (user) {
         const credential = auth.EmailAuthProvider.credential(user.email, currentPassword);
         await reauthenticateWithCredential(user, credential);
+        await updatePassword(user, newPassword);
         console.warn("User not authenticated");
         return;
       }
