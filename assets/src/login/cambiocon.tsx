@@ -50,4 +50,21 @@ const handleChangePassword = async () => {
       // Handle errors and show messages to the user
     }
   };
+  return(
+    <View style={styles.container}>
+    <Text style={styles.textito}>Nueva Contraseña</Text>
+    <TextInput
+      placeholder="Ingresa tu nueva contraseña"
+      secureTextEntry
+      value={newPassword}
+      onChangeText={setNewPassword}
+      style={newPasswordError ? styles.inputError : styles.input}
+    />
+    {newPasswordError ? (
+      <Text style={styles.errorText}>{newPasswordError}</Text>
+    ) : null}
+    <Button title="Cambiar Contraseña" onPress={handleChangePassword} />
+  </View>
+  )
 }
+export default cambiocon;
