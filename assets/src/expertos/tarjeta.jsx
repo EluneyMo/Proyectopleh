@@ -78,7 +78,7 @@ export default function ProfileCard() {
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
-          <Typography paragraph>información adicional</Typography>
+          <Typography paragraph>{data.additionalInfo}</Typography>
         </CardContent>
       </Collapse>
     </Card>
