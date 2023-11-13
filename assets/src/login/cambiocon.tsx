@@ -13,6 +13,12 @@ import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
 const cambiocon=()=>{
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [newPassword, setNewPassword] = useState(""); // Nuevo estado
+    const [emailError, setEmailError] = useState("");
+    const [passwordError, setPasswordError] = useState("");
+    const [newPasswordError, setNewPasswordError] = useState("");
 const handleChangePassword = async () => {
     try {
       if (!auth.currentUser) {
