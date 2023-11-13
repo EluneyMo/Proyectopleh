@@ -49,7 +49,8 @@ function AppBar() {
                         sx={{
                             mr: 2,
                             display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,        
+                            flexGrow: 1, 
+                            fontFamily: 'monospace',
                         }}
                     >
                         PLEH
