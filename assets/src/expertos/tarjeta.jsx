@@ -43,7 +43,7 @@ export default function ProfileCard() {
             <MoreVertIcon />
           </IconButton>
         }
-        title="Nombre Completo"
+        title={data.fullName}
         subheader="Psicólogo"
       />
       <CardContent>
