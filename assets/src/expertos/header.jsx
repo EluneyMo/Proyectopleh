@@ -67,9 +67,10 @@ function AppBar() {
                             key={page}
                             onClick={handleCloseNavMenu}
                             sx={{
-                                 my: 2,
-                                 color: 'white', 
-                                 }}
+                                my: 2,
+                                color: 'white', 
+                                display: 'block'
+                                }}
                        >
                             
                         </Button>
