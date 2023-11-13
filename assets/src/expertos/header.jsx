@@ -32,6 +32,10 @@ function AppBar() {
         setAnchorElNav(null);
       };
 
+      const handleCloseUserMenu = () => {
+        
+      };
+
   return (
     );
 }
