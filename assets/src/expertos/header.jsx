@@ -44,6 +44,7 @@ function AppBar() {
                     <Typography
                         variant="h6"
                         noWrap
+                        component="a"
                     >
                         PLEH
                     </Typography>
