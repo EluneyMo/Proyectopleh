@@ -16,7 +16,7 @@ const Expertos = () => {
     };
 
 
-function ExpertosPage() {
+function Expertos() {
   return (
         <div>
             <h1>Lista de Expertos</h1>
@@ -28,4 +28,4 @@ function ExpertosPage() {
   );
 }
 
-export default  ExpertosPage ;
+export default  Expertos;
