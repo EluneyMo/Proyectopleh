@@ -51,6 +51,7 @@ function AppBar() {
                             display: { xs: 'flex', md: 'none' },
                             flexGrow: 1, 
                             fontFamily: 'monospace',
+                            fontWeight: 700,
                         }}
                     >
                         PLEH
