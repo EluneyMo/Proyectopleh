@@ -3,7 +3,9 @@ import Tarjeta from './tarjeta';
 import CustomizedButtons from './botton_selc';
 
 const Expertos = () => {
+    
     const [expertosData, setExpertosData] = useState([]);
+    const [filtro, setFiltro] = useState(null);
     const datosFalsos = [
         {
             id: 1,
