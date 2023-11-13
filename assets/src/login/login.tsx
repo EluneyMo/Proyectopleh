@@ -21,7 +21,7 @@ const Login = () => {
   const [newPassword, setNewPassword] = useState(""); 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-  const [newPasswordError, setNewPasswordError] = useState(""); // Nuevo estado
+  const [newPasswordError, setNewPasswordError] = useState(""); 
   const handleSignIn = async () => {
     try {
       
