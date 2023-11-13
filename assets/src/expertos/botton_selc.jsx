@@ -52,7 +52,6 @@ const ColorButton = styled(Button)(({ theme }) => ({
         const handleButtonClick  = (categoria) =>  {
             onSelect(categoria);
         };
-    };
 
   return (
     <Stack spacing={5} direction="row">
