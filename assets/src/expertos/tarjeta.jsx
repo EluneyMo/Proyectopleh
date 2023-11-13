@@ -51,7 +51,7 @@ export default function ProfileCard() {
           <IconButton color="primary" aria-label="location">
             <LocationOnIcon />
           </IconButton>
-          Ubicación: avenida tarabajador 500
+          Ubicación: {data.location}
         </Typography>
         <Typography variant="body2" color="text.secondary">
           <IconButton color="primary" aria-label="phone">
