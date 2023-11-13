@@ -8,7 +8,7 @@ const Expertos = () => {
     const [expertosData, setExpertosData] = useState([]);
     const [filtro, setFiltro] = useState(null);
    
-      setExpertosData(datosFalsos);
+      
     };
 
    
