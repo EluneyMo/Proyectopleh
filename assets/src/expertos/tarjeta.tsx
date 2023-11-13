@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -14,6 +14,17 @@ import PhoneIcon from '@mui/icons-material/Phone';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
+interface ProfileCardProps {
+  data: {
+    avatar: string;
+    fullName: string;
+    title: string;
+    location: string;
+    phoneNumber: string;
+    additionalInfo: string;
+  };
+}
+
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
   return <IconButton {...other} />;
@@ -25,8 +36,8 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-export default function ProfileCard() {
-  const [expanded, setExpanded] = React.useState(false);
+const ProfileCard: React.FC<ProfileCardProps> = ({ data }) => {
+  const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
@@ -35,9 +46,7 @@ export default function ProfileCard() {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
-        avatar={
-          <Avatar sx={{ bgcolor: red[500] }}>{data.avatar}</Avatar>
-        }
+        avatar={<Avatar sx={{ bgcolor: red[500] }}>{data.avatar}</Avatar>}
         action={
           <IconButton aria-label="settings">
             <MoreVertIcon />
@@ -57,15 +66,15 @@ export default function ProfileCard() {
           <IconButton color="primary" aria-label="phone">
             <PhoneIcon />
           </IconButton>
-          Teléfono:{data.phoneNumber}
+          Teléfono: {data.phoneNumber}
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
         <IconButton aria-label="add to favorites">
-          <FavoriteIcon />
+          {/* Agrega los iconos de FavoriteIcon y ShareIcon importados aquí */}
         </IconButton>
         <IconButton aria-label="share">
-          <ShareIcon />
+          {/* Agrega el icono de ShareIcon importado aquí */}
         </IconButton>
         <ExpandMore
           expand={expanded}
@@ -83,4 +92,6 @@ export default function ProfileCard() {
       </Collapse>
     </Card>
   );
-}
+};
+
+export default ProfileCard;
