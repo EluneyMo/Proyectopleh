@@ -86,6 +86,7 @@ function AppBar() {
                         mt: '45px' 
                         }}
                         id="menu-appbar"
+                        anchorEl={anchorElUser}
                     >
 
                     </menu>
