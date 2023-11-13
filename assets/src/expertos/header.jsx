@@ -38,7 +38,7 @@ function AppBar() {
 
   return (
     <AppBar position="static" >
-        <Container>
+        <Container maxWidth="xl">
         </Container>
     </AppBar>
     );
