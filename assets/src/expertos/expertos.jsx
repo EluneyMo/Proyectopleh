@@ -2,7 +2,8 @@ import React from 'react';
 import Tarjeta from './tarjeta';
 import CustomizedButtons from './botton_selc';
 import { datosFalsos } from './datos';
-import AppBar from './header';
+import AppBar from './';
+import Footer from './footer';
 
 const Expertos = () => {
     const [expertosData, setExpertosData] = useState(datosFalsos);
