@@ -4,21 +4,16 @@ import CustomizedButtons from './botton_selc';
 import { datosFalsos } from './datos';
 
 const Expertos = () => {
-    
-    const [expertosData, setExpertosData] = useState([]);
+    const [expertosData, setExpertosData] = useState(datosFalsos);
     const [filtro, setFiltro] = useState(null);
-   
-      
-    };
 
-   
-  const expertosFiltrados = expertosData.filter((experto) => {
-    if (!filtro) {
-        return true;
-      } return experto.categoria === filtro;
-  });
+    const expertosFiltrados = expertosData.filter((experto) => {
+        if (!filtro) {
+        return true; 
+        }
+        return experto.categoria === filtro;
+    });
 
-function Expertos() {
   return (
         <div>
             <CustomizedButtons  onSelect={(categoria) => setFiltro(categoria)} />
