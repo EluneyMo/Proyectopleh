@@ -33,7 +33,7 @@ function AppBar() {
       };
 
       const handleCloseUserMenu = () => {
-        
+        setAnchorElUser(null);
       };
 
   return (
