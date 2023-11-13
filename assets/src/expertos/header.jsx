@@ -71,8 +71,8 @@ function AppBar() {
                                 color: 'white', 
                                 display: 'block'
                                 }}
-                       >
-                            
+                        >
+                            {page}
                         </Button>
                     </Box>
                     
