@@ -1,12 +1,12 @@
 import React from "react";
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Tipos() {
   return (
-    <View>
-      <Text>Violencia de Género</Text>
-      <Image source={require('../tipos/violenciagenero.jpeg')} style={{ width: 100, height: 100 }} />
-      <Text>
+    <View  style={styles.container}>
+      <Text style={styles.title}>Violencia de Género</Text>
+      <Image source={require('../tipos/violenciagenero.jpeg')} style={styles.imagen} />
+      <Text style={styles.descripcion}>
         La violencia por motivos de género es una práctica estructural que
         viola los derechos humanos y las libertades fundamentales.
         La violencia por motivos de género afecta gravemente a mujeres y personas LGBTI+. Se produce cuando sufren algún tipo de discriminación, agresión, hostigamiento o degradación por su identidad de género, expresión de género u orientación sexual.
@@ -19,6 +19,31 @@ function Tipos() {
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    padding: 16,
+  },
+
+  title:{
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+
+  imagen: {
+    width: 100,
+    height: 100,
+  },
+
+  descripcion: {
+    fontSize: 16,
+    textAlign: 'center',
+  },
+});
 
 export default Tipos;
 
