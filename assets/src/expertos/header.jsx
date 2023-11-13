@@ -18,6 +18,7 @@ const settings = ['Profile''Account', 'Dashboard','Logout'];
 
 function AppBar() {
     const [anchorElNav, setAnchorElNav] = React.useState(null);
+    const [anchorElUser, setAnchorElUser] = React.useState(null);
   return (
     );
 }
