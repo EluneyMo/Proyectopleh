@@ -59,7 +59,9 @@ function AppBar() {
                     >
                         PLEH
                     </Typography>
-                    <Box>
+                    <Box sx={{ 
+                        flexGrow: 1,
+                    }}>
                     </Box>
                     
                 </Toolbar>    
