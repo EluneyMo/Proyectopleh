@@ -23,6 +23,10 @@ function AppBar() {
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
       };
+
+      const handleOpenUserMenu = (event) => {
+        
+      };
   return (
     );
 }
