@@ -81,8 +81,13 @@ function AppBar() {
                         <Avatar alt="imagen de usuario " src="../../img/usuario.png"/>
                     </IconButton>
                     </Tooltip>
-                    <menu>
-                        
+                    <menu
+                    sx={{
+                        mt: '45px' 
+                        }}
+                        id="menu-appbar"
+                    >
+
                     </menu>
                     </Box>
                     
