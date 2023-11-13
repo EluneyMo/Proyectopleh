@@ -18,9 +18,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
+  const [newPassword, setNewPassword] = useState(""); 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-
+  const [newPasswordError, setNewPasswordError] = useState(""); // Nuevo estado
   const handleSignIn = async () => {
     try {
       
@@ -63,7 +64,7 @@ const Login = () => {
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, provider);
-      navigation.navigate("Home" as never)
+      navigation.navigate("PLEH" as never)
     } catch (error) {
       console.error("Error en el inicio de sesión con Google:", error);
     }
@@ -72,7 +73,7 @@ const Login = () => {
     try{
       
     await signInAnonymously(auth);
-    navigation.navigate("Home" as never)
+    navigation.navigate("PLEH" as never)
   }catch (error){
     console.error("Error al iniciar sesión como invitado:", error);
   }

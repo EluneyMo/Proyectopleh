@@ -21,44 +21,43 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   const [modalVisible, setModalVisible] = useState(false);
   const [contacto, setContacto] = useState('');
   useEffect(() => {
-  const verificarPrimerRegistro = async () => {
-    try {
-      const primerRegistro = await AsyncStorage.getItem('primerRegistro');
-      if (!primerRegistro && auth.currentUser) {
-        const userCollection = collection(db, 'numeros');
-        const userDocRef: DocumentReference<DocumentData> = doc(userCollection, auth.currentUser?.uid || '');
-        try{
-        const userDocSnapshot = await getDoc(userDocRef);;
-        if (!userDocSnapshot.exists() || !userDocSnapshot.data()?.contacto) {
-        setModalVisible(true);
+    const verificarContacto = async () => {
+      try {
+        if (auth.currentUser && auth.currentUser.isAnonymous) {
+          const userCollection = collection(db, 'usuarios');
+          const userDocRef = doc(userCollection, auth.currentUser?.uid || '');
+
+          const userDocSnapshot = await getDoc(userDocRef);
+          if (!userDocSnapshot.exists() || !userDocSnapshot.data()?.contacto) {
+            setModalVisible(true);
+          }
+        }
+      } catch (error) {
+        console.error('Error al verificar el contacto:', error);
       }
-    }catch (error) {
-      console.error('Error al verificar el primer registro:', error);
-    }
-    }
-    }catch (error) {
-      console.error('Error al verificar el primer registro:', error);
-    }
-  }
-    verificarPrimerRegistro();
-   
-  },[auth.currentUser]);
+    };
+
+    verificarContacto();
+  }, [auth.currentUser]);
+
+  
   const handlePress = () => {
-    navigation.navigate('Panico');  };
-  const presionar=()=>{
-    //funciondebotondeabi
+    navigation.navigate('Panico');
+  };
+
+  const presionar = () => {
     navigation.navigate('Preguntas' as never);
   };
 
   const handleSignOut = async () => {
     try {
       await signOut(auth);
-      // Después de cerrar sesión, navega a la pantalla de inicio de sesión
-      navigation.navigate('Login'); // Ajustando la ruta según tu estructura
+      navigation.navigate('Login');
     } catch (error) {
       console.error('Error al cerrar sesión', error);
     }
   };
+
   const handleGuardarContacto = async () => {
     try {
       if (auth.currentUser) {
@@ -72,7 +71,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     } catch (error) {
       console.error('Error al guardar el contacto en Firebase:', error);
     }
-  }
+  };
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
@@ -85,24 +84,25 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
       <Modal
-      animationType="slide"
-      transparent={true}
-      visible={modalVisible}
-      onRequestClose={() => setModalVisible(false)}>
-         <View style={styles.modalContainer}>
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => setModalVisible(false)}>
+        <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
-          <Text>Ingrese un número de contacto:</Text>
-          <TextInput
+            <Text>Ingrese un número de contacto:</Text>
+            <TextInput
               style={styles.input}
               placeholder="Número de contacto"
               onChangeText={(text) => setContacto(text)}
             />
-             <TouchableOpacity onPress={handleGuardarContacto} style={styles.button}>
-             <Text style={styles.buttonText}>Cerrar</Text>
-             </TouchableOpacity>
-            </View>
+            <TouchableOpacity onPress={handleGuardarContacto} style={styles.button}>
+              <Text style={styles.buttonText}>Guardar</Text>
+            </TouchableOpacity>
           </View>
+        </View>
       </Modal>
+
     </View>
   );
 };
