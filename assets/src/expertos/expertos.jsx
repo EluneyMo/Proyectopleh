@@ -17,6 +17,10 @@ const Expertos = () => {
       setExpertosData(datosFalsos);
     };
 
+   
+  const expertosFiltrados = expertosData.filter((experto) => {
+   
+  });
 
 function Expertos() {
   return (
