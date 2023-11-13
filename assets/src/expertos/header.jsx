@@ -65,6 +65,7 @@ function AppBar() {
                     }}>
                         <Button
                             key={page}
+                            onClick={handleCloseNavMenu}
                         >
                             
                         </Button>
