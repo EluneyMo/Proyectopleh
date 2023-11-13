@@ -25,7 +25,7 @@ function AppBar() {
       };
 
       const handleOpenUserMenu = (event) => {
-        
+        setAnchorElUser(event.currentTarget);
       };
   return (
     );
