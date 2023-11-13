@@ -85,12 +85,13 @@ function AppBar() {
                     sx={{
                         mt: '45px' 
                         }}
-                        id="menu-appbar"
-                        anchorEl={anchorElUser}
-                        anchorOrigin={{
+                    id="menu-appbar"
+                    anchorEl={anchorElUser}
+                    anchorOrigin={{
                             vertical: 'top',
                             horizontal: 'right',
                         }}
+                    keepMounted
                     >
 
                     </menu>
