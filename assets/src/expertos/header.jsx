@@ -52,6 +52,7 @@ function AppBar() {
                             flexGrow: 1, 
                             fontFamily: 'monospace',
                             fontWeight: 700,
+                            letterSpacing: '.3rem',
                         }}
                     >
                         PLEH
