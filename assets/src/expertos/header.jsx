@@ -78,7 +78,7 @@ function AppBar() {
                     <Box sx={{ flexGrow: 0 }}>
                     <Tooltip title="abrir usuario">
                     <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                        <Avatar/>
+                        <Avatar alt="imagen de usuario"/>
                     </IconButton>
                     </Tooltip>
 
