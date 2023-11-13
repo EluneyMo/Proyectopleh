@@ -45,6 +45,7 @@ function AppBar() {
                         variant="h6"
                         noWrap
                         component="a"
+                        href="#app-bar-with-responsive-menu"
                     >
                         PLEH
                     </Typography>
