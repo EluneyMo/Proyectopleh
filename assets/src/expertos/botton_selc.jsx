@@ -66,4 +66,6 @@ const ColorButton = styled(Button)(({ theme }) => ({
 
     </Stack>
   );
+};
 
+export default CustomizedButtons;
