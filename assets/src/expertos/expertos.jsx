@@ -1,5 +1,7 @@
 import React from 'react';
 import Tarjeta from './tarjeta';
+import CustomizedButtons from './botton_selc';
+
 const Expertos = () => {
     const [expertosData, setExpertosData] = useState([]);
     const datosFalsos = [
