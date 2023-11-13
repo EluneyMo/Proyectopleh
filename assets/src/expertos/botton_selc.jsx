@@ -53,9 +53,9 @@ export default function CustomizedButtons() {
     <Stack spacing={5} direction="row">
         <Button variant="contained" ck={() => handleButtonClick('psicologos')}>
         Psicólogos
-        </Button>
+        </Button >
 
-        <Button>
+        <Button variant="contained">
        
        </Button>
 
