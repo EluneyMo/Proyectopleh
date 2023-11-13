@@ -40,7 +40,7 @@ function AppBar() {
         <AppBar position="static" >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-                    <AdbIcon />
+                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
 
                 </Toolbar>    
 
