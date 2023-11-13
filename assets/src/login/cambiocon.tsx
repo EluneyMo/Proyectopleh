@@ -12,6 +12,7 @@ import { getFirestore, collection, doc, setDoc,DocumentReference, DocumentData  
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
+const auth = getAuth(appFirebase);
 const cambiocon=()=>{
   
   const [currentPassword, setCurrentPassword] = useState('');
