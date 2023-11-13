@@ -40,7 +40,7 @@ function AppBar() {
         <AppBar position="static" >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
-
+                    <AdbIcon />
 
                 </Toolbar>    
 
