@@ -25,32 +25,17 @@ const handleChangePassword = async () => {
         const credential = auth.EmailAuthProvider.credential(user.email, currentPassword);
         await reauthenticateWithCredential(user, credential);
         await updatePassword(user, newPassword);
-        console.warn("User not authenticated");
-        return;
-      }
-  
-      if (!newPassword) {
-        setNewPasswordError("Por favor, ingresa tu nueva contraseña");
-        return;
-      }
-  
-      // Change password using Firebase
-      await updatePassword(auth.currentUser, newPassword);
-  
-      // Success in changing the password
-      Toast.show({
-        type: 'success',
-        text1: 'Contraseña cambiada con éxito',
-      });
-  
-      // You can clear the password fields if desired
-      setPassword("");
-      setNewPassword("");
-    } catch (error) {
-      console.error("Error al cambiar la contraseña:", error);
-      // Handle errors and show messages to the user
+        console.log('Password updated successfully');
+    } else {
+      console.log('Unable to get the current user');
     }
-  };
+  } catch (error) {
+    console.error('Error changing password:', error.message);
+  }
+};
+    }
+  }
+
   return(
     <View style={styles.container}>
     <Text style={styles.textito}>Nueva Contraseña</Text>
