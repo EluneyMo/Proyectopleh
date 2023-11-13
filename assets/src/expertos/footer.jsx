@@ -9,8 +9,8 @@ import { styled } from '@mui/material/styles';
     const Footer = () => {
         return (
             <FooterContainer>
-                
+
             </FooterContainer>
         );
     };
-
+export default Footer;
