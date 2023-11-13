@@ -39,7 +39,7 @@ function AppBar() {
   return (
     <AppBar position="static" >
         <Container maxWidth="xl">
-            <Toolbar>
+            <Toolbar disableGutters>
             </Toolbar>    
 
         </Container>
