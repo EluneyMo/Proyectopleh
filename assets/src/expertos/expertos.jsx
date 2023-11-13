@@ -8,6 +8,7 @@ const Expertos = () => {
             fullName: 'Carla Lopez',
             title: 'Psicólogo',
             location: 'Neuquen, Neuquén ',
+            phoneNumber: '+5429922567',
         },
       ];
     };
