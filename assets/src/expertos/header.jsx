@@ -41,7 +41,12 @@ function AppBar() {
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-
+                    <Typography
+                        
+                    >
+                        PLEH
+                    </Typography>
+                    
                 </Toolbar>    
 
             </Container>
