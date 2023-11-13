@@ -35,10 +35,14 @@ const GradientButton = styled(Button)(({ theme }) => ({
     '&:focus': {
         boxShadow: '0 0 0 0.2rem rgba(0,123,255,.5)',
     },
-    }));
+}));
 
-    const CustomizedButtons = ({ onSelect }) => {
-    const handleButtonClick = (categoria) => {
+interface CustomizedButtonsProps {
+    onSelect: (categoria: string) => void;
+}
+
+const CustomizedButtons: React.FC<CustomizedButtonsProps> = ({ onSelect }) => {
+    const handleButtonClick = (categoria: string) => {
         onSelect(categoria);
     };
 
@@ -49,7 +53,7 @@ const GradientButton = styled(Button)(({ theme }) => ({
             </GradientButton>
 
             <GradientButton variant="contained" onClick={() => handleButtonClick('comisarias')}>
-                    Comisarías
+                Comisarías
             </GradientButton>
         </Stack>
     );
