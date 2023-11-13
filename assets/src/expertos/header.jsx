@@ -75,7 +75,7 @@ function AppBar() {
                             {page}
                         </Button>
                     </Box>
-                    <Box >
+                    <Box sx={{ flexGrow: 0 }}>
 
 
                     </Box>
