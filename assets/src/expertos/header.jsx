@@ -54,7 +54,7 @@ function AppBar() {
                             fontWeight: 700,
                             letterSpacing: '.3rem',
                             color: 'inherit',
-
+                            textDecoration: 'none',
                         }}
                     >
                         PLEH
