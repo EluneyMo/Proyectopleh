@@ -15,8 +15,10 @@ const Expertos = () => {
         return experto.categoria === filtro;
     });
 
-  return (
+    return (
+        
         <div>
+            <AppBar/>
             <CustomizedButtons  onSelect={(categoria) => setFiltro(categoria)} />
             <h1>Lista de Expertos</h1>
             {expertosData.map((experto) => (
@@ -24,7 +26,7 @@ const Expertos = () => {
             ))}
             
         </div>
-  );
+    );
 }
 
 export default  Expertos;
