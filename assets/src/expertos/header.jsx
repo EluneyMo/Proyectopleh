@@ -88,7 +88,7 @@ function AppBar() {
                         id="menu-appbar"
                         anchorEl={anchorElUser}
                         anchorOrigin={{
-                            
+                            vertical: 'top',
                         }}
                     >
 
