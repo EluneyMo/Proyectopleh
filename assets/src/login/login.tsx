@@ -129,7 +129,7 @@ const Login = () => {
 
       </TouchableOpacity>
 
-      <Button title="Olvidaste tu contraseña?" onPress={} />
+      <Button title="Olvidaste tu contraseña?" onPress={navigateTocambiocon} />
 
     </View>
     </LinearGradient>
