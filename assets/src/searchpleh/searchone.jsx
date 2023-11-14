@@ -20,7 +20,12 @@ const searchone = () => {
 
 
   let result = [];
-  
+  if (!search) {
+    result = users;
+  } else {
+    users.filter(
+      (dato) => dato.name - tolowerCase().includes(search.tolocaleLowerCase())
+    );
   }
     return (
     
