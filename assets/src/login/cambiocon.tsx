@@ -18,6 +18,8 @@ const cambiocon=()=>{
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
+  
+  const [newPasswordError, setNewPasswordError] = useState('');
 const handleChangePassword = async () => {
   try {
     const user = auth.currentUser;
