@@ -3,6 +3,7 @@ const searchone = () => {
   const { users, setUsers } = useState({});
   const { search, useSearch } = useState("");
 
+  const URL = "";
     return (
     
   )
