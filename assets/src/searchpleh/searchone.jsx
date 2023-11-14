@@ -10,6 +10,12 @@ const searchone = () => {
       const data = await response.json();
       console.log(data);
       setUsers(data);
+  
+  const searcher = (e) => {
+        setSearch(e.target.value);
+        console.log(e.target);
+      };
+    
   };
 
     return (
