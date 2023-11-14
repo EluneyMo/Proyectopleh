@@ -55,6 +55,15 @@ const handleChangePassword = async () => {
   )
 }
 const styles = StyleSheet.create({
-  
-})
+  container: {
+  },
+  textito: {
+  },
+  input: {
+  },
+  inputError: {
+  },
+  errorText: {
+  },
+});
 export default cambiocon;
