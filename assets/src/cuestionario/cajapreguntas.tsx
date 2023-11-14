@@ -60,7 +60,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               
               
                 <Text style={styles.cardText}>Violencia Institucional</Text>
-                <Image source={require("../tipos/institucional.jpeg")} style={styles.cardimagen} />
+                <Image source={require("../tipos/instucional.jpeg")} style={styles.cardimagen} />
                 
                 
               
@@ -129,7 +129,7 @@ const styles = StyleSheet.create({
   container:{
     width:300,
     margin: 10,
-  }
+  },
 
   card: {
     backgroundColor: '#fff',
@@ -193,4 +193,3 @@ const styles = StyleSheet.create({
 
 
 export default CajaTipos;
-

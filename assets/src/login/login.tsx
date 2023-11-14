@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously} from "firebase/auth"
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword } from "firebase/auth";
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
 import * as Google from "expo-google-app-auth"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
 import { FirebaseError } from "firebase/app";
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { getFirestore, collection, doc, setDoc,DocumentReference, DocumentData  } from 'firebase/firestore';
 import firebase from "firebase/app"
 import "firebase/auth"
 import Toast from "react-native-toast-message";
@@ -16,9 +18,10 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
+  const [newPassword, setNewPassword] = useState(""); 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
-
+  const [newPasswordError, setNewPasswordError] = useState(""); 
   const handleSignIn = async () => {
     try {
       
@@ -41,9 +44,9 @@ const Login = () => {
       // Usuario autenticado
       const user = userCredential.user;
       console.log("Usuario autenticado:", user);
-
+      await AsyncStorage.setItem('primerRegistro', 'true');
       // Navegando a la pantalla Home después de la autenticación exitosa
-      navigation.navigate("Home", { correoUsuario: email });
+      navigation.navigate("PLEH", { correoUsuario: email });
     } catch (error) {
       // Manejando errores de autenticación
       const authError = error as FirebaseError;
@@ -52,16 +55,42 @@ const Login = () => {
 
       // Actualizando mensajes de error específicos
       if (authError.code === "auth/invalid-email") {
-        setEmailError("El formato del email no es válido");
+        setEmailError("El email no es válido");
       } else if (authError.code === "auth/wrong-password") {
         setPasswordError("Contraseña incorrecta");
       }
     }
   };
+  const handleChangePassword = async () => {
+    try {
+      if (!auth.currentUser) {
+        setEmailError("Por favor, ingresa tu email");
+        console.warn("User not authenticated");
+        return;
+      }
+
+      if (!newPassword) {
+        setNewPasswordError("Por favor, ingresa tu nueva contraseña");
+        return;
+      }
+
+      await updatePassword(auth.currentUser, newPassword);
+
+      Toast.show({
+        type: 'success',
+        text1: 'Contraseña cambiada con éxito',
+      });
+
+      setPassword("");
+      setNewPassword("");
+    } catch (error) {
+      console.error("Error al cambiar la contraseña:", error);
+    }
+  };
   const handleGoogleSignIn = async () => {
     try {
       await signInWithPopup(auth, provider);
-      navigation.navigate("Home" as never)
+      navigation.navigate("PLEH" as never)
     } catch (error) {
       console.error("Error en el inicio de sesión con Google:", error);
     }
@@ -70,7 +99,7 @@ const Login = () => {
     try{
       
     await signInAnonymously(auth);
-    navigation.navigate("Home" as never)
+    navigation.navigate("PLEH" as never)
   }catch (error){
     console.error("Error al iniciar sesión como invitado:", error);
   }
@@ -122,7 +151,21 @@ const Login = () => {
       <Text style={styles.invitado}>Ingresar como invitado</Text>
 
       </TouchableOpacity>
-      
+      <Text style={styles.textito}>Nueva Contraseña</Text>
+      <TextInput
+        placeholder="Ingresa tu nueva contraseña"
+        secureTextEntry
+        value={newPassword}
+        onChangeText={setNewPassword}
+        style={newPasswordError ? styles.inputError : styles.input}
+      />
+      {newPasswordError ? (
+        <Text style={styles.errorText}>{newPasswordError}</Text>
+      ) : null}
+
+      {/* Botón para cambiar la contraseña */}
+      <Button title="Cambiar Contraseña" onPress={handleChangePassword} />
+
     </View>
     </LinearGradient>
   );
