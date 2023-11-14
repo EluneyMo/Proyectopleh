@@ -67,6 +67,18 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   input: {
+    height: 40,
+    width: 350,
+    display:"flex",
+    alignSelf:"center",
+    justifyContent:"center",
+    alignItems: "center",
+    alignContent: "center",
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 16,
+    paddingHorizontal: 8,
+    borderRadius:20
   },
   inputError: {
   },
