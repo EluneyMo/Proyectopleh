@@ -21,7 +21,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="Panico" component={Panicbutton} />
         <Stack.Screen name='Preguntas' component={CajaTipos}/>
         <Stack.Screen name='Tipos' component={Tipos}/>
-        <Stack.Screen name="ChangePassword" component={cambiocon} />
+        <Stack.Screen name="Cambio de contraseña" component={cambiocon} />
       </Stack.Navigator>
     </NavigationContainer>
   );
