@@ -85,7 +85,7 @@ const Login = () => {
     navigation.navigate("Registro" as never);
   };
   const navigateTocambiocon=()=>{
-    navigation.navigate("ChangePassword" as never)
+    navigation.navigate("Cambio de contraseña" as never)
   }
   return (
     <LinearGradient
