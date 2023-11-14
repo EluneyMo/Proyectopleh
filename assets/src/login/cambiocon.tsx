@@ -54,4 +54,7 @@ const handleChangePassword = async () => {
   </View>
   )
 }
+const styles = StyleSheet.create({
+  
+})
 export default cambiocon;
