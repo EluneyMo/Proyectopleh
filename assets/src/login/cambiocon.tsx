@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
     padding: 16,
   },
   textito: {
+    color:"white",
+    textAlign:"center"
   },
   input: {
   },
