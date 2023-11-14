@@ -33,7 +33,7 @@ const handleChangePassword = async () => {
     } else {
       console.log('No se pudo obtener el usuario actual');
     }
-  } catch (error) {
+  } catch (error:any) {
     console.error('Error al cambiar la contraseña:', error.message);
   }
 };
