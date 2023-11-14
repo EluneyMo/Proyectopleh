@@ -17,12 +17,7 @@ const cambiocon=()=>{
   
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
-<<<<<<< HEAD
-  const [error, setError] = useState('');  
-=======
   const [error, setError] = useState('');
-  
->>>>>>> 6d8a38673af923d14c631a2ae0c4617eaa8523d6
   const [newPasswordError, setNewPasswordError] = useState('');
 const handleChangePassword = async () => {
   try {
@@ -63,10 +58,6 @@ const handleChangePassword = async () => {
   )
 }
 const styles = StyleSheet.create({
-<<<<<<< HEAD
-
-})
-=======
   container: {
     flex: 1,
     justifyContent: "center",
@@ -116,5 +107,4 @@ const styles = StyleSheet.create({
     marginTop: 5,
   },
 });
->>>>>>> 6d8a38673af923d14c631a2ae0c4617eaa8523d6
 export default cambiocon;
