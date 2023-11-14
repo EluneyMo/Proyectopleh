@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert, Image, TouchableOpacity} from "react-native";
-import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, EmailAuthProvider, reauthenticateWithCredential } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, GoogleAuthProvider, signInWithPopup, signInAnonymously, updatePassword, confirmPasswordReset ,EmailAuthProvider, reauthenticateWithCredential } from "firebase/auth";
 import "firebase/auth"
 import {LinearGradient} from "expo-linear-gradient"
 import appFirebase from "../../../firebase/firebase";
 import { useNavigation } from '@react-navigation/native';
+import { useRoute } from "@react-navigation/native";
 import { FirebaseError } from "firebase/app";
 import "firebase/auth"
 import Toast from "react-native-toast-message";
@@ -14,6 +15,7 @@ const cambiocon=()=>{
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
+  const route = useRoute();
   const [newPasswordError, setNewPasswordError] = useState('');
 const handleChangePassword = async () => {
   try {
