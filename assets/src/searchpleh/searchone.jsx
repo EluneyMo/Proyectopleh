@@ -18,6 +18,10 @@ const searchone = () => {
     
   };
 
+
+  let result = [];
+  
+  }
     return (
     
   )
