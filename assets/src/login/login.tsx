@@ -84,7 +84,9 @@ const Login = () => {
     // Navegando a la pantalla de registro
     navigation.navigate("Registro" as never);
   };
-
+  const navigateTocambiocon=()=>{
+    
+  }
   return (
     <LinearGradient
     colors={['darkmagenta', 'darkviolet']}
@@ -127,7 +129,7 @@ const Login = () => {
 
       </TouchableOpacity>
 
-      <Button title="Olvidaste tu contraseña?" onPress={handleChangePassword} />
+      <Button title="Olvidaste tu contraseña?" onPress={} />
 
     </View>
     </LinearGradient>
