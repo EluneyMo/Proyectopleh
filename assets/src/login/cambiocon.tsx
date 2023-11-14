@@ -102,6 +102,8 @@ const styles = StyleSheet.create({
     textAlign:"center"
   },
   errorText: {
+    color: 'red',
+    marginTop: 5,
   },
 });
 export default cambiocon;
