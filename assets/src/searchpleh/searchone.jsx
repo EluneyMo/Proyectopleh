@@ -18,11 +18,6 @@ const searchone = () => {
     
   };
 
-
-  useEffect(() => {
-    showData();
-  }, []);
-
   let result = [];
   if (!search) {
     result = users;
@@ -31,6 +26,12 @@ const searchone = () => {
       (dato) => dato.name - tolowerCase().includes(search.tolocaleLowerCase())
     );
   }
+
+  
+  useEffect(() => {
+    showData();
+  }, []);
+  
     return (
     
   )
