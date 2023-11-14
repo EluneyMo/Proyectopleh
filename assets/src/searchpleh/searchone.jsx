@@ -4,6 +4,11 @@ const searchone = () => {
   const { search, useSearch } = useState("");
 
   const URL = "";
+
+  const showData = async () => {
+   
+  };
+
     return (
     
   )
