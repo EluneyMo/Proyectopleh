@@ -1,9 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TextInput, Button, StyleSheet, Alert } from "react-native";
 import { getAuth, createUserWithEmailAndPassword, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 import { useNavigation } from "@react-navigation/native";
-
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import appFirebase from "../../../firebase/firebase";
 import { RegistrationData } from "../home/types";
 
@@ -31,6 +31,7 @@ const RegistroForm = () => {
 
         console.log("Usuario registrado con ID:", registrationData.uid);
         alert("Usuario registrado de forma exitosa");
+        await AsyncStorage.setItem('primerRegistro', 'true');
         navigation.navigate('Login');
       } else {
         alert("Por favor, completa todos los campos para el registro.");
@@ -39,7 +40,21 @@ const RegistroForm = () => {
       console.log("Error en el registro", error);
     }
   };
-
+  useEffect(() => {
+    const verificarPrimerRegistro = async () => {
+      try {
+        const registroAnterior = await AsyncStorage.getItem('primerRegistro');
+        if (!registroAnterior) {
+          console.log('Estableciendo primerRegistro en AsyncStorage');
+          await AsyncStorage.setItem('primerRegistro', 'true');
+          
+        }
+      } catch (error) {
+        console.error('Error al verificar el primer registro:', error);
+      }
+    }
+    verificarPrimerRegistro();
+  },[]);
   return (
     <View style={styles.container}>
       <Text style={styles.title}>PLEH</Text>
