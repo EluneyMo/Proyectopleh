@@ -41,6 +41,8 @@ const handleChangePassword = async () => {
 };
   return(
     <View style={styles.container}>
+      
+      <Text style={styles.header}>PLEH</Text>
     <Text style={styles.textito}>Nueva Contraseña</Text>
     <TextInput
       placeholder="Ingresa tu nueva contraseña"
