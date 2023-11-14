@@ -40,6 +40,10 @@ const handleChangePassword = async () => {
   }
 };
   return(
+    <LinearGradient
+    colors={['darkmagenta', 'darkviolet']}
+    style={styles.container}
+    >
     <View style={styles.container}>
       
       <Text style={styles.header}>PLEH</Text>
@@ -57,6 +61,8 @@ const handleChangePassword = async () => {
     ) : null}
     <Button title="Cambiar Contraseña" onPress={handleChangePassword} />
   </View>
+  
+    </LinearGradient>
   )
 }
 const styles = StyleSheet.create({
