@@ -14,7 +14,7 @@ import "firebase/auth"
 import Toast from "react-native-toast-message";
 const auth = getAuth(appFirebase);
 const cambiocon=()=>{
-  
+  const navigation = useNavigation();
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
