@@ -6,7 +6,10 @@ const searchone = () => {
   const URL = "";
 
   const showData = async () => {
-   
+      const response = await fetch(URL);
+      const data = await response.json();
+      console.log(data);
+      setUsers(data);
   };
 
     return (
