@@ -92,6 +92,15 @@ const styles = StyleSheet.create({
     borderColor: 'red',
     borderWidth: 1,
   },
+  header: {
+    color:"white",
+    fontFamily:"ArchivoBlack-Regular",
+    fontSize: 40,
+    fontWeight: "bold",
+    marginBottom: 16,
+    justifyContent:"center",
+    textAlign:"center"
+  },
   errorText: {
   },
 });
