@@ -19,6 +19,10 @@ const searchone = () => {
   };
 
 
+  useEffect(() => {
+    showData();
+  }, []);
+
   let result = [];
   if (!search) {
     result = users;
