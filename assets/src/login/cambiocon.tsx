@@ -28,7 +28,7 @@ const handleChangePassword = async () => {
         await reauthenticateWithCredential(user, credential);
         await updatePassword(user, newPassword);
         console.log('Contraseña actualizada correctamente');
-        navigation.navigate("Login" as never)
+        navigation.navigate('Login' as never)
       } else {
         console.log('El correo electrónico del usuario es nulo.');
       }
