@@ -4,6 +4,7 @@ import CustomizedButtons from './botton_selc';
 import { datosFalsos } from './datos';
 import CustomAppBar from './header'; 
 import Footer from './footer';
+import { View, Text } from 'react-native';
 
 const Expertos: React.FC = () => {
     const [expertosData, setExpertosData] = useState(datosFalsos);
@@ -17,15 +18,15 @@ const Expertos: React.FC = () => {
     });
 
     return (
-        <div>
+        <View>
             <CustomAppBar />
             <CustomizedButtons onSelect={(categoria) => setFiltro(categoria)} />
-            <h1>Lista de Expertos</h1>
+            <Text>Lista de Expertos</Text>
             {expertosFiltrados.map((experto) => (
                 <ProfileCard key={experto.id} data={experto} />
             ))}
             <Footer />
-        </div>
+        </View>
     );
 };
 
