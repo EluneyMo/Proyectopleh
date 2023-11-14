@@ -6,16 +6,15 @@ const searchone = () => {
   const URL = "";
 
   const showData = async () => {
-      const response = await fetch(URL);
-      const data = await response.json();
-      console.log(data);
-      setUsers(data);
-  
-  const searcher = (e) => {
-        setSearch(e.target.value);
-        console.log(e.target);
-      };
-    
+    const response = await fetch(URL);
+    const data = await response.json();
+    console.log(data);
+    setUsers(data);
+
+    const searcher = (e) => {
+      setSearch(e.target.value);
+      console.log(e.target);
+    };
   };
 
   let result = [];
@@ -27,13 +26,22 @@ const searchone = () => {
     );
   }
 
-  
   useEffect(() => {
     showData();
   }, []);
-  
-    return (
-    
-  )
+
+  return (
+    <div>
+      <input value={search} placeholder="buscar" />
+      <body>
+        {data.map((user) => (
+          <tr key={user.id}>
+            <td>{user.name}</td>
+            <td>{user.username}</td>
+          </tr>
+        ))}
+      </body>
+    </div>
+  );
 };
 export default searchone;
