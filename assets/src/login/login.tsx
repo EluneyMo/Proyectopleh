@@ -46,7 +46,7 @@ const Login = () => {
       console.log("Usuario autenticado:", user);
       await AsyncStorage.setItem('primerRegistro', 'true');
       // Navegando a la pantalla Home después de la autenticación exitosa
-      navigation.navigate("PLEH", { correoUsuario: email });
+      navigation.navigate('PLEH', { correoUsuario: email });
     } catch (error) {
       // Manejando errores de autenticación
       const authError = error as FirebaseError;
