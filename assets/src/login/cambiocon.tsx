@@ -28,7 +28,7 @@ const handleChangePassword = async () => {
         await updatePassword(user, newPassword);
         console.log('Contraseña actualizada correctamente');
     } else {
-      console.log('Unable to get the current user');
+      console.log('El correo electrónico del usuario es nulo.');
     }
   } catch (error) {
     console.error('Error changing password:', error.message);
