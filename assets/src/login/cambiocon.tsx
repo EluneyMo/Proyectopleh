@@ -22,7 +22,7 @@ const handleChangePassword = async () => {
     try {
       const user = auth.currentUser;
       if (user) {
-        const credential = auth.EmailAuthProvider.credential(user.email, currentPassword);
+        const credential = EmailAuthProvider.credential(user.email, currentPassword);
         await reauthenticateWithCredential(user, credential);
         await updatePassword(user, newPassword);
         console.log('Password updated successfully');
