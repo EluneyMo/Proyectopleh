@@ -17,7 +17,8 @@ const cambiocon=()=>{
   
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
-  const [error, setError] = useState('');
+  const [error, setError] = useState('');  
+  const [newPasswordError, setNewPasswordError] = useState('');
 const handleChangePassword = async () => {
   try {
     const user = auth.currentUser;
@@ -55,6 +56,6 @@ const handleChangePassword = async () => {
   )
 }
 const styles = StyleSheet.create({
-  
+
 })
 export default cambiocon;
