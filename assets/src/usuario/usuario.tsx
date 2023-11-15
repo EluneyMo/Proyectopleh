@@ -16,6 +16,8 @@ const MyForm: React.FC<MyFormProps> = () => {
     };
 
     return (
-        <View></View>
+        <View>
+            <TextInput/>
+        </View>
     )
 }
