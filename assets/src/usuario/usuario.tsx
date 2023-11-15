@@ -45,6 +45,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             <TextInput
             placeholder="imputDireccion"
             value={imputDireccion}
+            onChangeText={(Text) => setDireccion(Text)}
             />
         </View>
     )
