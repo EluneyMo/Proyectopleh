@@ -37,7 +37,9 @@ const MyForm: React.FC<MyFormProps> = () => {
             value={imputEmail}
             onChangeText={(Text) => setEmail(Text)}
             />
-            <TextInput/>
+            <TextInput
+            placeholder="imputPhone"
+            />
         </View>
     )
 }
