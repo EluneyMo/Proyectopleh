@@ -42,6 +42,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             value={imputPhone}
             onChangeText={(Text) => setPhone(Text)}
             />
+            <TextInput/>
         </View>
     )
 }
