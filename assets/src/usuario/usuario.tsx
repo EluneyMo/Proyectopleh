@@ -30,6 +30,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             <TextInput
             placeholder="imputNumeroIdentificacion"
             value={imputNumeroIdentificacion}
+            onChangeText={(Text) => setNumeroIdentificacion(Text)}
             />
         </View>
     )
