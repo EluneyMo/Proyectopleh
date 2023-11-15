@@ -8,4 +8,5 @@ const MyForm: React.FC<MyFormProps> = () => {
     const [imputSurname, setSurname] = useState<string>('');
     const [imputNumeroIdentificacion, setNumeroIdentificacion] = useState<string>('');
     const [imputEmail, setEmail] = useState<string>('');
+    const [imputPhone, setPhone] = useState<string>('');
 }
