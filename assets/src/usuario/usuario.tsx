@@ -11,5 +11,7 @@ const MyForm: React.FC<MyFormProps> = () => {
     const [imputPhone, setPhone] = useState<string>('');
     const [imputDireccion, setDireccion] = useState<string>('');
 
-    const handleSubmit = () => {}
+    const handleSubmit = () => {
+        console.log('Submitted:', { imputNombre, imputSurname, imputNumeroIdentificacion, imputEmail, imputPhone, imputDireccion });
+    }
 }
