@@ -17,7 +17,9 @@ const MyForm: React.FC<MyFormProps> = () => {
 
     return (
         <View>
-            <TextInput/>
+            <TextInput
+            placeholder="imputNombre"
+            />
         </View>
     )
 }
