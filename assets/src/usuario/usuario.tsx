@@ -49,5 +49,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             />
             <Button title="Submit" onPress={handleSubmit} />
         </View>
-    )
-}
+    );
+};
+
+export default MyForm;
