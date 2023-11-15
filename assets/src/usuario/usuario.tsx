@@ -22,7 +22,9 @@ const MyForm: React.FC<MyFormProps> = () => {
             value={imputNombre}
             onChangeText={(Text) => setNombre(Text)}
             />
-            <TextInput/>
+            <TextInput
+            placeholder="imputSurname"
+            />
         </View>
     )
 }
