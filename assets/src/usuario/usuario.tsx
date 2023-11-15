@@ -47,6 +47,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             value={imputDireccion}
             onChangeText={(Text) => setDireccion(Text)}
             />
+            <Button title="Submit" onPress={handleSubmit} />
         </View>
     )
 }
