@@ -13,5 +13,7 @@ const MyForm: React.FC<MyFormProps> = () => {
 
     const handleSubmit = () => {
         console.log('Submitted:', { imputNombre, imputSurname, imputNumeroIdentificacion, imputEmail, imputPhone, imputDireccion });
-    }
+    };
+
+    return ()
 }
