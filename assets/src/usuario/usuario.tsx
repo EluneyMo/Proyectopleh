@@ -35,6 +35,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             <TextInput
             placeholder="imputEmail"
             value={imputEmail}
+            onChangeText={(Text) => setEmail(Text)}
             />
         </View>
     )
