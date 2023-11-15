@@ -24,6 +24,7 @@ const MyForm: React.FC<MyFormProps> = () => {
             />
             <TextInput
             placeholder="imputSurname"
+            value={imputSurname}
             />
         </View>
     )
