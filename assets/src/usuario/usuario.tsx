@@ -15,5 +15,7 @@ const MyForm: React.FC<MyFormProps> = () => {
         console.log('Submitted:', { imputNombre, imputSurname, imputNumeroIdentificacion, imputEmail, imputPhone, imputDireccion });
     };
 
-    return ()
+    return (
+        <View></View>
+    )
 }
