@@ -18,6 +18,8 @@ const cambiocon=()=>{
   const [currentPassword, setCurrentPassword] = useState('');
   const [newPassword, setNewPassword] = useState('');
   const [error, setError] = useState('');
+  
+  const [newPasswordError, setNewPasswordError] = useState('');
 const handleChangePassword = async () => {
   try {
     const user = auth.currentUser;
@@ -39,6 +41,8 @@ const handleChangePassword = async () => {
 };
   return(
     <View style={styles.container}>
+      
+      <Text style={styles.header}>PLEH</Text>
     <Text style={styles.textito}>Nueva Contraseña</Text>
     <TextInput
       placeholder="Ingresa tu nueva contraseña"
@@ -55,6 +59,53 @@ const handleChangePassword = async () => {
   )
 }
 const styles = StyleSheet.create({
-  
-})
+  container: {
+    flex: 1,
+    justifyContent: "center",
+    padding: 16,
+  },
+  textito: {
+    color:"white",
+    textAlign:"center"
+  },
+  input: {
+    height: 40,
+    width: 350,
+    display:"flex",
+    alignSelf:"center",
+    justifyContent:"center",
+    alignItems: "center",
+    alignContent: "center",
+    borderColor: "gray",
+    borderWidth: 1,
+    marginBottom: 16,
+    paddingHorizontal: 8,
+    borderRadius:20
+  },
+  inputError: {
+    borderRadius:20,
+    height: 40,
+    width: 400,
+    display:"flex",
+    alignSelf:"center",
+    justifyContent:"center",
+    alignItems: "center",
+    alignContent: "center",
+    borderColor: 'red',
+    borderWidth: 1,
+  },
+  header: {
+    color:"white",
+    fontFamily:"ArchivoBlack-Regular",
+    fontSize: 40,
+    fontWeight: "bold",
+    marginBottom: 16,
+    justifyContent:"center",
+    textAlign:"center"
+  },
+  errorText: {
+    color: 'red',
+    marginTop: 5,
+  },
+});
 export default cambiocon;

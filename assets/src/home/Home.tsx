@@ -79,15 +79,28 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
-      <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
+      <div style={styles.divblanco}>
+      <Text style={styles.Preguntastext}>Responde las sigientes preguntas para que entendamos tu caso</Text>
+      </div>
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Image 
        source={require('../../img/logo-boton.png')}
        style={styles.botonpanico}
        resizeMode="contain" />
       </TouchableOpacity>
+<<<<<<< HEAD
       <Button title='Preguntas' onPress={presionar}></Button>
       <Button title='Usuario' onPress={usuarioCambio}></Button>
+=======
+      <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
+              <Text style={styles.buttonText}>Preguntas</Text>
+      </TouchableOpacity>
+  
+
+      <TouchableOpacity onPress={handleSignOut} style={styles.botonpreguntas}>
+              <Text style={styles.buttonText}>Cerrar session</Text>
+      </TouchableOpacity>
+>>>>>>> 16a24927be34a24a4178cb49a45fd31c9edabeca
       <Modal
         animationType="slide"
         transparent={true}
@@ -102,12 +115,12 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
               onChangeText={(text) => setContacto(text)}
             />
             <TouchableOpacity onPress={handleGuardarContacto} style={styles.button}>
-              <Text style={styles.buttonText}>Guardar</Text>
+              <Text style={styles.buttonText}>Guardadr cotacto</Text>
             </TouchableOpacity>
           </View>
         </View>
       </Modal>
-
+    <Text style={styles.footer}>Esta aplicacion fue desarrollada durante el trasncurso del año por Eluney Morales, Levilla Abril, Abigail Mercado, Alen Salazar y Juan Molina para ayudar a las victimas de abuso</Text>
     </View>
   );
 };
@@ -119,8 +132,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   welcomeText: {
-    fontSize: 18,
-    marginBottom: 10,
+    fontSize: 60,
+    marginBottom: 20,
   },
   panic:{
     height:70,
@@ -147,13 +160,22 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    backgroundColor: "blue",
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 10,
+    justifyContent: 'space-between',
+    backgroundColor: "purple",
+    color:"white",
+    padding: 20,
+    borderRadius: 10,
+    marginTop: 20,
   },
   buttonText: {
     color: "white",
+  },
+  Preguntas: {
+    backgroundColor: 'purple',
+    color: "white",
+    borderRadius: 10, 
+    padding: 15,
+    margin: 10,
   },
   input: {
     height: 40,
@@ -163,6 +185,30 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     width: "100%",
   },
+  footer: {
+    fontSize: 10,
+    color: 'black',
+    
+  },
+  botonpreguntas: {
+    color: "white", 
+    backgroundColor: 'purple',
+    borderRadius: 40,
+    padding: 15,
+    margin: 10,
+    position: 'absolute',
+    top: 0,
+    right: 0,
+  },
+  Preguntastext: {
+    fontSize: 18,
+  },
+  divblanco: {
+    backgroundColor: 'white',
+    borderRadius: 40,
+    padding: 15,
+    margin: 10,
+  }
 });
 
 export default Home;
