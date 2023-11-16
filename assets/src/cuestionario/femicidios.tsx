@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from 'react-native';  
+import Laboral from "./Vlaboral";
 
 function Femicidio(){
     return(
@@ -39,9 +40,9 @@ const styles = StyleSheet.create({
     descripcion:{
         fontSize: 16,
         textAlign: 'center',
-    }
+    },
   
 
+});
 
-
-})
+export default Femicidio;
