@@ -22,14 +22,25 @@ const Expertos: React.FC = () => {
     return (
         <div>
             <CustomAppBar />
-            <CustomizedButtons onSelect={(categoria) => setFiltro(categoria)} />
+            <div style={{padding:'30px',}}>
             <h1>Lista de Expertos</h1>
-            {expertosFiltrados.map((Experto:ProfileCardProps) => (
-                <ProfileCard key={Experto.id} {...Experto}  />
-            ))}
+            </div>
+            <div style={{padding:'10px',}}>
+            <CustomizedButtons onSelect={(categoria) => setFiltro(categoria)} />
+            </div>
+            <div style={{ display: 'flex', flexWrap: 'wrap', 
+            }}
+            >
+                {expertosFiltrados.map((Experto: ProfileCardProps) => (
+                    <div style={{padding:'30px',}}>
+                    <ProfileCard key={Experto.id} {...Experto} />
+                    </div>
+                ))}
+            </div>
             <Footer />
         </div>
     );
+
 };
 
 export default Expertos;
