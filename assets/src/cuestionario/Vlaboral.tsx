@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Laboral() {
     return(
-        <View >
+        <View style={styles.container}>
             <Text>Violencia Laboral</Text>
             <Image source={require('../tipos/laboral.jpeg')}></Image>
             <Text>
@@ -14,5 +14,10 @@ function Laboral() {
             La clave para combatirla es identificarla a tiempo.
             </Text>
         </View>
-    )
+    );
 }
+
+
+const styles = StyleSheet.create({
+    
+})
