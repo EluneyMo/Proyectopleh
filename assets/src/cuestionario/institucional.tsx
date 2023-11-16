@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Institucional(){
     return(
-        <View>
+        <View style={styles.container}>
             <Text>Violencia Institucional</Text>
             <Image source={require('../tipos/femicidios.jpg')}/>
             <Text>
@@ -24,6 +24,6 @@ function Institucional(){
 }
 
 const styles = StyleSheet.create({
-    
+
 
 })
