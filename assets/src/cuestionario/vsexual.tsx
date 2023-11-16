@@ -6,6 +6,9 @@ function Sexual{
         <View  style={styles.container}>
             <Text style={styles.title}>Violencia Sexual</Text>
             <Image source={require('../tipos/images.jpeg')} style={styles.imagen} />
+            <Text style={styles.descripcion}>
+                
+            </Text>
         </View>
 
     );
