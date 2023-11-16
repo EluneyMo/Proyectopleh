@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Acoso(){
     return(
-        <View>
+        <View style={styles.container}>
             <Text>Violencia Mediatica</Text>
             <Image source={require('../tipos/acoso.jpeg')} />
             <Text>
