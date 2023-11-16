@@ -159,7 +159,10 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     width: "100%",
   },
-  
+  footer: {
+    
+
+  }
 });
 
 export default Home;
