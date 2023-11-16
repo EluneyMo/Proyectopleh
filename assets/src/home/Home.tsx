@@ -176,8 +176,11 @@ const styles = StyleSheet.create({
     
   },
   botonpreguntas: {
-    backgroundColor: "purple",
+    backgroundColor: 'purple',
     color: "white",
+    borderRadius: 30, 
+    padding: 15,
+    margin: 10,
   },
   Preguntastext: {
     fontSize: 18,
