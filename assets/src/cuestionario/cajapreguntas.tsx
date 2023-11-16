@@ -17,7 +17,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
     <View  >
         <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
           <Text>#</Text>
-          <Text>Tipos de violencias</Text>
+          <Text style={styles.titulo}>Tipos de violencias</Text>
           <Text>#</Text>
         </View>
 
@@ -125,6 +125,16 @@ const styles = StyleSheet.create({
     width:300,
     margin: 10,
   },
+  
+  titulo:{
+    fontSize: 24,  // Tamaño de la fuente
+    //fontWeight: 'bold',  // Negrita
+    //color: '#333',  // Color del texto
+    //extAlign: 'center',  // Alineación del texto
+    //marginTop: 20,  //
+
+  },
+
 
   card: {
     backgroundColor: '#fff',
