@@ -102,7 +102,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
           </View>
         </View>
       </Modal>
-
+    <Text style={styles.footer}>esta aplicacion fue desarrollada durante el trasncurso del año por Eluney Morales, Abigail Mercado, Alen Salazar y Juan Molina para ayudar a las victimas de abuso</Text>
     </View>
   );
 };
@@ -159,6 +159,7 @@ const styles = StyleSheet.create({
     paddingHorizontal: 10,
     width: "100%",
   },
+  
 });
 
 export default Home;
