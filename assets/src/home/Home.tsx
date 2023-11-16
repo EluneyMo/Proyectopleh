@@ -142,6 +142,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
+    justifyContent: 'space-between',
     backgroundColor: "purple",
     padding: 20,
     borderRadius: 10,
