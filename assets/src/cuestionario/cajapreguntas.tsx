@@ -1,4 +1,4 @@
-import React from "react";
+import React = require("react");
 import { View, Text, Image, TouchableOpacity, Linking, StyleSheet} from "react-native";
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";

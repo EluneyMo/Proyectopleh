@@ -10,6 +10,7 @@ import { LoginFormProps } from './assets/src/home/types';
 import Tipos from './assets/src/cuestionario/cajatipos';
 import cambiocon from './assets/src/login/cambiocon';
 import MyForm from './assets/src/usuario/usuario';
+import Institucional from './assets/src/cuestionario/institucional';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -24,6 +25,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name='Tipos' component={Tipos}/>
         <Stack.Screen name="ChangePassword" component={cambiocon} />
         <Stack.Screen name ="Usuario" component={MyForm}/>
+        <Stack.Navigator name ="Institucional" component={Institucional} />
       </Stack.Navigator>
     </NavigationContainer>
   );

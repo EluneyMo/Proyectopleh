@@ -1,4 +1,4 @@
-import React from "react";
+import React = require('react');
 import { View, Text, Image, StyleSheet } from 'react-native'; 
 
 function Institucional(){
