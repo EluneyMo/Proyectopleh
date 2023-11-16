@@ -18,6 +18,9 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   const instucional =()=>{
     navigation.navigate('Institucional' as never)
   }
+  const sexual =()=>{
+    navigation.navigate('Sexual' as never)
+  }
 
   return (
     <View  >
@@ -77,7 +80,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               </TouchableOpacity>    
               
               
-                   
+            
+            </View>   
+        
+
+          
           
           
 
