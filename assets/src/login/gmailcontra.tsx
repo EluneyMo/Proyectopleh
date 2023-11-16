@@ -16,7 +16,7 @@ const enviargmai=()=>{
       };
       return(
         <View>
-            
+            <Text>Restablecer contraseña</Text>
         </View>
       )
 }
