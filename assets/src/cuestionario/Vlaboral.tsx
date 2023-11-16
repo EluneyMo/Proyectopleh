@@ -5,7 +5,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 function Laboral() {
     return(
         <View style={styles.container}>
-            <Text>Violencia Laboral</Text>
+            <Text style={styles.title}>Violencia Laboral</Text>
             <Image source={require('../tipos/laboral.jpeg')}></Image>
             <Text>
             La violencia en el entorno laboral abarca una amplia gama de comportamientos perjudiciales,
