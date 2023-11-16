@@ -24,6 +24,15 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   const laboral =()=>{
     navigation.navigate('Laboral' as never)
   }
+  const femicidio =()=>{
+    navigation.navigate('Femicidio' as never)
+  }
+  const mediatica =()=>{
+    navigation.navigate('Mediatica' as never)
+  }
+  const acoso =()=>{
+    navigation.navigate('Acoso' as never)
+  }
 
   return (
     <View  >
@@ -52,13 +61,13 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               </TouchableOpacity>  
 
 
-              <TouchableOpacity onPress={movete} style={styles.card}>     
+              <TouchableOpacity onPress={laboral} style={styles.card}>     
                 <Text style={styles.cardText}>Violencia Laboral</Text>
                 <Image source={require("../tipos/laboral.jpeg")} style={styles.cardimagen} />
               </TouchableOpacity> 
                 
               
-              <TouchableOpacity onPress={movete} style={styles.card}>  
+              <TouchableOpacity onPress={femicidio} style={styles.card}>  
                 <Text style={styles.cardText}>Femicidio</Text>
                 <Image source={require("../tipos/femicidios.jpg")} style={styles.cardimagen} />
               </TouchableOpacity>           
@@ -72,12 +81,12 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               </TouchableOpacity>    
                 
               
-              <TouchableOpacity onPress={movete} style={styles.card}>      
+              <TouchableOpacity onPress={mediatica} style={styles.card}>      
                 <Text style={styles.cardText}>Violencia Mediática</Text>
                 <Image source={require("../tipos/mediatica.png")} style={styles.cardimagen} />
               </TouchableOpacity>        
               
-              <TouchableOpacity onPress={movete} style={styles.card}>
+              <TouchableOpacity onPress={acoso} style={styles.card}>
                 <Text style={styles.cardText}>Acoso</Text>
                 <Image source={require("../tipos/acoso.jpeg")} style={styles.cardimagen} />
               </TouchableOpacity>    
