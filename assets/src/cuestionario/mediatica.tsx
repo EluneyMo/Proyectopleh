@@ -5,9 +5,9 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 function Mediática() {
     return(
         <View style={styles.container}>
-            <Text>Violencia Mediatica</Text>
-            <Image source={require('../tipos/mediatica.png')}/>
-            <Text>
+            <Text style={styles.title}>Violencia Mediatica</Text>
+            <Image source={require('../tipos/mediatica.png')} style={styles.imagen}/>
+            <Text style={styles.descripcion}>
                 A menudo, la violencia mediática se manifiesta de manera sutil, infiltrándose
                 en nuestras vidas diarias sin que nos demos cuenta de sus efectos. El constante
                 bombardeo de imágenes, discursos y narrativas que perpetúan estereotipos, 
@@ -35,6 +35,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 10,
+    },
+    imagen:{
+
     }
     
 })
