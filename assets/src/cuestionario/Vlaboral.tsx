@@ -37,5 +37,7 @@ const styles = StyleSheet.create({
     descripcion: {
         fontSize: 16,
         textAlign: 'center'
-    }
-})
+    },
+});
+
+export default Laboral;
