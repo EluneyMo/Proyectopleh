@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 function Institucional(){
     return(
         <View style={styles.container}>
-            <Text>Violencia Institucional</Text>
+            <Text style={styles.title}>Violencia Institucional</Text>
             <Image source={require('../tipos/femicidios.jpg')}/>
             <Text>
                 A veces, la violencia institucional puede ser sutil y pasar desapercibida, pero es importante estar 
