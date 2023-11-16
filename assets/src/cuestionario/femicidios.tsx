@@ -5,7 +5,16 @@ function Femicidio(){
     return(
         <View>
             <Text>Femicidios</Text>
-            <Image source={require('../tipos/femicidios.jpg')}></Image>
+            <Image source={require('../tipos/femicidios.jpg')}/>
+            <Text>
+            En Argentina, el término comenzó a popularizarse en la década del 2000, de la mano 
+            de los movimientos feministas que enunciaban y 
+            denunciaban como un hecho político y social los asesinatos de mujeres causados
+            por hombres y motivados por la violencia machista. 
+            Poco a poco, el concepto de femicidio fue extendiéndose y en la prensa y
+            en la vida cotidiana comenzó titánica lucha de por medio
+            a reemplazar al deleznable término de “crimen pasional”.
+            </Text>
         </View>
     )
 
