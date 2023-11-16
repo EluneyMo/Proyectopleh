@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',  // Negrita
     color: '#333',  // Color del texto
     extAlign: 'center',  // Alineación del texto
-    //marginTop: 20,  //
+    marginTop: 20,  
 
   },
 
