@@ -75,7 +75,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
-      <div>
+      <div style={styles.divblanco}>
       <Text style={styles.Preguntastext}>Responde las sigientes preguntas para que entendamos tu caso</Text>
       </div>
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
@@ -194,7 +194,12 @@ const styles = StyleSheet.create({
   Preguntastext: {
     fontSize: 18,
   },
- 
+  divblanco: {
+    backgroundColor: 'white',
+    borderRadius: 40,
+    padding: 15,
+    margin: 10,
+  }
 });
 
 export default Home;
