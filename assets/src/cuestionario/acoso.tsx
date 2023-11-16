@@ -6,6 +6,7 @@ function Acoso(){
     return(
         <View>
             <Text>Violencia Mediatica</Text>
+            <Image source={require('../tipos/acoso.jpeg')} />
         </View>
     )
 }
