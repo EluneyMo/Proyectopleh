@@ -6,6 +6,7 @@ function Laboral() {
     return(
         <View >
             <Text>Violencia Laboral</Text>
+            <Image source={require('../tipos/laboral.jpeg')}></Image>
         </View>
     )
 }
