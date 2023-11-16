@@ -75,14 +75,14 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
-      <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
+      <RNButton title="Cerrar Sesión" onPress={handleSignOut} style={styles.botonpreguntas} />
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Image 
        source={require('../../img/logo-boton.png')}
        style={styles.botonpanico}
        resizeMode="contain" />
       </TouchableOpacity>
-      <Button title='Preguntas' onPress={presionar}></Button>
+      <Button title='Preguntas' onPress={presionar} style={styles.botonpreguntas}></Button>
       <Modal
         animationType="slide"
         transparent={true}
@@ -102,7 +102,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
           </View>
         </View>
       </Modal>
-    <Text style={styles.footer}>esta aplicacion fue desarrollada durante el trasncurso del año por Eluney Morales, Abigail Mercado, Alen Salazar y Juan Molina para ayudar a las victimas de abuso</Text>
+    <Text style={styles.footer}>Esta aplicacion fue desarrollada durante el trasncurso del año por Eluney Morales, Abigail Mercado, Alen Salazar y Juan Molina para ayudar a las victimas de abuso</Text>
     </View>
   );
 };
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   welcomeText: {
-    fontSize: 40,
+    fontSize: 60,
     marginBottom: 20,
   },
   panic:{
@@ -150,6 +150,7 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     color: "white",
+   
   },
   input: {
     height: 40,
@@ -160,10 +161,12 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   footer: {
-    fontSize: 5,
+    fontSize: 10,
     color: 'grey',
-
-  }
+  },
+  botonpreguntas: {
+    backgroundColor: "purple",
+  },
 });
 
 export default Home;
