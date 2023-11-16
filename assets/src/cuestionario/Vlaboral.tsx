@@ -33,5 +33,8 @@ const styles = StyleSheet.create({
     imagen:{
         width: 250, 
         height: 250,
+    },
+    descripcion: {
+        fontSize: 16,
     }
 })
