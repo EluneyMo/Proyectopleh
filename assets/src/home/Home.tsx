@@ -114,8 +114,8 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   welcomeText: {
-    fontSize: 18,
-    marginBottom: 10,
+    fontSize: 40,
+    marginBottom: 20,
   },
   panic:{
     height:70,
