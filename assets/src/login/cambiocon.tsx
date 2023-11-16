@@ -19,20 +19,10 @@ const cambiocon=()=>{
   const [newPasswordError, setNewPasswordError] = useState('');
 const handleChangePassword = async () => {
   try {
-    const user = auth.currentUser;
-    if (user) {
-      if (user.email !== null) { // Verifica que user.email no sea nulo
-        const credential = EmailAuthProvider.credential(user.email, currentPassword);
-        await reauthenticateWithCredential(user, credential);
-        await updatePassword(user, newPassword);
-        console.log('Contraseña actualizada correctamente');
+      await auth.confirmPasswordReset(route.params?.resetToken, newPassword);
+      console.log('Contraseña cambiada correctamente');
         navigation.navigate('Login' as never)
-      } else {
-        console.log('El correo electrónico del usuario es nulo.');
-      }
-    } else {
-      console.log('No se pudo obtener el usuario actual');
-    }
+     
   } catch (error:any) {
     console.error('Error al cambiar la contraseña:', error.message);
   }
