@@ -29,6 +29,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name ="Institucional" component={Institucional} />
         <Stack.Screen name ="Acoso" component={Acoso} />
         <Stack.Screen name ="Mediatica" component={Mediatica} />
+        <Stack.Screen name ="Femicidios" component={Femicidios} />
 
       </Stack.Navigator>
     </NavigationContainer>
