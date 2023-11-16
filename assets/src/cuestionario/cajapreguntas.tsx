@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, Linking, StyleSheet, FlatList } from "react-native";
+import { View, Text, Image, TouchableOpacity, Linking, StyleSheet} from "react-native";
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -21,11 +21,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
           <Text>#</Text>
         </View>
 
-        <FlatList
-          horizontal
-          data={data}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
+        
             <View style={styles.container}>
               
               <TouchableOpacity onPress={movete} style={styles.card}>
@@ -90,9 +86,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
                 <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
                 
             </View>   
-          )}
-        />    
-    
+        
 
           
           
