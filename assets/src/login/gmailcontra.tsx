@@ -23,6 +23,7 @@ const enviargmai=()=>{
             value={email}
             onChangeText={setEmail}
            />
+           <Button title="Enviar" onPress={handleResetPassword} />
         </View>
       )
 }
