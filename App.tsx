@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
 import Login from './assets/src/login/login';
 import Home from './assets/src/home/Home';
+import usuario from './assets/src/usuario/usuario';
 import appFirebase from './firebase/firebase';
 import { getAuth, onAuthStateChanged, User } from 'firebase/auth';
 

@@ -49,6 +49,10 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     navigation.navigate('Preguntas' as never);
   };
 
+  const usuarioCambio = () => {
+    navigation.navigate('Usuario' as never);
+  };
+
   const handleSignOut = async () => {
     try {
       await signOut(auth);
@@ -95,9 +99,13 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
        style={styles.botonpanico}
        resizeMode="contain" />
       </TouchableOpacity>
+<<<<<<< HEAD
       <div style={styles.divblanco}>
       <Text style={styles.Preguntastext}> Mantente informado </Text>
       </div>
+=======
+      <Button title='Usuario' onPress={usuarioCambio}></Button>
+>>>>>>> b6b2ff8a106cd8abf910f091325ac3a048e0bf4c
       <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
               <Text style={styles.buttonText}>Informacion</Text>
       </TouchableOpacity>
