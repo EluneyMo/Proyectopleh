@@ -5,7 +5,7 @@ function Femicidio(){
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Femicidios</Text>
-            <Image source={require('../tipos/femicidios.jpg')}/>
+            <Image source={require('../tipos/femicidios.jpg')} style={styles.imagen}/>
             <Text>
             En Argentina, el término comenzó a popularizarse en la década del 2000, de la mano 
             de los movimientos feministas que enunciaban y 
@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 10,
-    }
+    },
+
 
 })
