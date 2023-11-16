@@ -142,10 +142,10 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   button: {
-    backgroundColor: "blue",
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 10,
+    backgroundColor: "purple",
+    padding: 20,
+    borderRadius: 10,
+    marginTop: 20,
   },
   buttonText: {
     color: "white",
