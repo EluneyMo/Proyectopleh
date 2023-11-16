@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, Image, StyleSheet } from 'react-native';  
 
-function Sexual{
+function Sexual() {
     return(
         <View  style={styles.container}>
             <Text style={styles.title}>Violencia Sexual</Text>
@@ -44,5 +44,9 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 10,
+    },
+    imagen:{
+        
     }
+
 })
