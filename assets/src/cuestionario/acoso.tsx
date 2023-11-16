@@ -3,5 +3,9 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 
 function Acoso(){
-    return()
+    return(
+        <View >
+            
+        </View>
+    )
 }
