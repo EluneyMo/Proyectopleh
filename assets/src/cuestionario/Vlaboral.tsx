@@ -19,5 +19,7 @@ function Laboral() {
 
 
 const styles = StyleSheet.create({
-    
+    container: {
+        
+    }
 })
