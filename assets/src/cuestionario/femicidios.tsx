@@ -16,6 +16,10 @@ function Femicidio(){
             a reemplazar al deleznable término de “crimen pasional”.
             </Text>
         </View>
-    )
+    );
 
 }
+
+const style = StyleSheet.create({
+    
+})
