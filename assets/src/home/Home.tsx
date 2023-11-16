@@ -106,6 +106,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
               <Text style={styles.buttonText}>Informacion</Text>
       </TouchableOpacity>
+      <div style={styles.divblanco}>
+      <Text style={styles.Preguntastext}>  Mira tu usuario aqui  </Text>
+      </div>
       <TouchableOpacity onPress={usuarioCambio} style={styles.Preguntas}>
               <Text style={styles.buttonText}>Usuario</Text>
       </TouchableOpacity>
