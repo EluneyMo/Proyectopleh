@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Mediática() {
     return(
-        <View>
+        <View style={styles.container}>
             <Text>Violencia Mediatica</Text>
             <Image source={require('../tipos/mediatica.png')}/>
             <Text>
@@ -21,5 +21,9 @@ function Mediática() {
             </Text>
 
         </View>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    
+})
