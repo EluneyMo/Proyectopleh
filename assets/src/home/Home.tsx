@@ -88,10 +88,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
        style={styles.botonpanico}
        resizeMode="contain" />
       </TouchableOpacity>
-<<<<<<< HEAD
-      <Button title='Preguntas' onPress={presionar}></Button>
       <Button title='Usuario' onPress={usuarioCambio}></Button>
-=======
       <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
               <Text style={styles.buttonText}>Preguntas</Text>
       </TouchableOpacity>
@@ -100,7 +97,6 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       <TouchableOpacity onPress={handleSignOut} style={styles.botonpreguntas}>
               <Text style={styles.buttonText}>Cerrar session</Text>
       </TouchableOpacity>
->>>>>>> 16a24927be34a24a4178cb49a45fd31c9edabeca
       <Modal
         animationType="slide"
         transparent={true}
