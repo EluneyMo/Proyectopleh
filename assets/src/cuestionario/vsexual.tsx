@@ -46,7 +46,8 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     imagen:{
-        width: 100,
+        width: 250,
+        height: 250,
     }
 
 })
