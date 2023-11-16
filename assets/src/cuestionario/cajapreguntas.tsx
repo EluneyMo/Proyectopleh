@@ -96,30 +96,29 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
             </View>   
         
 
-          
-          
-          
+        
+              <View style={styles.cardNoticias}> 
+              <Text style={styles.cardText}>Noticias Recientes</Text>
+              <Image source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
+              <View>
+                <Text style={styles.title}>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
+                <Text style={styles.newsDescripcion}>
+                  Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la
+                  localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
+                  celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios
+                </Text>
+                <TouchableOpacity onPress={() => Linking.openURL('https://www.lanacion.com.ar/seguridad/misiones-una-mujer-denuncio-que-un-amigo-la-acompano-a-su-casa-la-amenazo-con-un-cuchillo-y-la-violo-nid04102023/')} style={styles.newsLink}>
+                  <Text>Ver más información</Text>
+                </TouchableOpacity>
+              </View>
 
 
           
-          <View style={styles.cardNoticias}>
-          <Text style={styles.cardText}>Noticias Recientes</Text>
-            <Image
-              source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
-            <View>
-              <Text style={styles.title}>Una mujer denunció que un amigo la acompañó a su casa, la amenazó con un cuchillo y la violó</Text>
-              <Text style={styles.newsDescripcion}>
-                Una joven de 20 años denunció que un amigo, tras acompañarla a su casa en la
-                localidad de Oberá, Misiones, la amenazó con un cuchillo, la violó repetidas veces y grabó el ataque con un
-                celular, el domingo a la madrugada. Tras ello el hombre que fue detenido y su casa, allanada en busca de indicios
-              </Text>
-              <TouchableOpacity onPress={() => Linking.openURL('https://www.lanacion.com.ar/seguridad/misiones-una-mujer-denuncio-que-un-amigo-la-acompano-a-su-casa-la-amenazo-con-un-cuchillo-y-la-violo-nid04102023/')} style={styles.newsLink}>
-                <Text>Ver más información</Text>
-              </TouchableOpacity>
-            </View>
-
-         
         </View>
+
+
+        
+
     
     </View>
   );

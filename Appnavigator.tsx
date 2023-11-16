@@ -33,7 +33,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name ="Institucional" component={Institucional} />
         <Stack.Screen name ="Acoso" component={Acoso} />
         <Stack.Screen name ="Mediatica" component={Mediatica} />
-        <Stack.Screen name ="Femicidios" component={Femicidio} />
+        <Stack.Screen name ="Femicidio" component={Femicidio} />
         <Stack.Screen name ="Sexual" component={Sexual} />
         <Stack.Screen name ="Laboral" component={Laboral} />
         
