@@ -95,13 +95,6 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               
             
             </View>   
-<<<<<<< HEAD
-          
-        
-    
-=======
-        
->>>>>>> 16a24927be34a24a4178cb49a45fd31c9edabeca
 
         
               <View style={styles.cardNoticias}> 

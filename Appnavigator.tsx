@@ -8,10 +8,8 @@ import CajaTipos from './assets/src/cuestionario/cajapreguntas';
 import RegistroForm from './assets/src/login/register';
 import { LoginFormProps } from './assets/src/home/types';
 import Tipos from './assets/src/cuestionario/cajatipos';
-<<<<<<< HEAD
 import enviargmai from "./assets/src/login/gmailcontra"
 import Expertos from './assets/src/expertos/expertos';
-=======
 import cambiocon from './assets/src/login/cambiocon';
 import MyForm from './assets/src/usuario/usuario';
 import Institucional from './assets/src/cuestionario/institucional';
@@ -20,7 +18,6 @@ import Sexual from './assets/src/cuestionario/vsexual';
 import Femicidio from './assets/src/cuestionario/femicidios';
 import Acoso from './assets/src/cuestionario/acoso';
 import Laboral from './assets/src/cuestionario/Vlaboral';
->>>>>>> 16a24927be34a24a4178cb49a45fd31c9edabeca
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -33,10 +30,8 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="Panico" component={Panicbutton} />
         <Stack.Screen name='Preguntas' component={CajaTipos}/>
         <Stack.Screen name='Tipos' component={Tipos}/>
-<<<<<<< HEAD
         <Stack.Screen name="Cambio de contraseña" component={enviargmai} />
         <Stack.Screen name="Expertos" component={Expertos}/>
-=======
         <Stack.Screen name="ChangePassword" component={cambiocon} />
         <Stack.Screen name ="Usuario" component={MyForm}/>
         <Stack.Screen name ="Institucional" component={Institucional} />
@@ -47,7 +42,6 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name ="Laboral" component={Laboral} />
         
 
->>>>>>> 16a24927be34a24a4178cb49a45fd31c9edabeca
       </Stack.Navigator>
     </NavigationContainer>
   );

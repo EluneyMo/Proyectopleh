@@ -77,23 +77,29 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   }
   return (
     <View style={styles.container}>
-      <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
-<<<<<<< HEAD
-      <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
-      <RNButton title="Expertos" onPress={expertos}></RNButton>
-=======
+      <Text style={styles.welcomeText} >Bienvenido {correoUsuario}</Text>
+  
       <div style={styles.divblanco}>
-      <Text style={styles.Preguntastext}>Responde las sigientes preguntas para que entendamos tu caso</Text>
+      <Text style={styles.Preguntastext}>  Encuntra expertos para acesorar tu caso  </Text>
       </div>
->>>>>>> f8411d54190e487f713c04446355088540ec08f9
+      <TouchableOpacity onPress={expertos
+      } style={styles.Preguntas}>
+              <Text style={styles.buttonText}>Expertos</Text>
+      </TouchableOpacity>
+
+      
+
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Image 
        source={require('../../img/logo-boton.png')}
        style={styles.botonpanico}
        resizeMode="contain" />
       </TouchableOpacity>
+      <div style={styles.divblanco}>
+      <Text style={styles.Preguntastext}> Mantente informado </Text>
+      </div>
       <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
-              <Text style={styles.buttonText}>Preguntas</Text>
+              <Text style={styles.buttonText}>Informacion</Text>
       </TouchableOpacity>
   
 
