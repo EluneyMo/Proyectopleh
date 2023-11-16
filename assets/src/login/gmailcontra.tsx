@@ -5,6 +5,7 @@ import appFirebase from '../../../firebase/firebase';
 const auth=getAuth(appFirebase)
 
 const enviargmai=()=>{
+    const [email, setEmail] = useState('');
     const handleResetPassword = async (email: string) => {
         try {
           await sendPasswordResetEmail(auth, email);
