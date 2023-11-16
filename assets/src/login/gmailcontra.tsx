@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet } from 'react-native'
+import { View, Text, TextInput, Button, StyleSheet,  } from 'react-native'
 import { Auth, getAuth, sendPasswordResetEmail } from 'firebase/auth';
+import "firebase/functions";
 import appFirebase from '../../../firebase/firebase';
+
 const auth=getAuth(appFirebase)
 
 const enviargmai=()=>{
@@ -23,7 +25,7 @@ const enviargmai=()=>{
             value={email}
             onChangeText={setEmail}
            />
-           <Button title="Enviar" onPress={handleResetPassword} />
+           <Button title="Enviar" onPress={() => handleResetPassword(email)}></Button>
         </View>
       )
 }
