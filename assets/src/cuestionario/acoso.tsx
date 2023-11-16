@@ -22,4 +22,9 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         padding: 16,
     },
+    title:{
+        fontSize: 20,
+        fontWeight: 'bold',
+        marginBottom: 10,
+    },
 })
