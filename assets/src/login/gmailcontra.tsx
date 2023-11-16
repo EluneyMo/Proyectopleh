@@ -17,6 +17,11 @@ const enviargmai=()=>{
       return(
         <View>
             <Text>Restablecer contraseña</Text>
+            <TextInput
+            placeholder="Correo electrónico"
+            value={email}
+            onChangeText={setEmail}
+           />
         </View>
       )
 }
