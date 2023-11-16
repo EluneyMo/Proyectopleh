@@ -90,11 +90,12 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
           
           
-          <Text>Noticias Recientes</Text>
+          
 
 
           
           <View style={styles.cardNoticias}>
+          <Text style={styles.cardText}>Noticias Recientes</Text>
             <Image
               source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
             <View>
