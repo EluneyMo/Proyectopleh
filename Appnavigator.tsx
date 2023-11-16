@@ -26,6 +26,8 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="ChangePassword" component={cambiocon} />
         <Stack.Screen name ="Usuario" component={MyForm}/>
         <Stack.Screen name ="Institucional" component={Institucional} />
+        <Stack.Screen name ="Acoso" component={Acoso} />
+
       </Stack.Navigator>
     </NavigationContainer>
   );
