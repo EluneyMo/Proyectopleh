@@ -72,10 +72,14 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       console.error('Error al guardar el contacto en Firebase:', error);
     }
   };
+  const expertos=()=>{
+    navigation.navigate("Expertos" as never);
+  }
   return (
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
       <RNButton title="Cerrar Sesión" onPress={handleSignOut} />
+      <RNButton title="Expertos" onPress={expertos}></RNButton>
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Image 
        source={require('../../img/logo-boton.png')}

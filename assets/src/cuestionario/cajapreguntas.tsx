@@ -21,11 +21,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
           <Text>#</Text>
         </View>
 
-        <FlatList
-          horizontal
-          data={data}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
+        
             <View style={styles.container}>
               
               <TouchableOpacity onPress={movete} style={styles.card}>
@@ -90,8 +86,8 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
                 <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
                 
             </View>   
-          )}
-        />    
+          
+        
     
 
           

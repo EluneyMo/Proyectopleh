@@ -19,3 +19,4 @@ const datosFalsos = [
         additionalInfo: 'Trabaja de lunes a viernes de 8am a 3pm ',
     },
   ];
+export default datosFalsos

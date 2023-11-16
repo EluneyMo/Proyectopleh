@@ -13,16 +13,18 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import PhoneIcon from '@mui/icons-material/Phone';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import {ProfileCardProps} from "../home/types"
 
-interface ProfileCardProps {
-  data: {
-    avatar: string;
-    fullName: string;
-    title: string;
-    location: string;
-    phoneNumber: string;
-    additionalInfo: string;
-  };
+interface Data {
+  avatar: string;
+  fullName: string;
+  title: string;
+  location: string;
+  phoneNumber: string;
+  additionalInfo: string;
+}
+interface averquepasa{
+  expand:any
 }
 
 const ExpandMore = styled((props) => {
@@ -36,7 +38,7 @@ const ExpandMore = styled((props) => {
   }),
 }));
 
-const ProfileCard: React.FC<ProfileCardProps> = ({ data }) => {
+const ProfileCard: React.FC<ProfileCardProps> = ({ data }: {data:Data}) => {
   const [expanded, setExpanded] = useState(false);
 
   const handleExpandClick = () => {
