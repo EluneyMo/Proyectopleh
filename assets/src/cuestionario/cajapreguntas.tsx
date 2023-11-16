@@ -115,8 +115,11 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
           
         </View>
-
-
+        
+        <TouchableOpacity onPress={sexual} style={styles.card}> 
+                <Image source={require("../tipos/señal.jpg")} style={styles.cardimagen} />
+                <Text style={styles.cardText}>Señal de ayuda para violencia de genero</Text>
+        </TouchableOpacity>  
         
 
     
