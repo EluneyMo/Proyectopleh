@@ -177,7 +177,6 @@ const styles = StyleSheet.create({
     height:48
   },
   container: {
-   
     flex: 1,
     justifyContent: "center",
     padding: 16,
