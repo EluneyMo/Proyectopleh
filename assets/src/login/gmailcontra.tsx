@@ -17,6 +17,7 @@ const enviargmai=()=>{
       return(
         <View>
             <Text>Restablecer contraseña</Text>
+            <Text>Introduce el gmail que deseas cambiar la contraseña, y se le enviara un correo electronico</Text>
             <TextInput
             placeholder="Correo electrónico"
             value={email}
