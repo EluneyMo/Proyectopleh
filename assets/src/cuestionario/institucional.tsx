@@ -35,5 +35,8 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         marginBottom: 10,
     },
+    imagen: {
+        width: 250,
+    }
 
 })
