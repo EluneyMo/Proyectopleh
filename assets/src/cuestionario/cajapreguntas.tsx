@@ -21,6 +21,9 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   const sexual =()=>{
     navigation.navigate('Sexual' as never)
   }
+  const laboral =()=>{
+    navigation.navigate('Laboral' as never)
+  }
 
   return (
     <View  >
@@ -43,7 +46,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               </TouchableOpacity>
 
 
-              <TouchableOpacity onPress={movete} style={styles.card}> 
+              <TouchableOpacity onPress={sexual} style={styles.card}> 
                 <Text style={styles.cardText}>Violencia Sexual </Text>
                 <Image source={require("../tipos/images.jpeg")} style={styles.cardimagen} />
               </TouchableOpacity>  
