@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react"
 import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Tipos() {
@@ -36,7 +36,7 @@ const styles = StyleSheet.create({
 
   imagen: {
     width: 100,
-    height: 100,
+    height: 150,
   },
 
   descripcion: {
