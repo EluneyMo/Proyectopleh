@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
   },
   
   title: {
-    color: '#555',
+    color: '#000',
     fontSize: 18,
     textAlign: 'center',
   },
