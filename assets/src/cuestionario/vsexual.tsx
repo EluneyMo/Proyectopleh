@@ -31,3 +31,6 @@ function Sexual{
 
     );
 }
+
+
+const styles = StyleSheet.create({})
