@@ -81,10 +81,10 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
                 <Image source={require("../tipos/economica.jpeg")} style={styles.cardimagen} />
               </TouchableOpacity>      
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>
                 <Text style={styles.cardText}>Violencia Física</Text>
                 <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
-                
+              </TouchableOpacity>  
             </View>   
         
 
