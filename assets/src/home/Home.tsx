@@ -49,6 +49,10 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     navigation.navigate('Preguntas' as never);
   };
 
+  const usuarioCambio = () => {
+    navigation.navigate('Usuario' as never);
+  };
+
   const handleSignOut = async () => {
     try {
       await signOut(auth);
@@ -72,22 +76,39 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       console.error('Error al guardar el contacto en Firebase:', error);
     }
   };
+  const expertos=()=>{
+    navigation.navigate("Expertos" as never);
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
+      <Text style={styles.welcomeText} >Bienvenido {correoUsuario}</Text>
+  
       <div style={styles.divblanco}>
-      <Text style={styles.Preguntastext}>Responde las sigientes preguntas para que entendamos tu caso</Text>
+      <Text style={styles.Preguntastext}>  Encuntra expertos para acesorar tu caso  </Text>
       </div>
+      <TouchableOpacity onPress={expertos
+      } style={styles.Preguntas}>
+              <Text style={styles.buttonText}>Expertos</Text>
+      </TouchableOpacity>
+
+      
+
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Image 
        source={require('../../img/logo-boton.png')}
        style={styles.botonpanico}
        resizeMode="contain" />
       </TouchableOpacity>
+      <div style={styles.divblanco}>
+      <Text style={styles.Preguntastext}> Mantente informado </Text>
+      </div>
+      
       <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
-              <Text style={styles.buttonText}>Preguntas</Text>
+              <Text style={styles.buttonText}>Informacion</Text>
       </TouchableOpacity>
-  
+      <TouchableOpacity onPress={usuarioCambio} style={styles.Preguntas}>
+              <Text style={styles.buttonText}>Usuario</Text>
+      </TouchableOpacity>
 
       <TouchableOpacity onPress={handleSignOut} style={styles.botonpreguntas}>
               <Text style={styles.buttonText}>Cerrar session</Text>
