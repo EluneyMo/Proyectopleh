@@ -1,8 +1,9 @@
-import React = require("react");
+import React  from "react"
 import { View, Text, Image, TouchableOpacity, Linking, StyleSheet} from "react-native";
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
+import Institucional from "./institucional";
 
 interface PreguntasProps{
   route: RouteProp<RootStackParamList,"Preguntas" >
@@ -12,7 +13,12 @@ interface PreguntasProps{
 const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
   const movete =()=>{
     navigation.navigate("Tipos")
+    
   }
+  const instucional =()=>{
+    navigation.navigate('Institucional' as never)
+  }
+
   return (
     <View  >
         <View style= {{ flexDirection: "row", justifyContent: "space-between", alignItems: "center" }}>
@@ -54,7 +60,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
 
             
               
-              <TouchableOpacity onPress={movete} style={styles.card}>  
+              <TouchableOpacity onPress={instucional} style={styles.card}>  
                 <Text style={styles.cardText}>Violencia Institucional</Text>
                 <Image source={require("../tipos/instucional.jpeg")} style={styles.cardimagen} />
               </TouchableOpacity>    
