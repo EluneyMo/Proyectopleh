@@ -36,4 +36,7 @@ const enviargmai=()=>{
         </View>
       )
 }
+const styles=StyleSheet.create({
+
+})
 export default enviargmai
