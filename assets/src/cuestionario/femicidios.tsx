@@ -3,7 +3,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Femicidio(){
     return(
-        <View>
+        <View style={styles.container}>
             <Text>Femicidios</Text>
             <Image source={require('../tipos/femicidios.jpg')}/>
             <Text>
@@ -20,6 +20,9 @@ function Femicidio(){
 
 }
 
-const style = StyleSheet.create({
-    
+const styles = StyleSheet.create({
+    container:{
+        
+    }
+
 })
