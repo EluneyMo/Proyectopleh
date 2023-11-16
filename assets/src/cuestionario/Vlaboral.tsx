@@ -7,7 +7,7 @@ function Laboral() {
         <View style={styles.container}>
             <Text style={styles.title}>Violencia Laboral</Text>
             <Image source={require('../tipos/laboral.jpeg')} style={styles.imagen}/>
-            <Text>
+            <Text style={styles.descripcion}>
             La violencia en el entorno laboral abarca una amplia gama de comportamientos perjudiciales,
             desde acoso verbal y psicológico hasta agresiones físicas. Puede ocurrir entre colegas,
             entre empleados y empleadores, o incluso entre clientes y empleados. 
