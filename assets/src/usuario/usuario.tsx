@@ -1,4 +1,5 @@
 import { getAuth, signOut } from 'firebase/auth';
+import appFirebase from '../../../firebase/firebase';
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
 
