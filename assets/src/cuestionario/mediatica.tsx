@@ -2,7 +2,7 @@ import React from "react"
 import { View, Text, Image, StyleSheet } from 'react-native';  
 
 
-function Mediática() {
+function Mediatica() {
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Violencia Mediatica</Text>
@@ -43,6 +43,8 @@ const styles = StyleSheet.create({
     descripcion:{
         fontSize: 16,
         textAlign: "center",
-    }
+    },
     
-})
+});
+
+export default Mediatica;
