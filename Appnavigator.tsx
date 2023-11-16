@@ -13,6 +13,7 @@ import MyForm from './assets/src/usuario/usuario';
 import Institucional from './assets/src/cuestionario/institucional';
 import Mediatica from './assets/src/cuestionario/mediatica';
 import Sexual from './assets/src/cuestionario/vsexual';
+import Femicidio from './assets/src/cuestionario/femicidios';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -30,7 +31,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name ="Institucional" component={Institucional} />
         <Stack.Screen name ="Acoso" component={Acoso} />
         <Stack.Screen name ="Mediatica" component={Mediatica} />
-        <Stack.Screen name ="Femicidios" component={Femicidios} />
+        <Stack.Screen name ="Femicidios" component={Femicidio} />
         <Stack.Screen name ="Sexual" component={Sexual} />
 
       </Stack.Navigator>
