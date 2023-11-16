@@ -50,7 +50,7 @@ const styles = StyleSheet.create({
         height: 250,
     },
     descripcion: {
-        
+        fontSize: 16,
     }
 
 })
