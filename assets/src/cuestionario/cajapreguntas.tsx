@@ -46,10 +46,10 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               </TouchableOpacity> 
                 
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>  
                 <Text style={styles.cardText}>Femicidio</Text>
                 <Image source={require("../tipos/femicidios.jpg")} style={styles.cardimagen} />
-                        
+                </TouchableOpacity>           
             
 
             
