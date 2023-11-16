@@ -102,11 +102,13 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       <div style={styles.divblanco}>
       <Text style={styles.Preguntastext}> Mantente informado </Text>
       </div>
-      <Button title='Usuario' onPress={usuarioCambio}></Button>
+      
       <TouchableOpacity onPress={presionar} style={styles.Preguntas}>
               <Text style={styles.buttonText}>Informacion</Text>
       </TouchableOpacity>
-  
+      <TouchableOpacity onPress={usuarioCambio} style={styles.Preguntas}>
+              <Text style={styles.buttonText}>Usuario</Text>
+      </TouchableOpacity>
 
       <TouchableOpacity onPress={handleSignOut} style={styles.botonpreguntas}>
               <Text style={styles.buttonText}>Cerrar session</Text>
