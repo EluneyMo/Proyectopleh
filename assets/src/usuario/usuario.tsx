@@ -1,3 +1,4 @@
+import { getAuth, signOut } from 'firebase/auth';
 import React, { useState } from 'react';
 import { View, Text, TextInput, Button } from 'react-native';
 
@@ -51,5 +52,6 @@ const MyForm: React.FC<MyFormProps> = () => {
         </View>
     );
 };
+
 
 export default MyForm;

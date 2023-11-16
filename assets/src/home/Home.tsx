@@ -49,6 +49,10 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     navigation.navigate('Preguntas' as never);
   };
 
+  const usuarioCambio = () => {
+    navigation.navigate('Usuario' as never);
+  };
+
   const handleSignOut = async () => {
     try {
       await signOut(auth);
@@ -83,6 +87,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
        resizeMode="contain" />
       </TouchableOpacity>
       <Button title='Preguntas' onPress={presionar}></Button>
+      <Button title='Usuario' onPress={usuarioCambio}></Button>
       <Modal
         animationType="slide"
         transparent={true}
