@@ -20,5 +20,10 @@ function Institucional(){
                 y promover un cambio hacia sistemas más justos y equitativos.
             </Text>
         </View>
-    )
+    );
 }
+
+const styles = StyleSheet.create({
+    
+
+})
