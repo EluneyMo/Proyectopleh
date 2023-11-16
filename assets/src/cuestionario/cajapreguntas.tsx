@@ -130,7 +130,7 @@ const styles = StyleSheet.create({
     fontSize: 24,  // Tamaño de la fuente
     fontWeight: 'bold',  // Negrita
     color: '#333',  // Color del texto
-    //extAlign: 'center',  // Alineación del texto
+    extAlign: 'center',  // Alineación del texto
     //marginTop: 20,  //
 
   },
