@@ -6,6 +6,7 @@ function Mediática() {
     return(
         <View>
             <Text>Violencia Mediatica</Text>
+            <Image source={require('../tipos/mediatica.png')}/>
 
         </View>
     )
