@@ -4,7 +4,7 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 function Femicidio(){
     return(
         <View style={styles.container}>
-            <Text>Femicidios</Text>
+            <Text style={styles.title}>Femicidios</Text>
             <Image source={require('../tipos/femicidios.jpg')}/>
             <Text>
             En Argentina, el término comenzó a popularizarse en la década del 2000, de la mano 
@@ -26,6 +26,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         padding: 16,
-    }
+    };
 
 })
