@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, Image, TouchableOpacity, Linking, StyleSheet, FlatList } from "react-native";
+import { View, Text, Image, TouchableOpacity, Linking, StyleSheet} from "react-native";
 import { RootStackParamList } from "../home/types";
 import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
@@ -21,11 +21,7 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
           <Text>#</Text>
         </View>
 
-        <FlatList
-          horizontal
-          data={data}
-          keyExtractor={(item, index) => index.toString()}
-          renderItem={({ item }) => (
+        
             <View style={styles.container}>
               
               <TouchableOpacity onPress={movete} style={styles.card}>
@@ -38,69 +34,68 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
               </TouchableOpacity>
 
 
-                
+              <TouchableOpacity onPress={movete} style={styles.card}> 
                 <Text style={styles.cardText}>Violencia Sexual </Text>
                 <Image source={require("../tipos/images.jpeg")} style={styles.cardimagen} />
+              </TouchableOpacity>  
 
 
-                  
+              <TouchableOpacity onPress={movete} style={styles.card}>     
                 <Text style={styles.cardText}>Violencia Laboral</Text>
                 <Image source={require("../tipos/laboral.jpeg")} style={styles.cardimagen} />
-                
-                
+              </TouchableOpacity> 
                 
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>  
                 <Text style={styles.cardText}>Femicidio</Text>
                 <Image source={require("../tipos/femicidios.jpg")} style={styles.cardimagen} />
-                        
+              </TouchableOpacity>           
             
 
             
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>  
                 <Text style={styles.cardText}>Violencia Institucional</Text>
                 <Image source={require("../tipos/instucional.jpeg")} style={styles.cardimagen} />
-                
+              </TouchableOpacity>    
                 
               
-                  
+              <TouchableOpacity onPress={movete} style={styles.card}>      
                 <Text style={styles.cardText}>Violencia Mediática</Text>
                 <Image source={require("../tipos/mediatica.png")} style={styles.cardimagen} />
-                    
+              </TouchableOpacity>        
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>
                 <Text style={styles.cardText}>Acoso</Text>
                 <Image source={require("../tipos/acoso.jpeg")} style={styles.cardimagen} />
-                
+              </TouchableOpacity>    
               
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>
                 <Text style={styles.cardText}>Violencia Psicologica</Text>
                 <Image source={require("../tipos/psicologica.jpeg")} style={styles.cardimagen} />
+              </TouchableOpacity>
               
-              
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>
                 <Text style={styles.cardText}>Violencia Economica y Patrimonial</Text>
                 <Image source={require("../tipos/economica.jpeg")} style={styles.cardimagen} />
-                    
+              </TouchableOpacity>      
               
-              
+              <TouchableOpacity onPress={movete} style={styles.card}>
                 <Text style={styles.cardText}>Violencia Física</Text>
                 <Image source={require("../tipos/fisica.jpg")} style={styles.cardimagen} />
-                
+              </TouchableOpacity>  
             </View>   
-          )}
-        />    
-    
+        
 
           
           
-          <Text>Noticias Recientes</Text>
+          
 
 
           
           <View style={styles.cardNoticias}>
+          <Text style={styles.cardText}>Noticias Recientes</Text>
             <Image
               source={require("../tipos/noticia1.png")} style={styles.cardimagen} />
             <View>
@@ -172,7 +167,7 @@ const styles = StyleSheet.create({
   },
   
   title: {
-    color: '#555',
+    color: '#000',
     fontSize: 18,
     textAlign: 'center',
   },
