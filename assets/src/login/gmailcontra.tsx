@@ -14,5 +14,8 @@ const enviargmai=()=>{
           console.error("Error al enviar el correo electrónico de restablecimiento de contraseña:", error);
         }
       };
+      return(
+        <
+      )
 }
 export default enviargmai
