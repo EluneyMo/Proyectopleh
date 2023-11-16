@@ -3,7 +3,7 @@ import appFirebase from '../../../firebase/firebase';
 import React, { useState } from 'react';
 import { DocumentData, DocumentReference, getFirestore, doc, setDoc, getDoc, collection } from 'firebase/firestore';
 import { View, Text, TextInput, Button } from 'react-native';
-
+const auth = getAuth(appFirebase);
 interface MyFormProps {}
 
 const MyForm: React.FC<MyFormProps> = () => {
