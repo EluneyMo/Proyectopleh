@@ -12,8 +12,10 @@ const enviargmai=()=>{
         try {
           await sendPasswordResetEmail(auth, email);
           console.log("Se ha enviado un correo electrónico de restablecimiento de contraseña.");
+          ToastAndroid.show('Correo electrónico enviado con éxito', ToastAndroid.SHORT);
         } catch (error) {
           console.error("Error al enviar el correo electrónico de restablecimiento de contraseña:", error);
+          ToastAndroid.show('Hubo un error al enviar el correo', ToastAndroid.SHORT);
         }
       };
       return(
