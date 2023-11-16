@@ -5,6 +5,7 @@ import { RouteProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import Institucional from "./institucional";
 
+
 interface PreguntasProps{
   route: RouteProp<RootStackParamList,"Preguntas" >
   navigation: StackNavigationProp <RootStackParamList, "Preguntas">
@@ -121,6 +122,10 @@ const CajaTipos:React.FC<PreguntasProps>=({route,navigation}) => {
                 <Text style={styles.cardText}>Señal de ayuda para violencia de genero</Text>
         </TouchableOpacity>  
         
+        <TouchableOpacity style={styles.card}> 
+                <Image source={require("../tipos/144.jpg")} style={styles.cardimagen} />
+                <Text style={styles.cardText}>Comunicarse al...</Text>
+        </TouchableOpacity> 
 
     
     </View>
