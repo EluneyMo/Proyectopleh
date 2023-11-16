@@ -31,4 +31,8 @@ const styles = StyleSheet.create({
         width: 250,
         height: 250,
     },
+    descripcion:{
+        fontSize: 16,
+        textAlign: "center",
+    },
 })
