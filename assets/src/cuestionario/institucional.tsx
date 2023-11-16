@@ -5,7 +5,7 @@ function Institucional(){
     return(
         <View style={styles.container}>
             <Text style={styles.title}>Violencia Institucional</Text>
-            <Image source={require('../tipos/femicidios.jpg')}/>
+            <Image source={require('../tipos/femicidios.jpg')} style={styles.imagen}/>
             <Text>
                 A veces, la violencia institucional puede ser sutil y pasar desapercibida, pero es importante estar 
                 consciente de sus manifestaciones para poder abordarlas de manera efectiva. 
@@ -34,6 +34,6 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: 'bold',
         marginBottom: 10,
-    }
+    },
 
 })
