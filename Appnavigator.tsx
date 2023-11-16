@@ -11,6 +11,7 @@ import Tipos from './assets/src/cuestionario/cajatipos';
 import cambiocon from './assets/src/login/cambiocon';
 import MyForm from './assets/src/usuario/usuario';
 import Institucional from './assets/src/cuestionario/institucional';
+import Mediatica from './assets/src/cuestionario/mediatica';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -27,6 +28,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name ="Usuario" component={MyForm}/>
         <Stack.Screen name ="Institucional" component={Institucional} />
         <Stack.Screen name ="Acoso" component={Acoso} />
+        <Stack.Screen name ="Mediatica" component={Mediatica} />
 
       </Stack.Navigator>
     </NavigationContainer>
