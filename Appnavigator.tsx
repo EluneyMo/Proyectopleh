@@ -14,6 +14,8 @@ import Institucional from './assets/src/cuestionario/institucional';
 import Mediatica from './assets/src/cuestionario/mediatica';
 import Sexual from './assets/src/cuestionario/vsexual';
 import Femicidio from './assets/src/cuestionario/femicidios';
+import Acoso from './assets/src/cuestionario/acoso';
+import Laboral from './assets/src/cuestionario/Vlaboral';
 const Stack = createStackNavigator();
 
 const AppNavigator: React.FC = () => {
@@ -33,6 +35,8 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name ="Mediatica" component={Mediatica} />
         <Stack.Screen name ="Femicidios" component={Femicidio} />
         <Stack.Screen name ="Sexual" component={Sexual} />
+        <Stack.Screen name ="Laboral" component={Laboral} />
+        
 
       </Stack.Navigator>
     </NavigationContainer>
