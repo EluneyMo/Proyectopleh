@@ -13,7 +13,18 @@ export type RootStackParamList = {
     
    
   }
- 
+export interface ProfileCardProps{
+      
+      id: number;
+      fullName: string;
+      title: string;
+      location: string;
+      phoneNumber: string;
+      categoria: string;
+      additionalInfo: string;
+      
+        
+};
 export interface RegistrationData {
   nombre: string;
   dni: string;
