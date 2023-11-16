@@ -1,29 +1,36 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState, ChangeEvent } from "react";
 
-const searchone = () => {
-  const { users, setUsers } = useState({});
-  const { search, useSearch } = useState("");
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  // Agrega otros campos según la estructura de tus datos
+}
 
-  const URL = "";
+const SearchOne: React.FC = () => {
+  const [users, setUsers] = useState<User[]>([]);
+  const [search, setSearch] = useState<string>("");
+
+  const URL = ""; // Agrega la URL correspondiente
 
   const showData = async () => {
     const response = await fetch(URL);
-    const data = await response.json();
+    const data: User[] = await response.json();
     console.log(data);
     setUsers(data);
   };
 
-  const searcher = (e) => {
+  const searcher = (e: ChangeEvent<HTMLInputElement>) => {
     setSearch(e.target.value);
-    console.log(e.target);
+    console.log(e.target.value);
   };
 
-  let result = [];
+  let result: User[] = [];
   if (!search) {
     result = users;
   } else {
-    users.filter(
-      (dato) => dato.name - tolowerCase().includes(search.tolocaleLowerCase())
+    result = users.filter((dato) =>
+      dato.name.toLowerCase().includes(search.toLowerCase())
     );
   }
 
@@ -33,16 +40,20 @@ const searchone = () => {
 
   return (
     <div>
-      <input value={search} placeholder="buscar" />
-      <body>
-        {data.map((user) => (
-          <tr key={user.id}>
-            <td>{user.name}</td>
-            <td>{user.username}</td>
-          </tr>
-        ))}
-      </body>
+      <input value={search} placeholder="buscar" onChange={searcher} />
+      <table>
+        <tbody>
+          {result.map((user) => (
+            <tr key={user.id}>
+              <td>{user.name}</td>
+              <td>{user.username}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 };
-export default searchone;
+
+export default SearchOne;
+
