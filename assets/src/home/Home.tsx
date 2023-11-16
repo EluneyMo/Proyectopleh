@@ -76,9 +76,6 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
     <View style={styles.container}>
       <Text style={styles.welcomeText}>Bienvenido {correoUsuario}</Text>
       <Text style={styles.Preguntastext}>Responde las sigientes preguntas para que entendamos tu caso</Text>
-      <TouchableOpacity onPress={handleSignOut} style={styles.botonpreguntas}>
-              <Text style={styles.buttonText}>Cerrar session</Text>
-      </TouchableOpacity>
       <TouchableOpacity onPress={handlePress} style={styles.panic}>
       <Image 
        source={require('../../img/logo-boton.png')}
@@ -89,6 +86,11 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
               <Text style={styles.buttonText}>Preguntas</Text>
       </TouchableOpacity>
   
+      <Text>¿deseas cerrar session?</Text>
+
+      <TouchableOpacity onPress={handleSignOut} style={styles.botonpreguntas}>
+              <Text style={styles.buttonText}>Cerrar session</Text>
+      </TouchableOpacity>
       <Modal
         animationType="slide"
         transparent={true}
@@ -156,11 +158,14 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   buttonText: {
-    color: "black",
+    color: "white",
   },
   Preguntas: {
-    backgroundColor: "purple",
-    color:"white",
+    backgroundColor: 'purple',
+    color: "white",
+    borderRadius: 10, 
+    padding: 15,
+    margin: 10,
   },
   input: {
     height: 40,
