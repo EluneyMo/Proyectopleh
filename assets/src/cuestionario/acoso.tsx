@@ -4,8 +4,8 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 
 function Acoso(){
     return(
-        <View >
-            
+        <View>
+            <Text>Violencia Mediatica</Text>
         </View>
     )
 }
