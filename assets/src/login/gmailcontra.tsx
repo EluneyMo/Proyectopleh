@@ -15,7 +15,9 @@ const enviargmai=()=>{
         }
       };
       return(
-        <
+        <View>
+            
+        </View>
       )
 }
 export default enviargmai
