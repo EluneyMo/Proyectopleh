@@ -8,7 +8,7 @@ import CajaTipos from './assets/src/cuestionario/cajapreguntas';
 import RegistroForm from './assets/src/login/register';
 import { LoginFormProps } from './assets/src/home/types';
 import Tipos from './assets/src/cuestionario/cajatipos';
-import cambiocon from './assets/src/login/cambiocon';
+import enviargmai from "./assets/src/login/gmailcontra"
 import Expertos from './assets/src/expertos/expertos';
 const Stack = createStackNavigator();
 
@@ -22,7 +22,7 @@ const AppNavigator: React.FC = () => {
         <Stack.Screen name="Panico" component={Panicbutton} />
         <Stack.Screen name='Preguntas' component={CajaTipos}/>
         <Stack.Screen name='Tipos' component={Tipos}/>
-        <Stack.Screen name="Cambio de contraseña" component={cambiocon} />
+        <Stack.Screen name="Cambio de contraseña" component={enviargmai} />
         <Stack.Screen name="Expertos" component={Expertos}/>
       </Stack.Navigator>
     </NavigationContainer>

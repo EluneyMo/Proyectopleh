@@ -5,5 +5,6 @@ import appFirebase from '../../../firebase/firebase';
 const auth=getAuth(appFirebase)
 
 const enviargmai=()=>{
-    
+
 }
+export default enviargmai
