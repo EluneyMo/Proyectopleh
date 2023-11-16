@@ -160,7 +160,8 @@ const styles = StyleSheet.create({
     width: "100%",
   },
   footer: {
-    
+    fontSize: 5,
+    color: 'grey',
 
   }
 });
