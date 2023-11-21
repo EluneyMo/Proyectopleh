@@ -23,8 +23,7 @@ const enviargmai=()=>{
 
         } catch (error) {
           console.error("Error al enviar el correo electrónico de restablecimiento de contraseña:", error);
-          alert ("Error al enviar el correo electrónico de restablecimiento de contraseña")
-        }
+         
       };
       return(
         <LinearGradient
