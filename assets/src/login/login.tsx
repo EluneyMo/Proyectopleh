@@ -21,6 +21,7 @@ const Login = () => {
   const [newPassword, setNewPassword] = useState(""); 
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
+  const [isAnonymous, setIsAnonymous] = useState(false);
   const [newPasswordError, setNewPasswordError] = useState(""); 
   const handleSignIn = async () => {
     try {
@@ -74,6 +75,7 @@ const Login = () => {
     try{
       
     await signInAnonymously(auth);
+    setIsAnonymous(true);
     navigation.navigate("PLEH" as never)
   }catch (error){
     console.error("Error al iniciar sesión como invitado:", error);

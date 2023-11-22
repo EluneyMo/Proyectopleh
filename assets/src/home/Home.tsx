@@ -7,8 +7,6 @@ import { TextInput, Modal, View, Text, Button as RNButton, StyleSheet, Button, I
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RouteProp } from '@react-navigation/native';
 import { RootStackParamList } from './types';
-import AppNavigator from "../../../Appnavigator"
-import AsyncStorage from '@react-native-async-storage/async-storage';
 const auth = getAuth(appFirebase);
 const db = getFirestore(appFirebase);
 interface HomeProps {
@@ -23,9 +21,9 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
   useEffect(() => {
     const verificarContacto = async () => {
       try {
-        if (auth.currentUser && auth.currentUser.isAnonymous) {
+        if (auth.currentUser && !auth.currentUser.isAnonymous) {
           const userCollection = collection(db, 'usuarios');
-          const userDocRef = doc(userCollection, auth.currentUser?.uid || '');
+          const userDocRef = doc(userCollection, auth.currentUser.uid);
 
           const userDocSnapshot = await getDoc(userDocRef);
           if (!userDocSnapshot.exists() || !userDocSnapshot.data()?.contacto) {
@@ -67,7 +65,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
       if (auth.currentUser) {
         const userCollection = collection(db, 'numeros');
         const userDoc = doc(userCollection, auth.currentUser.uid);
-        await setDoc(userDoc, { contacto: contacto }, { merge: true });
+        await setDoc(userDoc, { contacto }, { merge: true });
         setModalVisible(false);
       } else {
         console.error('Usuario no autenticado');
@@ -130,7 +128,7 @@ const Home: React.FC<HomeProps> = ({ route, navigation }) => {
               onChangeText={(text) => setContacto(text)}
             />
             <TouchableOpacity onPress={handleGuardarContacto} style={styles.button}>
-              <Text style={styles.buttonText}>Guardadr cotacto</Text>
+              <Text style={styles.buttonText}>Guardar cotacto</Text>
             </TouchableOpacity>
           </View>
         </View>

@@ -23,7 +23,7 @@ const Stack = createStackNavigator();
 const AppNavigator: React.FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="Login">
         <Stack.Screen name="PLEH" component={Home} />
         <Stack.Screen name='Login' component={Login}/>
         <Stack.Screen name='Registro'>{(props: LoginFormProps) => <RegistroForm {...props} />}</Stack.Screen> 
